@@ -4,6 +4,7 @@ import { createFooter, footerStyles } from './components/Footer';
 import { renderHomePage, initHomePage, homeStyles } from './pages/Home';
 import { renderMapMindPage, initMapMindPage, mapMindStyles } from './pages/MapMind';
 import { renderSecondBrainPage, initSecondBrainPage, secondBrainStyles } from './pages/SecondBrain';
+import { renderServicesPage, initServicesPage, servicesStyles } from './pages/Services';
 import { renderContactPage, initContactPage, contactStyles } from './pages/Contact';
 import { renderImpressumPage, initImpressumPage, impressumStyles } from './pages/Impressum';
 import { router } from './utils/router';
@@ -17,6 +18,7 @@ styles.textContent = `
   ${homeStyles}
   ${mapMindStyles}
   ${secondBrainStyles}
+  ${servicesStyles}
   ${contactStyles}
   ${impressumStyles}
 `;
@@ -67,6 +69,12 @@ function initApp(): void {
     updatePageMeta('SecondBrain | Polar Labs', 'Dein externes Gedächtnis, gesteuert durch KI.');
   });
 
+  router.register('/services', () => {
+    main.innerHTML = renderServicesPage();
+    initServicesPage();
+    updatePageMeta('Dienstleistungen | Polar Labs', 'Individuelle Lösungen und Beratung.');
+  });
+
   router.register('/contact', () => {
     main.innerHTML = renderContactPage();
     initContactPage();
@@ -89,6 +97,7 @@ function initApp(): void {
       '/': () => { main.innerHTML = renderHomePage(); initHomePage(); },
       '/mapmind': () => { main.innerHTML = renderMapMindPage(); initMapMindPage(); },
       '/secondbrain': () => { main.innerHTML = renderSecondBrainPage(); initSecondBrainPage(); },
+      '/services': () => { main.innerHTML = renderServicesPage(); initServicesPage(); },
       '/contact': () => { main.innerHTML = renderContactPage(); initContactPage(); },
       '/impressum': () => { main.innerHTML = renderImpressumPage(); initImpressumPage(); },
     }[currentRoute];

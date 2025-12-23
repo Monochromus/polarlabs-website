@@ -39,14 +39,26 @@ export function createNavigation(): HTMLElement {
             <a href="/" class="nav-link ${currentRoute === '/' ? 'active' : ''}" data-link>
               ${i18n.t('nav.home')}
             </a>
-            <a href="/mapmind" class="nav-link ${currentRoute === '/mapmind' ? 'active' : ''}" data-link>
-              ${i18n.t('nav.mapmind')}
-            </a>
-            <a href="/secondbrain" class="nav-link ${currentRoute === '/secondbrain' ? 'active' : ''}" data-link>
-              ${i18n.t('nav.secondbrain')}
-            </a>
-            <a href="/contact" class="nav-link ${currentRoute === '/contact' ? 'active' : ''}" data-link>
-              ${i18n.t('nav.contact')}
+            <div class="nav-dropdown">
+              <button class="nav-link nav-dropdown-trigger ${currentRoute === '/mapmind' || currentRoute === '/secondbrain' ? 'active' : ''}">
+                ${i18n.t('nav.products')}
+                <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="/mapmind" class="nav-dropdown-item ${currentRoute === '/mapmind' ? 'active' : ''}" data-link>
+                  <span class="nav-dropdown-item-name">mapMind</span>
+                  <span class="nav-dropdown-item-desc mono">AI Maps</span>
+                </a>
+                <a href="/secondbrain" class="nav-dropdown-item ${currentRoute === '/secondbrain' ? 'active' : ''}" data-link>
+                  <span class="nav-dropdown-item-name">SecondBrain</span>
+                  <span class="nav-dropdown-item-desc mono">AI Productivity</span>
+                </a>
+              </div>
+            </div>
+            <a href="/services" class="nav-link ${currentRoute === '/services' ? 'active' : ''}" data-link>
+              ${i18n.t('nav.services')}
             </a>
           </div>
 
@@ -211,6 +223,83 @@ export const navigationStyles = `
     background: var(--aurora-cyan);
   }
 
+  /* Dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+  }
+
+  .nav-dropdown-trigger::after {
+    display: none;
+  }
+
+  .nav-dropdown-arrow {
+    transition: transform var(--transition-fast);
+  }
+
+  .nav-dropdown:hover .nav-dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + var(--space-4));
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    z-index: var(--z-dropdown);
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+  }
+
+  .nav-dropdown-item:hover {
+    background: var(--background);
+    color: var(--text-primary);
+  }
+
+  .nav-dropdown-item.active {
+    background: var(--background);
+  }
+
+  .nav-dropdown-item-name {
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+  }
+
+  .nav-dropdown-item-desc {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+
   .nav-actions {
     display: flex;
     align-items: center;
@@ -322,6 +411,31 @@ export const navigationStyles = `
 
     .nav-link {
       font-size: var(--text-xl);
+    }
+
+    .nav-dropdown {
+      width: 100%;
+    }
+
+    .nav-dropdown-trigger {
+      font-size: var(--text-xl);
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .nav-dropdown-menu {
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      background: transparent;
+      border: none;
+      padding: var(--space-4) 0 0 var(--space-4);
+      min-width: auto;
+    }
+
+    .nav-dropdown-item {
+      padding: var(--space-2) var(--space-3);
     }
 
     .nav-actions {

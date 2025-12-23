@@ -17,6 +17,10 @@ export const translations: Translations = {
     de: 'Produkte',
     en: 'Products',
   },
+  'nav.services': {
+    de: 'Dienstleistungen',
+    en: 'Services',
+  },
   'nav.mapmind': {
     de: 'mapMind',
     en: 'mapMind',
@@ -36,12 +40,12 @@ export const translations: Translations = {
 
   // Hero
   'hero.headline': {
-    de: 'Wir enthüllen Strukturen in komplexen Systemen.',
-    en: 'We reveal structure in complex systems.',
+    de: 'See what Matters',
+    en: 'See what Matters',
   },
-  'hero.description': {
-    de: 'Polar Labs entwickelt KI-Werkzeuge, die Klarheit schaffen – durch präzise Visualisierung und intelligente Organisation.',
-    en: 'Polar Labs develops AI tools that create clarity – through precise visualization and intelligent organization.',
+  'hero.subline': {
+    de: 'AI Tools for the people',
+    en: 'AI Tools for the people',
   },
   'hero.cta': {
     de: 'Produkte entdecken',
@@ -50,8 +54,16 @@ export const translations: Translations = {
 
   // Products Section
   'products.title': {
-    de: 'Unsere Werkzeuge',
-    en: 'Our Tools',
+    de: 'Was wir bauen',
+    en: 'What we build',
+  },
+  'products.vote.question': {
+    de: 'Welches Tool interessiert dich am meisten?',
+    en: 'Which tool interests you most?',
+  },
+  'products.vote.hint': {
+    de: 'Dein Vote hilft uns bei der Priorisierung',
+    en: 'Your vote helps us prioritize',
   },
   'products.status.development': {
     de: 'In Entwicklung',
@@ -350,10 +362,32 @@ export const translations: Translations = {
     en: 'iOS & Android',
   },
 
-  // Philosophy
-  'philosophy.quote': {
-    de: '„Nach 5 Minuten Nutzung denkt der User: Ich habe gerade etwas verstanden, nicht nur benutzt."',
-    en: '"After 5 minutes of use, the user thinks: I just understood something, not just used it."',
+  // Philosophy Quotes
+  'philosophy.quote.1': {
+    de: 'Quiet tools for complex problems.',
+    en: 'Quiet tools for complex problems.',
+  },
+  'philosophy.quote.2': {
+    de: 'Powerful tools shouldn\'t require a manual.',
+    en: 'Powerful tools shouldn\'t require a manual.',
+  },
+  'philosophy.click.hint': {
+    de: 'Klicken für mehr',
+    en: 'Click for more',
+  },
+
+  // Services
+  'services.description': {
+    de: 'Individuelle Lösungen und Beratung für Ihre Projekte.',
+    en: 'Custom solutions and consulting for your projects.',
+  },
+  'services.coming.title': {
+    de: 'Demnächst verfügbar',
+    en: 'Coming Soon',
+  },
+  'services.coming.text': {
+    de: 'Unsere Dienstleistungen werden bald hier vorgestellt. Kontaktieren Sie uns für individuelle Anfragen.',
+    en: 'Our services will be presented here soon. Contact us for custom inquiries.',
   },
 
   // Contact

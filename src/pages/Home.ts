@@ -1,7 +1,32 @@
 import { i18n } from '../utils/translations';
 import { router, Route } from '../utils/router';
 
+// Get votes from localStorage
+function getVotes(): { mapmind: number; secondbrain: number } {
+  const stored = localStorage.getItem('polarlabs-votes');
+  if (stored) {
+    return JSON.parse(stored);
+  }
+  return { mapmind: 0, secondbrain: 0 };
+}
+
+// Check if user has voted
+function hasVoted(): string | null {
+  return localStorage.getItem('polarlabs-user-voted');
+}
+
+// Save vote
+function saveVote(product: 'mapmind' | 'secondbrain'): void {
+  const votes = getVotes();
+  votes[product]++;
+  localStorage.setItem('polarlabs-votes', JSON.stringify(votes));
+  localStorage.setItem('polarlabs-user-voted', product);
+}
+
 export function renderHomePage(): string {
+  const votes = getVotes();
+  const userVoted = hasVoted();
+
   return `
     <section class="hero">
       <div class="hero-background">
@@ -11,7 +36,7 @@ export function renderHomePage(): string {
       <div class="hero-content container">
         <span class="label label-accent mono">Polar Labs</span>
         <h1 class="hero-title">${i18n.t('hero.headline')}</h1>
-        <p class="hero-description">${i18n.t('hero.description')}</p>
+        <p class="hero-subline mono">${i18n.t('hero.subline')}</p>
         <a href="#products" class="btn btn-primary hero-cta">${i18n.t('hero.cta')}</a>
       </div>
     </section>
@@ -23,8 +48,13 @@ export function renderHomePage(): string {
           <h2>${i18n.t('products.title')}</h2>
         </div>
 
+        <div class="vote-prompt">
+          <p class="vote-question">${i18n.t('products.vote.question')}</p>
+          <p class="vote-hint mono">${i18n.t('products.vote.hint')}</p>
+        </div>
+
         <div class="products-grid">
-          <article class="product-card product-card-mapmind" data-product="mapmind">
+          <article class="product-card product-card-mapmind ${userVoted === 'mapmind' ? 'voted' : ''}" data-product="mapmind">
             <div class="product-card-header">
               <div class="product-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -39,15 +69,23 @@ export function renderHomePage(): string {
             <h3 class="product-name">mapMind</h3>
             <p class="product-tagline">${i18n.t('mapmind.tagline')}</p>
             <p class="product-description">${i18n.t('mapmind.description')}</p>
-            <a href="/mapmind" class="btn btn-secondary product-link" data-link>
-              ${i18n.t('products.learnmore')}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
+            <div class="product-actions">
+              <a href="/mapmind" class="btn btn-secondary product-link" data-link>
+                ${i18n.t('products.learnmore')}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <button class="vote-btn ${userVoted === 'mapmind' ? 'voted' : ''} ${userVoted && userVoted !== 'mapmind' ? 'disabled' : ''}" data-vote="mapmind" ${userVoted ? 'disabled' : ''}>
+                <svg viewBox="0 0 24 24" fill="${userVoted === 'mapmind' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                </svg>
+                <span class="vote-count">${votes.mapmind}</span>
+              </button>
+            </div>
           </article>
 
-          <article class="product-card product-card-secondbrain" data-product="secondbrain">
+          <article class="product-card product-card-secondbrain ${userVoted === 'secondbrain' ? 'voted' : ''}" data-product="secondbrain">
             <div class="product-card-header">
               <div class="product-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -66,12 +104,20 @@ export function renderHomePage(): string {
             <h3 class="product-name">SecondBrain</h3>
             <p class="product-tagline">${i18n.t('secondbrain.tagline')}</p>
             <p class="product-description">${i18n.t('secondbrain.description')}</p>
-            <a href="/secondbrain" class="btn btn-secondary product-link" data-link>
-              ${i18n.t('products.learnmore')}
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
+            <div class="product-actions">
+              <a href="/secondbrain" class="btn btn-secondary product-link" data-link>
+                ${i18n.t('products.learnmore')}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <button class="vote-btn vote-btn-violet ${userVoted === 'secondbrain' ? 'voted' : ''} ${userVoted && userVoted !== 'secondbrain' ? 'disabled' : ''}" data-vote="secondbrain" ${userVoted ? 'disabled' : ''}>
+                <svg viewBox="0 0 24 24" fill="${userVoted === 'secondbrain' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+                  <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                </svg>
+                <span class="vote-count">${votes.secondbrain}</span>
+              </button>
+            </div>
           </article>
         </div>
       </div>
@@ -81,13 +127,19 @@ export function renderHomePage(): string {
       <div class="container">
         <div class="philosophy-content">
           <span class="label mono">//02</span>
-          <blockquote class="philosophy-quote">
-            ${i18n.t('philosophy.quote')}
-          </blockquote>
-          <div class="philosophy-decoration">
-            <div class="philosophy-line"></div>
-            <div class="philosophy-dot"></div>
+          <div class="philosophy-quotes" id="philosophy-quotes">
+            <blockquote class="philosophy-quote active" data-quote="0">
+              "${i18n.t('philosophy.quote.1')}"
+            </blockquote>
+            <blockquote class="philosophy-quote" data-quote="1">
+              "${i18n.t('philosophy.quote.2')}"
+            </blockquote>
           </div>
+          <div class="philosophy-indicators">
+            <button class="philosophy-indicator active" data-index="0" aria-label="Quote 1"></button>
+            <button class="philosophy-indicator" data-index="1" aria-label="Quote 2"></button>
+          </div>
+          <p class="philosophy-hint mono">${i18n.t('philosophy.click.hint')}</p>
         </div>
       </div>
     </section>
@@ -122,6 +174,72 @@ export function initHomePage(): void {
     });
     card.addEventListener('mouseleave', () => {
       card.classList.remove('glow-cyan', 'glow-violet');
+    });
+  });
+
+  // Voting functionality
+  document.querySelectorAll('.vote-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const button = e.currentTarget as HTMLButtonElement;
+      if (button.disabled) return;
+
+      const product = button.getAttribute('data-vote') as 'mapmind' | 'secondbrain';
+      saveVote(product);
+
+      // Update UI
+      const countEl = button.querySelector('.vote-count');
+      if (countEl) {
+        const currentCount = parseInt(countEl.textContent || '0');
+        countEl.textContent = (currentCount + 1).toString();
+      }
+
+      // Mark as voted
+      button.classList.add('voted');
+      button.disabled = true;
+      const svg = button.querySelector('svg');
+      if (svg) svg.setAttribute('fill', 'currentColor');
+
+      // Disable other vote buttons
+      document.querySelectorAll('.vote-btn').forEach(otherBtn => {
+        if (otherBtn !== button) {
+          otherBtn.classList.add('disabled');
+          (otherBtn as HTMLButtonElement).disabled = true;
+        }
+      });
+
+      // Add voted class to card
+      const card = button.closest('.product-card');
+      if (card) card.classList.add('voted');
+    });
+  });
+
+  // Rotating quotes
+  let currentQuote = 0;
+  const quotes = document.querySelectorAll('.philosophy-quote');
+  const indicators = document.querySelectorAll('.philosophy-indicator');
+
+  function showQuote(index: number) {
+    quotes.forEach((q, i) => {
+      q.classList.toggle('active', i === index);
+    });
+    indicators.forEach((ind, i) => {
+      ind.classList.toggle('active', i === index);
+    });
+    currentQuote = index;
+  }
+
+  // Click on quotes container to cycle
+  document.getElementById('philosophy-quotes')?.addEventListener('click', () => {
+    const nextQuote = (currentQuote + 1) % quotes.length;
+    showQuote(nextQuote);
+  });
+
+  // Click on indicators
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showQuote(index);
     });
   });
 }
@@ -174,18 +292,17 @@ export const homeStyles = `
 
   .hero-title {
     margin-top: var(--space-6);
-    margin-bottom: var(--space-6);
-    font-size: clamp(var(--text-3xl), 5vw, var(--text-6xl));
-    font-weight: var(--font-light);
+    margin-bottom: var(--space-4);
+    font-size: clamp(var(--text-4xl), 8vw, 6rem);
+    font-weight: var(--font-medium);
     line-height: 1.1;
     letter-spacing: -0.03em;
   }
 
-  .hero-description {
-    font-size: var(--text-lg);
-    max-width: 600px;
-    margin: 0 auto var(--space-10);
-    line-height: 1.7;
+  .hero-subline {
+    font-size: var(--text-xl);
+    color: var(--aurora-cyan);
+    margin-bottom: var(--space-10);
   }
 
   .hero-cta {
@@ -202,7 +319,23 @@ export const homeStyles = `
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
-    margin-bottom: var(--space-12);
+    margin-bottom: var(--space-8);
+  }
+
+  .vote-prompt {
+    text-align: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .vote-question {
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .vote-hint {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
   }
 
   .products-grid {
@@ -244,7 +377,8 @@ export const homeStyles = `
     transition: opacity var(--transition-fast);
   }
 
-  .product-card:hover::before {
+  .product-card:hover::before,
+  .product-card.voted::before {
     opacity: 1;
   }
 
@@ -304,9 +438,63 @@ export const homeStyles = `
     font-size: var(--text-base);
   }
 
+  .product-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
   .product-link {
     display: inline-flex;
     gap: var(--space-2);
+  }
+
+  .vote-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+
+  .vote-btn:hover:not(.disabled):not(.voted) {
+    border-color: var(--aurora-cyan);
+    color: var(--aurora-cyan);
+  }
+
+  .vote-btn.voted {
+    border-color: var(--aurora-cyan);
+    color: var(--aurora-cyan);
+    background: rgba(77, 238, 234, 0.1);
+  }
+
+  .vote-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .vote-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .vote-btn-violet:hover:not(.disabled):not(.voted) {
+    border-color: var(--soft-violet);
+    color: var(--soft-violet);
+  }
+
+  .vote-btn-violet.voted {
+    border-color: var(--soft-violet);
+    color: var(--soft-violet);
+    background: rgba(155, 140, 255, 0.1);
   }
 
   /* Philosophy Section */
@@ -320,34 +508,66 @@ export const homeStyles = `
     text-align: center;
   }
 
+  .philosophy-quotes {
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: var(--space-8) 0;
+  }
+
   .philosophy-quote {
+    position: absolute;
     font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
     font-weight: var(--font-light);
     line-height: 1.4;
     color: var(--text-primary);
-    margin: var(--space-8) 0;
     font-style: normal;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-slow);
+    pointer-events: none;
   }
 
-  .philosophy-decoration {
+  .philosophy-quote.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .philosophy-indicators {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: var(--space-4);
-    margin-top: var(--space-8);
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
   }
 
-  .philosophy-line {
-    width: 60px;
-    height: 1px;
-    background: var(--border);
-  }
-
-  .philosophy-dot {
-    width: 6px;
-    height: 6px;
+  .philosophy-indicator {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    background: var(--border);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: 0;
+  }
+
+  .philosophy-indicator:hover {
+    background: var(--text-muted);
+  }
+
+  .philosophy-indicator.active {
     background: var(--aurora-cyan);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  .philosophy-hint {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
   }
 
   @media (max-width: 768px) {
@@ -358,6 +578,15 @@ export const homeStyles = `
     .hero-glow {
       width: 300px;
       height: 200px;
+    }
+
+    .product-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .vote-btn {
+      justify-content: center;
     }
   }
 `;
