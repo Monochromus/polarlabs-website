@@ -179,27 +179,31 @@ export const translations: Translations = {
     de: 'Early Access anfragen',
     en: 'Request Early Access',
   },
+  'mapmind.try': {
+    de: 'App öffnen',
+    en: 'Open App',
+  },
 
-  // SecondBrain
+  // SecondBrainAgent
   'secondbrain.tagline': {
-    de: 'Dein externes Gedächtnis, gesteuert durch KI',
-    en: 'Your external memory, powered by AI',
+    de: 'Dein KI-Agent für Produktivität',
+    en: 'Your AI agent for productivity',
   },
   'secondbrain.description': {
-    de: 'Ein KI-Agent, der Kalender, Todos und Notizen verknüpft – basierend auf dem Second Brain Prinzip.',
-    en: 'An AI agent that connects calendar, todos, and notes – based on the Second Brain principle.',
+    de: 'Ein KI-Agent, der Projekte, Todos, Notizen und Kalender verknüpft – basierend auf dem Second Brain Prinzip.',
+    en: 'An AI agent that connects projects, todos, notes and calendar – based on the Second Brain principle.',
   },
   'secondbrain.hero.title': {
-    de: 'SecondBrain',
-    en: 'SecondBrain',
+    de: 'SecondBrainAgent',
+    en: 'SecondBrainAgent',
   },
   'secondbrain.hero.subtitle': {
     de: 'Das Second Brain Prinzip, automatisiert',
     en: 'The Second Brain Principle, Automated',
   },
   'secondbrain.hero.description': {
-    de: 'Eine Produktivitäts-Webapp, die als externes Gedächtnis dient. Basierend auf dem Prinzip von Tiago Forte, angetrieben durch KI.',
-    en: 'A productivity web app that serves as an external memory. Based on Tiago Forte\'s principle, powered by AI.',
+    de: 'Eine Produktivitäts-App, die als externes Gedächtnis dient. Ein KI-Agent verwaltet Projekte, Todos, Notizen, Ressourcen und Kalender.',
+    en: 'A productivity app that serves as an external memory. An AI agent manages projects, todos, notes, resources and calendar.',
   },
   'secondbrain.concept.title': {
     de: 'Das Konzept',
@@ -210,8 +214,8 @@ export const translations: Translations = {
     en: 'According to Tiago Forte, the Second Brain consists of four steps: Capture, organize, distill, express.',
   },
   'secondbrain.concept.p2': {
-    de: 'SecondBrain automatisiert diese Schritte durch KI. Der Nutzer behält die Kontrolle, die KI übernimmt die Arbeit.',
-    en: 'SecondBrain automates these steps through AI. The user maintains control, the AI does the work.',
+    de: 'SecondBrainAgent automatisiert diese Schritte durch KI. Der Nutzer behält die Kontrolle, die KI übernimmt die Arbeit.',
+    en: 'SecondBrainAgent automates these steps through AI. The user maintains control, the AI does the work.',
   },
   'secondbrain.concept.p3': {
     de: 'Ein Eingabefeld für natürliche Sprache. Ein KI-Agent, der versteht und handelt.',
@@ -261,105 +265,125 @@ export const translations: Translations = {
     de: 'Für Updates anmelden',
     en: 'Sign up for Updates',
   },
+  'secondbrain.try': {
+    de: 'App öffnen',
+    en: 'Open App',
+  },
 
   // Roadmap Items - mapMind
   'roadmap.mapmind.1': {
-    de: 'LLM-Integration',
-    en: 'LLM Integration',
+    de: 'OpenStreetMaps Karte',
+    en: 'OpenStreetMaps Map',
   },
   'roadmap.mapmind.1.desc': {
-    de: 'Query-Interpretation',
-    en: 'Query Interpretation',
+    de: 'Konventionelle Suche',
+    en: 'Conventional Search',
   },
   'roadmap.mapmind.2': {
-    de: 'Annotations-Tools',
-    en: 'Annotation Tools',
+    de: 'Styles Menü',
+    en: 'Styles Menu',
   },
   'roadmap.mapmind.2.desc': {
-    de: 'Eigene Markierungen',
-    en: 'Custom Markers',
+    de: 'Karten-Individualisierung',
+    en: 'Map Customization',
   },
   'roadmap.mapmind.3': {
-    de: 'Wikipedia-Integration',
-    en: 'Wikipedia Integration',
+    de: 'Annotations Menü',
+    en: 'Annotations Menu',
   },
   'roadmap.mapmind.3.desc': {
-    de: 'Historische Daten',
-    en: 'Historical Data',
+    de: 'Manuelles Zeichnen',
+    en: 'Manual Drawing',
   },
   'roadmap.mapmind.4': {
-    de: 'Event-Discovery',
-    en: 'Event Discovery',
+    de: 'LLM Hintergrundrecherche',
+    en: 'LLM Background Research',
   },
   'roadmap.mapmind.4.desc': {
-    de: 'Konzerte, Theater, Märkte',
-    en: 'Concerts, Theater, Markets',
+    de: 'KI-gestützte Suche',
+    en: 'AI-powered Search',
   },
   'roadmap.mapmind.5': {
-    de: 'Öffentliche Beta',
-    en: 'Public Beta',
+    de: 'Satellitenbilder',
+    en: 'Satellite Imagery',
   },
   'roadmap.mapmind.5.desc': {
-    de: 'Erste öffentliche Version',
-    en: 'First public version',
+    de: 'Erweiterte Ansicht',
+    en: 'Extended View',
   },
   'roadmap.mapmind.6': {
-    de: 'Mobile App',
-    en: 'Mobile App',
+    de: 'LLM Annotationen & Styles',
+    en: 'LLM Annotations & Styles',
   },
   'roadmap.mapmind.6.desc': {
-    de: 'iOS & Android',
-    en: 'iOS & Android',
-  },
-
-  // Roadmap Items - SecondBrain
-  'roadmap.secondbrain.1': {
-    de: 'Kalender-Sync',
-    en: 'Calendar Sync',
-  },
-  'roadmap.secondbrain.1.desc': {
-    de: 'Google & Apple',
-    en: 'Google & Apple',
-  },
-  'roadmap.secondbrain.2': {
-    de: 'Todo-Management',
-    en: 'Todo Management',
-  },
-  'roadmap.secondbrain.2.desc': {
-    de: 'Aufgabenverwaltung',
-    en: 'Task Management',
-  },
-  'roadmap.secondbrain.3': {
-    de: 'Notizen-System',
-    en: 'Notes System',
-  },
-  'roadmap.secondbrain.3.desc': {
-    de: 'Mit Verknüpfungen',
-    en: 'With Connections',
-  },
-  'roadmap.secondbrain.4': {
-    de: 'Projekt-Organisation',
-    en: 'Project Organization',
-  },
-  'roadmap.secondbrain.4.desc': {
-    de: 'Strukturierte Projekte',
-    en: 'Structured Projects',
-  },
-  'roadmap.secondbrain.5': {
-    de: 'GPT-5 Agenten',
-    en: 'GPT-5 Agents',
-  },
-  'roadmap.secondbrain.5.desc': {
     de: 'KI-Integration',
     en: 'AI Integration',
   },
+  'roadmap.mapmind.7': {
+    de: 'MVP Release',
+    en: 'MVP Release',
+  },
+  'roadmap.mapmind.7.desc': {
+    de: 'Erste vollständige Version',
+    en: 'First Complete Version',
+  },
+  'roadmap.mapmind.8': {
+    de: 'iOS App',
+    en: 'iOS App',
+  },
+  'roadmap.mapmind.8.desc': {
+    de: 'App Store Release',
+    en: 'App Store Release',
+  },
+
+  // Roadmap Items - SecondBrainAgent
+  'roadmap.secondbrain.1': {
+    de: 'Vision & Konzept',
+    en: 'Vision & Concept',
+  },
+  'roadmap.secondbrain.1.desc': {
+    de: 'Grundidee entwickelt',
+    en: 'Core Idea Developed',
+  },
+  'roadmap.secondbrain.2': {
+    de: 'Manuelle Verwaltung',
+    en: 'Manual Management',
+  },
+  'roadmap.secondbrain.2.desc': {
+    de: 'Projekte, Todos, Notizen, Kalender',
+    en: 'Projects, Todos, Notes, Calendar',
+  },
+  'roadmap.secondbrain.3': {
+    de: 'LLM Integration',
+    en: 'LLM Integration',
+  },
+  'roadmap.secondbrain.3.desc': {
+    de: 'Erstellen, Löschen, Verknüpfen',
+    en: 'Create, Delete, Link',
+  },
+  'roadmap.secondbrain.4': {
+    de: 'Projektmanagement Tools',
+    en: 'Project Management Tools',
+  },
+  'roadmap.secondbrain.4.desc': {
+    de: 'Erweiterte Funktionen',
+    en: 'Extended Features',
+  },
+  'roadmap.secondbrain.5': {
+    de: 'Siri Kurzbefehle',
+    en: 'Siri Shortcuts',
+  },
+  'roadmap.secondbrain.5.desc': {
+    de: 'Sperrbildschirm-Zugriff',
+    en: 'Lock Screen Access',
+  },
   'roadmap.secondbrain.6': {
-    de: 'Mobile App',
-    en: 'Mobile App',
+    de: 'App Store Release',
+    en: 'App Store Release',
   },
   'roadmap.secondbrain.6.desc': {
-    de: 'iOS & Android',
-    en: 'iOS & Android',
+    de: 'iOS Veröffentlichung',
+    en: 'iOS Publication',
   },
 
   // Philosophy Quotes

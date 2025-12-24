@@ -21,10 +21,11 @@ export function renderSecondBrainPage(): string {
         </div>
       </div>
       <div class="product-hero-content container">
-        <span class="label mono text-violet">// ${i18n.t('products.status.concept')}</span>
+        <span class="label mono text-violet">// ${i18n.t('products.status.development')}</span>
         <h1 class="product-hero-title">${i18n.t('secondbrain.hero.title')}</h1>
         <p class="product-hero-subtitle mono secondbrain-subtitle">${i18n.t('secondbrain.hero.subtitle')}</p>
         <p class="product-hero-description">${i18n.t('secondbrain.hero.description')}</p>
+        <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet btn-lg hero-cta-btn">${i18n.t('secondbrain.try')}</a>
       </div>
     </section>
 
@@ -145,30 +146,30 @@ export function renderSecondBrainPage(): string {
           <span class="label mono">//03</span>
           <h2>${i18n.t('secondbrain.roadmap.title')}</h2>
         </div>
-        <div class="roadmap roadmap-secondbrain">
+        <div class="roadmap roadmap-secondbrain roadmap-6">
           <div class="roadmap-line"></div>
-          <div class="roadmap-item" data-status="upcoming">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.secondbrain.1')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.secondbrain.1.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="upcoming">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.secondbrain.2')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.secondbrain.2.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
+          <div class="roadmap-item" data-status="current">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.secondbrain.3')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.secondbrain.3.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
+          <div class="roadmap-item" data-status="upcoming">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.secondbrain.4')}</span>
@@ -255,6 +256,10 @@ export const secondBrainStyles = `
 
   .text-violet {
     color: var(--soft-violet);
+  }
+
+  .product-hero-secondbrain .hero-cta-btn {
+    margin-top: var(--space-6);
   }
 
   .concept-grid-reverse {
@@ -359,14 +364,27 @@ export const secondBrainStyles = `
   }
 
   /* Roadmap SecondBrain */
+  .roadmap-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
   .roadmap-secondbrain .roadmap-line::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
-    width: 16%;
+    width: 40%;
     height: 100%;
     background: var(--soft-violet);
+  }
+
+  .roadmap-secondbrain [data-status="done"] .roadmap-node {
+    border-color: var(--soft-violet);
+    background: var(--soft-violet);
+  }
+
+  .roadmap-secondbrain [data-status="done"] .roadmap-title {
+    color: var(--text-muted);
   }
 
   .roadmap-secondbrain [data-status="current"] .roadmap-node {

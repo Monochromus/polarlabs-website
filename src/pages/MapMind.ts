@@ -136,48 +136,62 @@ export function renderMapMindPage(): string {
           <span class="label mono">//04</span>
           <h2>${i18n.t('mapmind.roadmap.title')}</h2>
         </div>
-        <div class="roadmap roadmap-mapmind">
+        <div class="roadmap roadmap-mapmind roadmap-8">
           <div class="roadmap-line"></div>
-          <div class="roadmap-item" data-status="current">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.1')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.1.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="upcoming">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.2')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.2.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="upcoming">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.3')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.3.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
+          <div class="roadmap-item" data-status="done">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.4')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.4.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
+          <div class="roadmap-item" data-status="current">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.5')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.5.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
+          <div class="roadmap-item" data-status="upcoming">
             <div class="roadmap-node"></div>
             <div class="roadmap-content">
               <span class="roadmap-title">${i18n.t('roadmap.mapmind.6')}</span>
               <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.6.desc')}</span>
+            </div>
+          </div>
+          <div class="roadmap-item" data-status="future">
+            <div class="roadmap-node"></div>
+            <div class="roadmap-content">
+              <span class="roadmap-title">${i18n.t('roadmap.mapmind.7')}</span>
+              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.7.desc')}</span>
+            </div>
+          </div>
+          <div class="roadmap-item" data-status="future">
+            <div class="roadmap-node"></div>
+            <div class="roadmap-content">
+              <span class="roadmap-title">${i18n.t('roadmap.mapmind.8')}</span>
+              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.8.desc')}</span>
             </div>
           </div>
         </div>
@@ -440,14 +454,27 @@ export const mapMindStyles = `
     background: var(--border);
   }
 
+  .roadmap-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
   .roadmap-mapmind .roadmap-line::after {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
-    width: 33%;
+    width: 56%;
     height: 100%;
     background: var(--aurora-cyan);
+  }
+
+  .roadmap-mapmind [data-status="done"] .roadmap-node {
+    border-color: var(--aurora-cyan);
+    background: var(--aurora-cyan);
+  }
+
+  .roadmap-mapmind [data-status="done"] .roadmap-title {
+    color: var(--text-muted);
   }
 
   .roadmap-item {

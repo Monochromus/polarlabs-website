@@ -10,22 +10,39 @@ function getVotes(): { mapmind: number; secondbrain: number } {
   return { mapmind: 0, secondbrain: 0 };
 }
 
-// Check if user has voted
-function hasVoted(): string | null {
-  return localStorage.getItem('polarlabs-user-voted');
+// Get user's votes (which products they voted for)
+function getUserVotes(): { mapmind: boolean; secondbrain: boolean } {
+  const stored = localStorage.getItem('polarlabs-user-votes');
+  if (stored) {
+    return JSON.parse(stored);
+  }
+  return { mapmind: false, secondbrain: false };
 }
 
-// Save vote
-function saveVote(product: 'mapmind' | 'secondbrain'): void {
+// Toggle vote for a product
+function toggleVote(product: 'mapmind' | 'secondbrain'): boolean {
   const votes = getVotes();
-  votes[product]++;
+  const userVotes = getUserVotes();
+
+  if (userVotes[product]) {
+    // Remove vote
+    votes[product] = Math.max(0, votes[product] - 1);
+    userVotes[product] = false;
+  } else {
+    // Add vote
+    votes[product]++;
+    userVotes[product] = true;
+  }
+
   localStorage.setItem('polarlabs-votes', JSON.stringify(votes));
-  localStorage.setItem('polarlabs-user-voted', product);
+  localStorage.setItem('polarlabs-user-votes', JSON.stringify(userVotes));
+
+  return userVotes[product];
 }
 
 export function renderHomePage(): string {
   const votes = getVotes();
-  const userVoted = hasVoted();
+  const userVotes = getUserVotes();
 
   return `
     <section class="hero">
@@ -54,7 +71,7 @@ export function renderHomePage(): string {
         </div>
 
         <div class="products-grid">
-          <article class="product-card product-card-mapmind ${userVoted === 'mapmind' ? 'voted' : ''}" data-product="mapmind">
+          <article class="product-card product-card-mapmind ${userVotes.mapmind ? 'voted' : ''}" data-product="mapmind">
             <div class="product-card-header">
               <div class="product-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -76,8 +93,8 @@ export function renderHomePage(): string {
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </a>
-              <button class="vote-btn ${userVoted === 'mapmind' ? 'voted' : ''} ${userVoted && userVoted !== 'mapmind' ? 'disabled' : ''}" data-vote="mapmind" ${userVoted ? 'disabled' : ''}>
-                <svg viewBox="0 0 24 24" fill="${userVoted === 'mapmind' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+              <button class="vote-btn ${userVotes.mapmind ? 'voted' : ''}" data-vote="mapmind">
+                <svg viewBox="0 0 24 24" fill="${userVotes.mapmind ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
                   <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
                 </svg>
                 <span class="vote-count">${votes.mapmind}</span>
@@ -85,7 +102,7 @@ export function renderHomePage(): string {
             </div>
           </article>
 
-          <article class="product-card product-card-secondbrain ${userVoted === 'secondbrain' ? 'voted' : ''}" data-product="secondbrain">
+          <article class="product-card product-card-secondbrain ${userVotes.secondbrain ? 'voted' : ''}" data-product="secondbrain">
             <div class="product-card-header">
               <div class="product-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -98,10 +115,10 @@ export function renderHomePage(): string {
                 </svg>
               </div>
               <div class="product-status">
-                <span class="badge">${i18n.t('products.status.concept')}</span>
+                <span class="badge">${i18n.t('products.status.development')}</span>
               </div>
             </div>
-            <h3 class="product-name">SecondBrain</h3>
+            <h3 class="product-name">SecondBrainAgent</h3>
             <p class="product-tagline">${i18n.t('secondbrain.tagline')}</p>
             <p class="product-description">${i18n.t('secondbrain.description')}</p>
             <div class="product-actions">
@@ -111,8 +128,8 @@ export function renderHomePage(): string {
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </a>
-              <button class="vote-btn vote-btn-violet ${userVoted === 'secondbrain' ? 'voted' : ''} ${userVoted && userVoted !== 'secondbrain' ? 'disabled' : ''}" data-vote="secondbrain" ${userVoted ? 'disabled' : ''}>
-                <svg viewBox="0 0 24 24" fill="${userVoted === 'secondbrain' ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+              <button class="vote-btn vote-btn-violet ${userVotes.secondbrain ? 'voted' : ''}" data-vote="secondbrain">
+                <svg viewBox="0 0 24 24" fill="${userVotes.secondbrain ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
                   <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
                 </svg>
                 <span class="vote-count">${votes.secondbrain}</span>
@@ -177,40 +194,31 @@ export function initHomePage(): void {
     });
   });
 
-  // Voting functionality
+  // Voting functionality (toggle)
   document.querySelectorAll('.vote-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const button = e.currentTarget as HTMLButtonElement;
-      if (button.disabled) return;
-
       const product = button.getAttribute('data-vote') as 'mapmind' | 'secondbrain';
-      saveVote(product);
 
-      // Update UI
+      // Toggle vote and get new state
+      const isNowVoted = toggleVote(product);
+
+      // Update count
       const countEl = button.querySelector('.vote-count');
       if (countEl) {
         const currentCount = parseInt(countEl.textContent || '0');
-        countEl.textContent = (currentCount + 1).toString();
+        countEl.textContent = (isNowVoted ? currentCount + 1 : Math.max(0, currentCount - 1)).toString();
       }
 
-      // Mark as voted
-      button.classList.add('voted');
-      button.disabled = true;
+      // Update button state
+      button.classList.toggle('voted', isNowVoted);
       const svg = button.querySelector('svg');
-      if (svg) svg.setAttribute('fill', 'currentColor');
+      if (svg) svg.setAttribute('fill', isNowVoted ? 'currentColor' : 'none');
 
-      // Disable other vote buttons
-      document.querySelectorAll('.vote-btn').forEach(otherBtn => {
-        if (otherBtn !== button) {
-          otherBtn.classList.add('disabled');
-          (otherBtn as HTMLButtonElement).disabled = true;
-        }
-      });
-
-      // Add voted class to card
+      // Update card state
       const card = button.closest('.product-card');
-      if (card) card.classList.add('voted');
+      if (card) card.classList.toggle('voted', isNowVoted);
     });
   });
 
@@ -465,7 +473,7 @@ export const homeStyles = `
     font-size: var(--text-sm);
   }
 
-  .vote-btn:hover:not(.disabled):not(.voted) {
+  .vote-btn:hover {
     border-color: var(--aurora-cyan);
     color: var(--aurora-cyan);
   }
@@ -476,17 +484,21 @@ export const homeStyles = `
     background: rgba(77, 238, 234, 0.1);
   }
 
-  .vote-btn.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
+  .vote-btn.voted:hover {
+    background: rgba(77, 238, 234, 0.2);
   }
 
   .vote-btn svg {
     width: 18px;
     height: 18px;
+    transition: transform var(--transition-fast);
   }
 
-  .vote-btn-violet:hover:not(.disabled):not(.voted) {
+  .vote-btn:hover svg {
+    transform: scale(1.1);
+  }
+
+  .vote-btn-violet:hover {
     border-color: var(--soft-violet);
     color: var(--soft-violet);
   }
@@ -495,6 +507,10 @@ export const homeStyles = `
     border-color: var(--soft-violet);
     color: var(--soft-violet);
     background: rgba(155, 140, 255, 0.1);
+  }
+
+  .vote-btn-violet.voted:hover {
+    background: rgba(155, 140, 255, 0.2);
   }
 
   /* Philosophy Section */

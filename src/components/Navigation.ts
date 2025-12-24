@@ -52,8 +52,8 @@ export function createNavigation(): HTMLElement {
                   <span class="nav-dropdown-item-desc mono">AI Maps</span>
                 </a>
                 <a href="/secondbrain" class="nav-dropdown-item ${currentRoute === '/secondbrain' ? 'active' : ''}" data-link>
-                  <span class="nav-dropdown-item-name">SecondBrain</span>
-                  <span class="nav-dropdown-item-desc mono">AI Productivity</span>
+                  <span class="nav-dropdown-item-name">SecondBrainAgent</span>
+                  <span class="nav-dropdown-item-desc mono">AI Agent</span>
                 </a>
               </div>
             </div>
@@ -395,11 +395,24 @@ export const navigationStyles = `
       transform: translateX(100%);
       transition: transform var(--transition-slow);
       visibility: hidden;
+      z-index: var(--z-overlay);
+      overflow-y: auto;
     }
 
     .nav-menu.open {
       transform: translateX(0);
       visibility: visible;
+    }
+
+    .nav-menu::before {
+      content: '';
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--background);
+      z-index: -1;
     }
 
     .nav-links {
