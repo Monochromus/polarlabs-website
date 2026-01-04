@@ -118,7 +118,7 @@ export function renderHomePage(): string {
                 <span class="badge">${i18n.t('products.status.development')}</span>
               </div>
             </div>
-            <h3 class="product-name">SecondBrainAgent</h3>
+            <h3 class="product-name">Pocket Assistant</h3>
             <p class="product-tagline">${i18n.t('secondbrain.tagline')}</p>
             <p class="product-description">${i18n.t('secondbrain.description')}</p>
             <div class="product-actions">
@@ -301,7 +301,7 @@ export const homeStyles = `
   .hero-title {
     margin-top: var(--space-6);
     margin-bottom: var(--space-4);
-    font-size: clamp(var(--text-4xl), 8vw, 6rem);
+    font-size: clamp(var(--text-3xl), 6vw, 4.5rem);
     font-weight: var(--font-medium);
     line-height: 1.1;
     letter-spacing: -0.03em;

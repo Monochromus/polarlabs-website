@@ -66,7 +66,7 @@ function initApp(): void {
   router.register('/secondbrain', () => {
     main.innerHTML = renderSecondBrainPage();
     initSecondBrainPage();
-    updatePageMeta('SecondBrain | Polar Labs', 'Dein externes Gedächtnis, gesteuert durch KI.');
+    updatePageMeta('Pocket Assistant | Polar Labs', 'Dein KI-gestützter Produktivitäts-Assistent – ein Befehl, viele Aktionen.');
   });
 
   router.register('/services', () => {

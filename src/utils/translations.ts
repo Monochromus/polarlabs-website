@@ -44,8 +44,8 @@ export const translations: Translations = {
     en: 'See what Matters',
   },
   'hero.subline': {
-    de: 'AI Tools for the people',
-    en: 'AI Tools for the people',
+    de: 'AI Tools to make things easy',
+    en: 'AI Tools to make things easy',
   },
   'hero.cta': {
     de: 'Produkte entdecken',
@@ -184,90 +184,242 @@ export const translations: Translations = {
     en: 'Open App',
   },
 
-  // SecondBrainAgent
+  // Pocket Assistant
   'secondbrain.tagline': {
-    de: 'Dein KI-Agent für Produktivität',
-    en: 'Your AI agent for productivity',
+    de: 'Dein KI-Assistent für Produktivität',
+    en: 'Your AI assistant for productivity',
   },
   'secondbrain.description': {
-    de: 'Ein KI-Agent, der Projekte, Todos, Notizen und Kalender verknüpft – basierend auf dem Second Brain Prinzip.',
-    en: 'An AI agent that connects projects, todos, notes and calendar – based on the Second Brain principle.',
+    de: 'Ein KI-Agent, der per Sprache Projekte, Todos, Notizen, Kalender und Emails verwaltet – alles in einer Anfrage.',
+    en: 'An AI agent that manages projects, todos, notes, calendar and emails via voice – all in one request.',
   },
   'secondbrain.hero.title': {
-    de: 'SecondBrainAgent',
-    en: 'SecondBrainAgent',
+    de: 'Pocket Assistant',
+    en: 'Pocket Assistant',
   },
   'secondbrain.hero.subtitle': {
-    de: 'Das Second Brain Prinzip, automatisiert',
-    en: 'The Second Brain Principle, Automated',
+    de: 'Ein Befehl, viele Aktionen',
+    en: 'One command, many actions',
   },
   'secondbrain.hero.description': {
-    de: 'Eine Produktivitäts-App, die als externes Gedächtnis dient. Ein KI-Agent verwaltet Projekte, Todos, Notizen, Ressourcen und Kalender.',
-    en: 'A productivity app that serves as an external memory. An AI agent manages projects, todos, notes, resources and calendar.',
+    de: 'Dein KI-gestützter Produktivitäts-Assistent, der dir hilft, dein Leben zu organisieren – ganz natürlich per Sprache. Basierend auf der PARA-Methode strukturiert die App deine Aufgaben, Projekte und Wissen so, wie du denkst.',
+    en: 'Your AI-powered productivity assistant that helps you organize your life – naturally through voice. Based on the PARA method, the app structures your tasks, projects and knowledge the way you think.',
   },
   'secondbrain.concept.title': {
-    de: 'Das Konzept',
-    en: 'The Concept',
+    de: 'Das Besondere',
+    en: 'What makes it special',
   },
   'secondbrain.concept.p1': {
-    de: 'Nach Tiago Forte besteht das Second Brain aus vier Schritten: Erfasse, organisiere, destilliere, teile.',
-    en: 'According to Tiago Forte, the Second Brain consists of four steps: Capture, organize, distill, express.',
+    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Techno-Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der AI-Agent erledigt alles.',
+    en: 'A single request can trigger complex workflows. Say "Find techno events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the AI agent handles everything.',
   },
   'secondbrain.concept.p2': {
-    de: 'SecondBrainAgent automatisiert diese Schritte durch KI. Der Nutzer behält die Kontrolle, die KI übernimmt die Arbeit.',
-    en: 'SecondBrainAgent automates these steps through AI. The user maintains control, the AI does the work.',
+    de: 'Der Agent recherchiert im Web, erstellt Kalendereinträge und legt passende Aufgaben an. Alles in einem Schritt, ohne komplizierte Menüs.',
+    en: 'The agent researches the web, creates calendar entries and sets up matching tasks. All in one step, without complicated menus.',
   },
   'secondbrain.concept.p3': {
-    de: 'Ein Eingabefeld für natürliche Sprache. Ein KI-Agent, der versteht und handelt.',
-    en: 'A natural language input field. An AI agent that understands and acts.',
+    de: 'Mit dem iPhone Kurzbefehl hast du den Assistenten immer griffbereit – direkt vom Sperrbildschirm. Kein App-Öffnen, kein Einloggen.',
+    en: 'With the iPhone shortcut, you always have the assistant at hand – directly from the lock screen. No app opening, no logging in.',
   },
   'secondbrain.features.title': {
-    de: 'Features',
-    en: 'Features',
+    de: 'Hauptfunktionen',
+    en: 'Key Features',
   },
   'secondbrain.feature.1.title': {
-    de: 'Kalender-Integration',
-    en: 'Calendar Integration',
+    de: '37 KI-Tools',
+    en: '37 AI Tools',
   },
   'secondbrain.feature.1.desc': {
-    de: 'Termine anzeigen, anlegen und verwalten per Sprache.',
-    en: 'View, create, and manage appointments via voice.',
+    de: 'Der Agent kombiniert intelligent Tools für Todos, Kalender, Email, Web-Recherche und mehr.',
+    en: 'The agent intelligently combines tools for todos, calendar, email, web research and more.',
   },
   'secondbrain.feature.2.title': {
-    de: 'Todo-Management',
-    en: 'Todo Management',
+    de: 'Multi-Account Email',
+    en: 'Multi-Account Email',
   },
   'secondbrain.feature.2.desc': {
-    de: 'Aufgaben erfassen und organisieren ohne Friction.',
-    en: 'Capture and organize tasks without friction.',
+    de: 'Alle Postfächer (iCloud, Gmail, Outlook, GMX) in einer Oberfläche.',
+    en: 'All mailboxes (iCloud, Gmail, Outlook, GMX) in one interface.',
   },
   'secondbrain.feature.3.title': {
-    de: 'Verknüpfte Notizen',
-    en: 'Connected Notes',
+    de: 'Kalender-Sync',
+    en: 'Calendar Sync',
   },
   'secondbrain.feature.3.desc': {
-    de: 'Notizen, die mit Projekten und Terminen verbunden sind.',
-    en: 'Notes connected to projects and appointments.',
+    de: 'Synchronisation mit iCloud und Outlook Calendar.',
+    en: 'Synchronization with iCloud and Outlook Calendar.',
   },
   'secondbrain.feature.4.title': {
-    de: 'KI-Agenten-Workflow',
-    en: 'AI Agent Workflow',
+    de: 'Bildanalyse',
+    en: 'Image Analysis',
   },
   'secondbrain.feature.4.desc': {
-    de: 'Komplexe Anfragen werden durch intelligente Agenten verarbeitet.',
-    en: 'Complex requests are processed by intelligent agents.',
+    de: 'Termine aus Screenshots extrahieren, Visitenkarten digitalisieren.',
+    en: 'Extract appointments from screenshots, digitize business cards.',
+  },
+  'secondbrain.feature.5.title': {
+    de: 'PARA-Organisation',
+    en: 'PARA Organization',
+  },
+  'secondbrain.feature.5.desc': {
+    de: 'Projekte, Areas, Ressourcen und Archiv nach bewährter Methode.',
+    en: 'Projects, Areas, Resources and Archive following the proven method.',
+  },
+  'secondbrain.feature.6.title': {
+    de: 'Custom Tools',
+    en: 'Custom Tools',
+  },
+  'secondbrain.feature.6.desc': {
+    de: 'Eigene interaktive Widgets per Beschreibung erstellen lassen.',
+    en: 'Create custom interactive widgets via natural description.',
+  },
+  'secondbrain.examples.title': {
+    de: 'Beispiel-Anfragen',
+    en: 'Example Requests',
+  },
+  'secondbrain.example.1': {
+    de: 'Suche Jazz-Konzerte in München im Januar und trag sie ein',
+    en: 'Find jazz concerts in Munich in January and add them',
+  },
+  'secondbrain.example.1.result': {
+    de: 'Web-Recherche → Kalendereinträge',
+    en: 'Web research → Calendar entries',
+  },
+  'secondbrain.example.2': {
+    de: 'Fasse meine ungelesenen Emails zusammen und erstelle Todos für alles Wichtige',
+    en: 'Summarize my unread emails and create todos for everything important',
+  },
+  'secondbrain.example.2.result': {
+    de: 'Email-Analyse → Todo-Erstellung',
+    en: 'Email analysis → Todo creation',
+  },
+  'secondbrain.example.3': {
+    de: 'Plane einen Wochenendtrip nach Hamburg',
+    en: 'Plan a weekend trip to Hamburg',
+  },
+  'secondbrain.example.3.result': {
+    de: 'Recherche → Projekt + Todos + Kalender',
+    en: 'Research → Project + Todos + Calendar',
+  },
+  'secondbrain.example.4': {
+    de: 'Was steht morgen an und welche Emails muss ich beantworten?',
+    en: 'What\'s on tomorrow and which emails do I need to answer?',
+  },
+  'secondbrain.example.4.result': {
+    de: 'Kontext aus Kalender + Email-Analyse',
+    en: 'Context from calendar + email analysis',
   },
   'secondbrain.roadmap.title': {
     de: 'Roadmap',
     en: 'Roadmap',
   },
   'secondbrain.cta': {
-    de: 'Für Updates anmelden',
-    en: 'Sign up for Updates',
+    de: 'Jetzt ausprobieren',
+    en: 'Try it now',
   },
   'secondbrain.try': {
     de: 'App öffnen',
     en: 'Open App',
+  },
+  'secondbrain.pricing.title': {
+    de: 'Preise',
+    en: 'Pricing',
+  },
+  'secondbrain.pricing.free': {
+    de: 'Free',
+    en: 'Free',
+  },
+  'secondbrain.pricing.free.price': {
+    de: '0 €',
+    en: '€0',
+  },
+  'secondbrain.pricing.free.period': {
+    de: 'für immer',
+    en: 'forever',
+  },
+  'secondbrain.pricing.free.desc': {
+    de: 'Perfekt zum Ausprobieren',
+    en: 'Perfect to get started',
+  },
+  'secondbrain.pricing.free.feature.1': {
+    de: 'AI Agent mit GPT-4o-mini (10 Anfragen/Tag)',
+    en: 'AI Agent with GPT-4o-mini (10 requests/day)',
+  },
+  'secondbrain.pricing.free.feature.2': {
+    de: 'iPhone Kurzbefehl (Sperrbildschirm)',
+    en: 'iPhone Shortcut (lock screen)',
+  },
+  'secondbrain.pricing.free.feature.3': {
+    de: 'Web Research',
+    en: 'Web Research',
+  },
+  'secondbrain.pricing.free.feature.4': {
+    de: 'Bildanalyse (1x täglich)',
+    en: 'Image analysis (1x daily)',
+  },
+  'secondbrain.pricing.free.feature.5': {
+    de: 'PARA-Organisation & Notizen',
+    en: 'PARA organization & notes',
+  },
+  'secondbrain.pricing.free.feature.6': {
+    de: '2 Email-Konten & Kalender-Sync',
+    en: '2 email accounts & calendar sync',
+  },
+  'secondbrain.pricing.pro': {
+    de: 'Pro',
+    en: 'Pro',
+  },
+  'secondbrain.pricing.pro.price': {
+    de: '5,99 €',
+    en: '€5.99',
+  },
+  'secondbrain.pricing.pro.period': {
+    de: 'pro Monat',
+    en: 'per month',
+  },
+  'secondbrain.pricing.pro.desc': {
+    de: 'Volle KI-Power für maximale Produktivität',
+    en: 'Full AI power for maximum productivity',
+  },
+  'secondbrain.pricing.pro.includes': {
+    de: 'Alles aus Free, plus:',
+    en: 'Everything in Free, plus:',
+  },
+  'secondbrain.pricing.pro.feature.1': {
+    de: '100 AI-Anfragen pro Tag',
+    en: '100 AI requests per day',
+  },
+  'secondbrain.pricing.pro.feature.2': {
+    de: 'Premium-Modelle (GPT-5, Reasoning)',
+    en: 'Premium models (GPT-5, Reasoning)',
+  },
+  'secondbrain.pricing.pro.feature.3': {
+    de: 'Unbegrenzte Bildanalyse',
+    en: 'Unlimited image analysis',
+  },
+  'secondbrain.pricing.pro.feature.4': {
+    de: 'Unbegrenzte Email-Konten',
+    en: 'Unlimited email accounts',
+  },
+  'secondbrain.pricing.pro.feature.5': {
+    de: 'Perplexity Sonar Pro (tiefere Recherche)',
+    en: 'Perplexity Sonar Pro (deeper research)',
+  },
+  'secondbrain.pricing.pro.feature.6': {
+    de: 'Custom Tools (Widget-Generator)',
+    en: 'Custom Tools (widget generator)',
+  },
+  'secondbrain.pricing.cta.free': {
+    de: 'Kostenlos starten',
+    en: 'Start for free',
+  },
+  'secondbrain.pricing.cta.pro': {
+    de: 'Pro werden',
+    en: 'Go Pro',
+  },
+  'secondbrain.pricing.popular': {
+    de: 'Beliebt',
+    en: 'Popular',
   },
 
   // Roadmap Items - mapMind
@@ -336,52 +488,68 @@ export const translations: Translations = {
     en: 'App Store Release',
   },
 
-  // Roadmap Items - SecondBrainAgent
+  // Roadmap Items - Pocket Assistant
   'roadmap.secondbrain.1': {
-    de: 'Vision & Konzept',
-    en: 'Vision & Concept',
+    de: 'PARA-System',
+    en: 'PARA System',
   },
   'roadmap.secondbrain.1.desc': {
-    de: 'Grundidee entwickelt',
-    en: 'Core Idea Developed',
+    de: 'Projekte, Todos, Notizen',
+    en: 'Projects, Todos, Notes',
   },
   'roadmap.secondbrain.2': {
-    de: 'Manuelle Verwaltung',
-    en: 'Manual Management',
+    de: 'AI Agent',
+    en: 'AI Agent',
   },
   'roadmap.secondbrain.2.desc': {
-    de: 'Projekte, Todos, Notizen, Kalender',
-    en: 'Projects, Todos, Notes, Calendar',
+    de: '37 Tools integriert',
+    en: '37 Tools integrated',
   },
   'roadmap.secondbrain.3': {
-    de: 'LLM Integration',
-    en: 'LLM Integration',
+    de: 'Email & Kalender',
+    en: 'Email & Calendar',
   },
   'roadmap.secondbrain.3.desc': {
-    de: 'Erstellen, Löschen, Verknüpfen',
-    en: 'Create, Delete, Link',
+    de: 'Multi-Account Sync',
+    en: 'Multi-Account Sync',
   },
   'roadmap.secondbrain.4': {
-    de: 'Projektmanagement Tools',
-    en: 'Project Management Tools',
+    de: 'Web Research',
+    en: 'Web Research',
   },
   'roadmap.secondbrain.4.desc': {
-    de: 'Erweiterte Funktionen',
-    en: 'Extended Features',
+    de: 'Perplexity Integration',
+    en: 'Perplexity Integration',
   },
   'roadmap.secondbrain.5': {
-    de: 'Siri Kurzbefehle',
-    en: 'Siri Shortcuts',
+    de: 'Bildanalyse',
+    en: 'Image Analysis',
   },
   'roadmap.secondbrain.5.desc': {
+    de: 'Screenshots & Visitenkarten',
+    en: 'Screenshots & Business Cards',
+  },
+  'roadmap.secondbrain.6': {
+    de: 'iPhone Kurzbefehl',
+    en: 'iPhone Shortcut',
+  },
+  'roadmap.secondbrain.6.desc': {
     de: 'Sperrbildschirm-Zugriff',
     en: 'Lock Screen Access',
   },
-  'roadmap.secondbrain.6': {
+  'roadmap.secondbrain.7': {
+    de: 'Custom Tools',
+    en: 'Custom Tools',
+  },
+  'roadmap.secondbrain.7.desc': {
+    de: 'Widget-Generator',
+    en: 'Widget Generator',
+  },
+  'roadmap.secondbrain.8': {
     de: 'App Store Release',
     en: 'App Store Release',
   },
-  'roadmap.secondbrain.6.desc': {
+  'roadmap.secondbrain.8.desc': {
     de: 'iOS Veröffentlichung',
     en: 'iOS Publication',
   },

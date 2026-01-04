@@ -52,7 +52,7 @@ export function createNavigation(): HTMLElement {
                   <span class="nav-dropdown-item-desc mono">AI Maps</span>
                 </a>
                 <a href="/secondbrain" class="nav-dropdown-item ${currentRoute === '/secondbrain' ? 'active' : ''}" data-link>
-                  <span class="nav-dropdown-item-name">SecondBrainAgent</span>
+                  <span class="nav-dropdown-item-name">Pocket Assistant</span>
                   <span class="nav-dropdown-item-desc mono">AI Agent</span>
                 </a>
               </div>
