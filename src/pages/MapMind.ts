@@ -3,21 +3,23 @@ import { router, Route } from '../utils/router';
 
 export function renderMapMindPage(): string {
   return `
-    <section class="product-hero product-hero-mapmind">
+    <section class="product-hero product-hero-mapmind product-hero-warm">
       <div class="product-hero-background">
         <div class="product-hero-glow"></div>
+        <div class="product-hero-orb product-hero-orb-1"></div>
+        <div class="product-hero-orb product-hero-orb-2"></div>
         <div class="product-hero-lines">
           <svg class="hero-lines-svg" viewBox="0 0 400 300" preserveAspectRatio="none">
-            <line x1="0" y1="150" x2="200" y2="100" stroke="var(--aurora-cyan)" stroke-width="0.5" opacity="0.3"/>
-            <line x1="200" y1="100" x2="300" y2="180" stroke="var(--aurora-cyan)" stroke-width="0.5" opacity="0.3"/>
-            <line x1="300" y1="180" x2="400" y2="120" stroke="var(--aurora-cyan)" stroke-width="0.5" opacity="0.3"/>
-            <circle cx="200" cy="100" r="4" fill="var(--aurora-cyan)" opacity="0.5"/>
-            <circle cx="300" cy="180" r="3" fill="var(--aurora-cyan)" opacity="0.4"/>
+            <line x1="0" y1="150" x2="200" y2="100" stroke="var(--petrol-soft)" stroke-width="0.5" opacity="0.4"/>
+            <line x1="200" y1="100" x2="300" y2="180" stroke="var(--petrol-soft)" stroke-width="0.5" opacity="0.4"/>
+            <line x1="300" y1="180" x2="400" y2="120" stroke="var(--petrol-soft)" stroke-width="0.5" opacity="0.4"/>
+            <circle cx="200" cy="100" r="4" fill="var(--petrol-soft)" opacity="0.6"/>
+            <circle cx="300" cy="180" r="3" fill="var(--petrol-soft)" opacity="0.5"/>
           </svg>
         </div>
       </div>
       <div class="product-hero-content container">
-        <span class="label mono text-cyan">// ${i18n.t('products.status.development')}</span>
+        <span class="label mono text-petrol">// ${i18n.t('products.status.development')}</span>
         <h1 class="product-hero-title">${i18n.t('mapmind.hero.title')}</h1>
         <p class="product-hero-subtitle mono">${i18n.t('mapmind.hero.subtitle')}</p>
         <p class="product-hero-description">${i18n.t('mapmind.hero.description')}</p>
@@ -130,79 +132,96 @@ export function renderMapMindPage(): string {
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt-warm">
       <div class="container">
         <div class="section-header">
           <span class="label mono">//04</span>
           <h2>${i18n.t('mapmind.roadmap.title')}</h2>
         </div>
-        <div class="roadmap roadmap-mapmind roadmap-8">
-          <div class="roadmap-line"></div>
-          <div class="roadmap-item" data-status="done">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.1')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.1.desc')}</span>
+        <div class="roadmap-vertical">
+          <div class="roadmap-vertical-item" data-status="done">
+            <div class="roadmap-vertical-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.1')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.1.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="done">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.2')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.2.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="done">
+            <div class="roadmap-vertical-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.2')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.2.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="done">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.3')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.3.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="done">
+            <div class="roadmap-vertical-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.3')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.3.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="done">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.4')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.4.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="done">
+            <div class="roadmap-vertical-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.4')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.4.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="current">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.5')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.5.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="current">
+            <div class="roadmap-vertical-marker">
+              <span class="roadmap-vertical-pulse"></span>
+            </div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.5')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.5.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="upcoming">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.6')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.6.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="upcoming">
+            <div class="roadmap-vertical-marker"></div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.6')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.6.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.7')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.7.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="future">
+            <div class="roadmap-vertical-marker"></div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.7')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.7.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-item" data-status="future">
-            <div class="roadmap-node"></div>
-            <div class="roadmap-content">
-              <span class="roadmap-title">${i18n.t('roadmap.mapmind.8')}</span>
-              <span class="roadmap-desc mono">${i18n.t('roadmap.mapmind.8.desc')}</span>
+          <div class="roadmap-vertical-item" data-status="future">
+            <div class="roadmap-vertical-marker"></div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.8')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.8.desc')}</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section cta-section">
+    <section class="section cta-section-warm">
       <div class="container">
         <div class="cta-content">
           <h2>${i18n.t('mapmind.cta')}</h2>
-          <a href="/contact" class="btn btn-primary btn-lg" data-link>${i18n.t('nav.contact')}</a>
+          <a href="/contact" class="btn btn-warm btn-lg" data-link>${i18n.t('nav.contact')}</a>
         </div>
       </div>
     </section>
@@ -227,12 +246,18 @@ export function initMapMindPage(): void {
     });
   }, { threshold: 0.2 });
 
-  document.querySelectorAll('.roadmap-item').forEach(item => {
+  document.querySelectorAll('.roadmap-vertical-item').forEach(item => {
     observer.observe(item);
   });
 }
 
 export const mapMindStyles = `
+  /* Warm color utilities */
+  .text-petrol {
+    color: var(--petrol-soft);
+  }
+
+  /* Product Hero - Warm Design */
   .product-hero {
     position: relative;
     min-height: 70vh;
@@ -242,20 +267,59 @@ export const mapMindStyles = `
     overflow: hidden;
   }
 
+  .product-hero-warm {
+    background: linear-gradient(
+      135deg,
+      var(--warm-bg-dark) 0%,
+      var(--warm-bg-medium) 50%,
+      var(--warm-bg-dark) 100%
+    );
+  }
+
   .product-hero-background {
     position: absolute;
     inset: 0;
     pointer-events: none;
   }
 
-  .product-hero-mapmind .product-hero-glow {
+  .product-hero-warm .product-hero-glow {
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: 10%;
-    width: 400px;
-    height: 300px;
-    background: radial-gradient(ellipse, rgba(77, 238, 234, 0.1) 0%, transparent 70%);
+    width: 500px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(69, 196, 176, 0.12) 0%, transparent 70%);
+    filter: blur(80px);
+  }
+
+  .product-hero-orb {
+    position: absolute;
+    border-radius: 50%;
     filter: blur(60px);
+  }
+
+  .product-hero-orb-1 {
+    top: 30%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(69, 196, 176, 0.08) 0%, transparent 70%);
+    animation: floatOrb 15s ease-in-out infinite;
+  }
+
+  .product-hero-orb-2 {
+    bottom: 20%;
+    right: 15%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(168, 162, 158, 0.06) 0%, transparent 70%);
+    animation: floatOrb 20s ease-in-out infinite reverse;
+  }
+
+  @keyframes floatOrb {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(20px, -30px) scale(1.05); }
+    66% { transform: translate(-15px, 20px) scale(0.95); }
   }
 
   .product-hero-lines {
@@ -276,20 +340,23 @@ export const mapMindStyles = `
   }
 
   .product-hero-title {
+    font-family: var(--font-playful);
     font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
     margin: var(--space-4) 0;
     font-weight: var(--font-light);
+    color: var(--warm-text-primary);
   }
 
   .product-hero-subtitle {
     font-size: var(--text-lg);
-    color: var(--aurora-cyan);
+    color: var(--petrol-soft);
     margin-bottom: var(--space-6);
   }
 
   .product-hero-description {
     font-size: var(--text-lg);
     line-height: 1.7;
+    color: var(--warm-text-secondary);
   }
 
   /* Concept Section */
@@ -308,44 +375,55 @@ export const mapMindStyles = `
 
   .concept-content h2 {
     margin-top: var(--space-2);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+  }
+
+  .concept-content p {
+    color: var(--warm-text-secondary);
   }
 
   .concept-visual {
     position: relative;
   }
 
+  /* Map Preview - Glassmorphism */
   .map-preview {
     position: relative;
     aspect-ratio: 4/3;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(41, 37, 36, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 162, 158, 0.12);
     border-radius: var(--radius-lg);
     overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
   .map-preview-grid {
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(to right, var(--border) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+      linear-gradient(to right, rgba(168, 162, 158, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(168, 162, 158, 0.08) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   .map-preview-marker {
     position: absolute;
     width: 12px;
     height: 12px;
-    background: var(--aurora-cyan);
+    background: var(--petrol-soft);
     border-radius: 50%;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(69, 196, 176, 0.5);
   }
 
   .map-marker-pulse {
     position: absolute;
     inset: -4px;
-    border: 2px solid var(--aurora-cyan);
+    border: 2px solid var(--petrol-soft);
     border-radius: 50%;
     animation: markerPulse 2s ease-out infinite;
   }
@@ -356,17 +434,21 @@ export const mapMindStyles = `
       opacity: 1;
     }
     100% {
-      transform: scale(2);
+      transform: scale(2.5);
       opacity: 0;
     }
   }
 
-  /* Section Alt */
-  .section-alt {
-    background: var(--surface);
+  /* Section Alt - Warm Gradient */
+  .section-alt-warm {
+    background: linear-gradient(
+      180deg,
+      rgba(41, 37, 36, 0.4) 0%,
+      rgba(28, 25, 23, 0.6) 100%
+    );
   }
 
-  /* Examples */
+  /* Examples - Glassmorphism */
   .examples-list {
     display: flex;
     flex-direction: column;
@@ -375,24 +457,27 @@ export const mapMindStyles = `
 
   .example-item {
     padding: var(--space-6);
-    background: var(--background);
-    border: 1px solid var(--border);
+    background: rgba(41, 37, 36, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(168, 162, 158, 0.1);
     border-radius: var(--radius-md);
-    border-left: 2px solid var(--aurora-cyan);
-    transition: border-color var(--transition-fast);
+    border-left: 2px solid var(--petrol-soft);
+    transition: all var(--transition-fast);
   }
 
   .example-item:hover {
-    border-left-color: var(--aurora-cyan);
-    border-color: var(--aurora-cyan);
+    border-color: rgba(69, 196, 176, 0.3);
+    background: rgba(41, 37, 36, 0.7);
+    transform: translateX(4px);
   }
 
   .example-prompt {
     font-size: var(--text-sm);
-    color: var(--text-secondary);
+    color: var(--warm-text-secondary);
   }
 
-  /* Features Grid */
+  /* Features Grid - Glassmorphism */
   .features-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -401,14 +486,18 @@ export const mapMindStyles = `
 
   .feature-card {
     padding: var(--space-6);
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(41, 37, 36, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(168, 162, 158, 0.1);
     border-radius: var(--radius-md);
-    transition: border-color var(--transition-fast);
+    transition: all var(--transition-fast);
   }
 
   .feature-card:hover {
-    border-color: var(--border-hover);
+    border-color: rgba(69, 196, 176, 0.25);
+    background: rgba(41, 37, 36, 0.7);
+    transform: translateY(-2px);
   }
 
   .feature-icon {
@@ -418,7 +507,7 @@ export const mapMindStyles = `
     align-items: center;
     justify-content: center;
     margin-bottom: var(--space-4);
-    color: var(--aurora-cyan);
+    color: var(--petrol-soft);
   }
 
   .feature-icon svg {
@@ -429,111 +518,147 @@ export const mapMindStyles = `
   .feature-card h4 {
     margin-bottom: var(--space-2);
     font-size: var(--text-base);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
   }
 
   .feature-card p {
     font-size: var(--text-sm);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
   }
 
-  /* Roadmap */
-  .roadmap {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--space-4);
-    padding-top: var(--space-8);
+  /* Section Header */
+  .section-header h2 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
   }
 
-  .roadmap-line {
-    position: absolute;
-    top: calc(var(--space-8) + 6px);
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--border);
-  }
-
-  .roadmap-8 {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .roadmap-mapmind .roadmap-line::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 56%;
-    height: 100%;
-    background: var(--aurora-cyan);
-  }
-
-  .roadmap-mapmind [data-status="done"] .roadmap-node {
-    border-color: var(--aurora-cyan);
-    background: var(--aurora-cyan);
-  }
-
-  .roadmap-mapmind [data-status="done"] .roadmap-title {
-    color: var(--text-muted);
-  }
-
-  .roadmap-item {
-    position: relative;
+  /* Vertical Roadmap */
+  .roadmap-vertical {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    gap: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .roadmap-vertical::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(168, 162, 158, 0.15);
+  }
+
+  .roadmap-vertical-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+    position: relative;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(-10px);
     transition: all var(--transition-slow);
   }
 
-  .roadmap-item.visible {
+  .roadmap-vertical-item.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
-  .roadmap-node {
-    width: 14px;
-    height: 14px;
-    background: var(--background);
-    border: 2px solid var(--border);
+  .roadmap-vertical-marker {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
     border-radius: 50%;
-    margin-bottom: var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--warm-bg-dark);
+    border: 2px solid rgba(168, 162, 158, 0.2);
     z-index: 1;
     transition: all var(--transition-fast);
   }
 
-  .roadmap-mapmind [data-status="current"] .roadmap-node {
-    border-color: var(--aurora-cyan);
-    background: var(--aurora-cyan);
-    box-shadow: 0 0 10px var(--aurora-cyan);
+  .roadmap-vertical-item[data-status="done"] .roadmap-vertical-marker {
+    background: var(--petrol-soft);
+    border-color: var(--petrol-soft);
+    color: var(--warm-bg-dark);
   }
 
-  .roadmap-mapmind [data-status="upcoming"] .roadmap-node {
-    border-color: var(--aurora-cyan);
+  .roadmap-vertical-item[data-status="done"] .roadmap-vertical-marker svg {
+    width: 16px;
+    height: 16px;
   }
 
-  .roadmap-content {
+  .roadmap-vertical-item[data-status="current"] .roadmap-vertical-marker {
+    border-color: var(--petrol-soft);
+    background: rgba(69, 196, 176, 0.15);
+    box-shadow: 0 0 20px rgba(69, 196, 176, 0.3);
+  }
+
+  .roadmap-vertical-pulse {
+    width: 10px;
+    height: 10px;
+    background: var(--petrol-soft);
+    border-radius: 50%;
+    animation: roadmapPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes roadmapPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.7; }
+  }
+
+  .roadmap-vertical-item[data-status="upcoming"] .roadmap-vertical-marker {
+    border-color: rgba(69, 196, 176, 0.4);
+  }
+
+  .roadmap-vertical-item[data-status="future"] .roadmap-vertical-marker {
+    border-color: rgba(168, 162, 158, 0.15);
+    opacity: 0.6;
+  }
+
+  .roadmap-vertical-content {
     display: flex;
     flex-direction: column;
     gap: var(--space-1);
+    padding-top: var(--space-1);
   }
 
-  .roadmap-title {
-    font-size: var(--text-sm);
+  .roadmap-vertical-title {
+    font-size: var(--text-base);
     font-weight: var(--font-medium);
-    color: var(--text-primary);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
   }
 
-  .roadmap-desc {
+  .roadmap-vertical-item[data-status="done"] .roadmap-vertical-title {
+    color: var(--warm-text-muted);
+  }
+
+  .roadmap-vertical-item[data-status="future"] .roadmap-vertical-title {
+    color: var(--warm-text-muted);
+    opacity: 0.6;
+  }
+
+  .roadmap-vertical-desc {
     font-size: var(--text-xs);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
   }
 
-  /* CTA Section */
-  .cta-section {
+  /* CTA Section - Warm */
+  .cta-section-warm {
     text-align: center;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(69, 196, 176, 0.03) 50%,
+      transparent 100%
+    );
   }
 
   .cta-content {
@@ -541,6 +666,33 @@ export const mapMindStyles = `
     flex-direction: column;
     align-items: center;
     gap: var(--space-6);
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+  }
+
+  .btn-warm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-8);
+    background: linear-gradient(135deg, var(--petrol-soft) 0%, #3BA89A 100%);
+    color: var(--warm-bg-dark);
+    font-family: var(--font-playful);
+    font-weight: var(--font-semibold);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(69, 196, 176, 0.25);
+  }
+
+  .btn-warm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(69, 196, 176, 0.35);
   }
 
   .btn-lg {
@@ -551,15 +703,6 @@ export const mapMindStyles = `
   @media (max-width: 1024px) {
     .features-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .roadmap {
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: var(--space-8);
-    }
-
-    .roadmap-line {
-      display: none;
     }
   }
 
@@ -573,8 +716,8 @@ export const mapMindStyles = `
       grid-template-columns: 1fr;
     }
 
-    .roadmap {
-      grid-template-columns: repeat(2, 1fr);
+    .roadmap-vertical {
+      padding-left: var(--space-2);
     }
   }
 `;

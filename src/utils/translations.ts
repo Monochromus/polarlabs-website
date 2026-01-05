@@ -40,8 +40,8 @@ export const translations: Translations = {
 
   // Hero
   'hero.headline': {
-    de: 'See what Matters',
-    en: 'See what Matters',
+    de: 'Polar Labs',
+    en: 'Polar Labs',
   },
   'hero.subline': {
     de: 'AI Tools to make things easy',
@@ -62,8 +62,8 @@ export const translations: Translations = {
     en: 'Which tool interests you most?',
   },
   'products.vote.hint': {
-    de: 'Dein Vote hilft uns bei der Priorisierung',
-    en: 'Your vote helps us prioritize',
+    de: 'Dein Vote beeinflusst die Entwicklung',
+    en: 'Your vote influences development',
   },
   'products.status.development': {
     de: 'In Entwicklung',
@@ -186,12 +186,12 @@ export const translations: Translations = {
 
   // Pocket Assistant
   'secondbrain.tagline': {
-    de: 'Dein KI-Assistent für Produktivität',
-    en: 'Your AI assistant for productivity',
+    de: 'Dein Assistent für Produktivität',
+    en: 'Your assistant for productivity',
   },
   'secondbrain.description': {
-    de: 'Ein KI-Agent, der per Sprache Projekte, Todos, Notizen, Kalender und Emails verwaltet – alles in einer Anfrage.',
-    en: 'An AI agent that manages projects, todos, notes, calendar and emails via voice – all in one request.',
+    de: 'Verwaltet per Sprache Projekte, Todos, Notizen, Kalender und Emails – alles in einer Anfrage.',
+    en: 'Manages projects, todos, notes, calendar and emails via voice – all in one request.',
   },
   'secondbrain.hero.title': {
     de: 'Pocket Assistant',
@@ -202,16 +202,16 @@ export const translations: Translations = {
     en: 'Your personal pocket assistant!',
   },
   'secondbrain.hero.description': {
-    de: 'AI Agent organisiert deine Notizen, Todos, Kalender, Emails und alles was es sich zu merken lohnt. Per Kurzbefehl über den Sperrbildschirm organisiert er alles im Hintergrund.',
-    en: 'AI Agent organizes your notes, todos, calendar, emails and everything worth remembering. Via shortcut from the lock screen, it organizes everything in the background.',
+    de: 'Organisiert deine Notizen, Todos, Kalender, Emails und alles was es sich zu merken lohnt. Per Kurzbefehl über den Sperrbildschirm erledigt er alles im Hintergrund.',
+    en: 'Organizes your notes, todos, calendar, emails and everything worth remembering. Via shortcut from the lock screen, it handles everything in the background.',
   },
   'secondbrain.concept.title': {
     de: 'Das Besondere',
     en: 'What makes it special',
   },
   'secondbrain.concept.p1': {
-    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der AI-Agent erledigt alles.',
-    en: 'A single request can trigger complex workflows. Say "Find events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the AI agent handles everything.',
+    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der Assistent erledigt alles.',
+    en: 'A single request can trigger complex workflows. Say "Find events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the assistant handles everything.',
   },
   'secondbrain.concept.p2': {
     de: 'Der Agent recherchiert im Web, erstellt Kalendereinträge und legt passende Aufgaben an. Alles in einem Schritt, ohne komplizierte Menüs.',
@@ -226,8 +226,8 @@ export const translations: Translations = {
     en: 'Key Features',
   },
   'secondbrain.feature.1.title': {
-    de: 'Viele KI-Tools',
-    en: 'Many AI Tools',
+    de: 'Viele Tools',
+    en: 'Many Tools',
   },
   'secondbrain.feature.1.desc': {
     de: 'Der Agent kombiniert intelligent Tools für Todos, Kalender, Email, Web-Recherche und mehr.',

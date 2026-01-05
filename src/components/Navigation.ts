@@ -57,8 +57,8 @@ export function createNavigation(): HTMLElement {
                 </a>
               </div>
             </div>
-            <a href="/services" class="nav-link ${currentRoute === '/services' ? 'active' : ''}" data-link>
-              ${i18n.t('nav.services')}
+            <a href="/contact" class="nav-link ${currentRoute === '/contact' ? 'active' : ''}" data-link>
+              ${i18n.t('nav.contact')}
             </a>
           </div>
 
@@ -141,9 +141,10 @@ export const navigationStyles = `
     left: 0;
     right: 0;
     z-index: var(--z-sticky);
-    background: var(--background);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(10px);
+    background: rgba(28, 25, 23, 0.85);
+    border-bottom: 1px solid rgba(168, 162, 158, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     transition: background-color var(--transition-slow);
   }
 
@@ -158,18 +159,18 @@ export const navigationStyles = `
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    color: var(--text-primary);
-    font-weight: var(--font-medium);
+    color: var(--warm-text-primary);
+    font-weight: var(--font-semibold);
     transition: color var(--transition-fast);
   }
 
   .nav-logo:hover {
-    color: var(--aurora-cyan);
+    color: var(--petrol-soft);
   }
 
   .nav-logo:hover .polar-star {
-    fill: var(--aurora-cyan);
-    filter: drop-shadow(0 0 6px var(--aurora-cyan));
+    fill: var(--petrol-soft);
+    filter: drop-shadow(0 0 8px var(--petrol-soft));
   }
 
   .nav-logo-icon {
@@ -182,6 +183,7 @@ export const navigationStyles = `
   }
 
   .nav-logo-text {
+    font-family: var(--font-playful);
     font-size: var(--text-lg);
     letter-spacing: -0.01em;
   }
@@ -199,18 +201,19 @@ export const navigationStyles = `
   }
 
   .nav-link {
+    font-family: var(--font-playful);
     font-size: var(--text-sm);
-    color: var(--text-secondary);
+    color: var(--warm-text-secondary);
     transition: color var(--transition-fast);
     position: relative;
   }
 
   .nav-link:hover {
-    color: var(--text-primary);
+    color: var(--warm-text-primary);
   }
 
   .nav-link.active {
-    color: var(--text-primary);
+    color: var(--warm-text-primary);
   }
 
   .nav-link.active::after {
@@ -219,8 +222,10 @@ export const navigationStyles = `
     bottom: -4px;
     left: 0;
     right: 0;
-    height: 1px;
-    background: var(--aurora-cyan);
+    height: 2px;
+    background: var(--petrol-soft);
+    border-radius: 1px;
+    box-shadow: 0 0 8px rgba(69, 196, 176, 0.4);
   }
 
   /* Dropdown */
@@ -235,7 +240,7 @@ export const navigationStyles = `
     background: none;
     border: none;
     cursor: pointer;
-    font-family: inherit;
+    font-family: var(--font-playful);
     padding: 0;
   }
 
@@ -256,15 +261,18 @@ export const navigationStyles = `
     top: calc(100% + var(--space-4));
     left: 50%;
     transform: translateX(-50%);
-    min-width: 200px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+    min-width: 220px;
+    background: rgba(41, 37, 36, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 162, 158, 0.12);
+    border-radius: var(--radius-lg);
     padding: var(--space-2);
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-fast);
     z-index: var(--z-dropdown);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .nav-dropdown:hover .nav-dropdown-menu {
@@ -277,27 +285,27 @@ export const navigationStyles = `
     flex-direction: column;
     gap: var(--space-1);
     padding: var(--space-3) var(--space-4);
-    border-radius: var(--radius-sm);
-    transition: background var(--transition-fast);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
   }
 
   .nav-dropdown-item:hover {
-    background: var(--background);
-    color: var(--text-primary);
+    background: rgba(69, 196, 176, 0.1);
   }
 
   .nav-dropdown-item.active {
-    background: var(--background);
+    background: rgba(69, 196, 176, 0.15);
   }
 
   .nav-dropdown-item-name {
-    font-weight: var(--font-medium);
-    color: var(--text-primary);
+    font-family: var(--font-playful);
+    font-weight: var(--font-semibold);
+    color: var(--warm-text-primary);
   }
 
   .nav-dropdown-item-desc {
     font-size: var(--text-xs);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
   }
 
   .nav-actions {
@@ -312,21 +320,22 @@ export const navigationStyles = `
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: transparent;
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(168, 162, 158, 0.15);
     border-radius: var(--radius-md);
-    color: var(--text-secondary);
+    color: var(--warm-text-secondary);
     cursor: pointer;
     transition: all var(--transition-fast);
   }
 
   .nav-action-btn:hover {
-    border-color: var(--text-secondary);
-    color: var(--text-primary);
+    background: rgba(69, 196, 176, 0.1);
+    border-color: var(--petrol-soft);
+    color: var(--petrol-soft);
   }
 
   .nav-action-btn:focus-visible {
-    outline: 2px solid var(--aurora-cyan);
+    outline: 2px solid var(--petrol-soft);
     outline-offset: 2px;
   }
 
@@ -345,7 +354,7 @@ export const navigationStyles = `
     height: 40px;
     background: transparent;
     border: none;
-    color: var(--text-primary);
+    color: var(--warm-text-primary);
     cursor: pointer;
     padding: var(--space-2);
   }
@@ -387,7 +396,7 @@ export const navigationStyles = `
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--background);
+      background: var(--warm-bg-dark);
       flex-direction: column;
       justify-content: flex-start;
       padding: var(--space-8) var(--space-6);
@@ -411,7 +420,7 @@ export const navigationStyles = `
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--background);
+      background: var(--warm-bg-dark);
       z-index: -1;
     }
 
@@ -445,6 +454,7 @@ export const navigationStyles = `
       border: none;
       padding: var(--space-4) 0 0 var(--space-4);
       min-width: auto;
+      box-shadow: none;
     }
 
     .nav-dropdown-item {

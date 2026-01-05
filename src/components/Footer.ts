@@ -47,9 +47,10 @@ export function createFooter(): HTMLElement {
 
 export const footerStyles = `
   .footer {
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(168, 162, 158, 0.1);
     padding: var(--space-12) 0;
     margin-top: auto;
+    background: var(--warm-bg-dark);
   }
 
   .footer-container {
@@ -68,18 +69,20 @@ export const footerStyles = `
     display: flex;
     align-items: center;
     gap: var(--space-2);
-    color: var(--text-secondary);
+    color: var(--warm-text-secondary);
+    font-family: var(--font-playful);
     font-size: var(--text-sm);
     font-weight: var(--font-medium);
     transition: color var(--transition-fast);
   }
 
   .footer-logo:hover {
-    color: var(--text-primary);
+    color: var(--warm-text-primary);
   }
 
   .footer-logo:hover .polar-star {
-    fill: var(--aurora-cyan);
+    fill: var(--petrol-soft);
+    filter: drop-shadow(0 0 6px var(--petrol-soft));
   }
 
   .footer-logo-icon {
@@ -88,7 +91,7 @@ export const footerStyles = `
   }
 
   .footer-logo-icon .polar-star {
-    transition: fill var(--transition-fast);
+    transition: fill var(--transition-fast), filter var(--transition-fast);
   }
 
   .footer-links {
@@ -97,17 +100,18 @@ export const footerStyles = `
   }
 
   .footer-link {
+    font-family: var(--font-playful);
     font-size: var(--text-sm);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
     transition: color var(--transition-fast);
   }
 
   .footer-link:hover {
-    color: var(--text-primary);
+    color: var(--petrol-soft);
   }
 
   .footer-copyright {
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
     font-size: var(--text-xs);
   }
 

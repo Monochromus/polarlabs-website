@@ -2,9 +2,9 @@ import { i18n } from '../utils/translations';
 
 export function renderImpressumPage(): string {
   return `
-    <section class="page-hero">
+    <section class="page-hero-warm impressum-hero">
       <div class="container">
-        <span class="label mono">//legal</span>
+        <span class="label mono text-petrol">//legal</span>
         <h1>${i18n.t('impressum.title')}</h1>
       </div>
     </section>
@@ -65,8 +65,32 @@ export function initImpressumPage(): void {
 }
 
 export const impressumStyles = `
+  /* Text utility */
+  .text-petrol {
+    color: var(--petrol-soft);
+  }
+
+  /* Impressum Hero - Warm */
+  .impressum-hero {
+    position: relative;
+    padding: calc(64px + var(--space-16)) 0 var(--space-12);
+    background: linear-gradient(
+      135deg,
+      var(--warm-bg-dark) 0%,
+      var(--warm-bg-medium) 50%,
+      var(--warm-bg-dark) 100%
+    );
+    border-bottom: 1px solid rgba(168, 162, 158, 0.1);
+  }
+
+  .impressum-hero h1 {
+    margin-top: var(--space-4);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+  }
+
   .legal-section {
-    background: var(--background);
+    background: var(--warm-bg-dark);
   }
 
   .legal-content {
@@ -76,7 +100,7 @@ export const impressumStyles = `
   .legal-block {
     margin-bottom: var(--space-12);
     padding-bottom: var(--space-8);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(168, 162, 158, 0.1);
   }
 
   .legal-block:last-child {
@@ -88,6 +112,8 @@ export const impressumStyles = `
   .legal-block h2 {
     font-size: var(--text-xl);
     margin-bottom: var(--space-4);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
   }
 
   .legal-address {
@@ -96,15 +122,17 @@ export const impressumStyles = `
   }
 
   .legal-address p {
-    color: var(--text-secondary);
+    color: var(--warm-text-secondary);
   }
 
   .legal-link {
-    color: var(--aurora-cyan);
+    color: var(--petrol-soft);
     text-decoration: none;
+    transition: opacity var(--transition-fast);
   }
 
   .legal-link:hover {
+    opacity: 0.8;
     text-decoration: underline;
   }
 
@@ -115,10 +143,17 @@ export const impressumStyles = `
   .legal-subsection h3 {
     font-size: var(--text-base);
     margin-bottom: var(--space-2);
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
   }
 
   .legal-subsection p {
     font-size: var(--text-sm);
     line-height: 1.7;
+    color: var(--warm-text-secondary);
+  }
+
+  .legal-block p {
+    color: var(--warm-text-secondary);
   }
 `;

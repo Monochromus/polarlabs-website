@@ -45,16 +45,16 @@ export function renderHomePage(): string {
   const userVotes = getUserVotes();
 
   return `
-    <section class="hero">
+    <section class="hero hero-warm">
       <div class="hero-background">
-        <div class="hero-glow"></div>
-        <div class="hero-grid"></div>
+        <div class="hero-glow-warm"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
       </div>
       <div class="hero-content container">
-        <span class="label label-accent mono">Polar Labs</span>
-        <h1 class="hero-title">${i18n.t('hero.headline')}</h1>
-        <p class="hero-subline mono">${i18n.t('hero.subline')}</p>
-        <a href="#products" class="btn btn-primary hero-cta">${i18n.t('hero.cta')}</a>
+        <h1 class="hero-title-warm">${i18n.t('hero.headline')}</h1>
+        <p class="hero-subline-warm">${i18n.t('hero.subline')}</p>
+        <a href="#products" class="btn btn-warm hero-cta">${i18n.t('hero.cta')}</a>
       </div>
     </section>
 
@@ -149,7 +149,6 @@ export function renderHomePage(): string {
             <button class="philosophy-indicator active" data-index="0" aria-label="Quote 1"></button>
             <button class="philosophy-indicator" data-index="1" aria-label="Quote 2"></button>
           </div>
-          <p class="philosophy-hint mono">${i18n.t('philosophy.click.hint')}</p>
         </div>
       </div>
     </section>
@@ -256,32 +255,80 @@ export const homeStyles = `
     padding-top: 64px;
   }
 
+  /* Warm Hero Theme */
+  .hero-warm {
+    background: linear-gradient(
+      145deg,
+      var(--warm-bg-dark) 0%,
+      #1f1b19 30%,
+      #252120 60%,
+      var(--warm-bg-medium) 100%
+    );
+  }
+
   .hero-background {
     position: absolute;
     inset: 0;
     pointer-events: none;
   }
 
-  .hero-glow {
+  .hero-glow-warm {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(77, 238, 234, 0.08) 0%, transparent 70%);
-    filter: blur(40px);
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(
+      ellipse,
+      rgba(69, 196, 176, 0.15) 0%,
+      rgba(20, 145, 155, 0.08) 40%,
+      transparent 70%
+    );
+    filter: blur(60px);
+    animation: glowPulse 8s ease-in-out infinite;
   }
 
-  .hero-grid {
+  @keyframes glowPulse {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.8; transform: translateX(-50%) scale(1.05); }
+  }
+
+  /* Organic floating orbs for liquid glass feel */
+  .hero-orb {
     position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(to right, var(--border) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-    background-size: 60px 60px;
-    opacity: 0.3;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+  }
+
+  .hero-orb-1 {
+    width: 300px;
+    height: 300px;
+    top: 15%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(69, 196, 176, 0.2) 0%, transparent 70%);
+    animation: orbFloat1 12s ease-in-out infinite;
+  }
+
+  .hero-orb-2 {
+    width: 250px;
+    height: 250px;
+    bottom: 20%;
+    right: 15%;
+    background: radial-gradient(circle, rgba(20, 145, 155, 0.15) 0%, transparent 70%);
+    animation: orbFloat2 10s ease-in-out infinite;
+  }
+
+  @keyframes orbFloat1 {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(20px, -30px); }
+    66% { transform: translate(-15px, 20px); }
+  }
+
+  @keyframes orbFloat2 {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-25px, -20px); }
   }
 
   .hero-content {
@@ -291,19 +338,43 @@ export const homeStyles = `
     max-width: 800px;
   }
 
-  .hero-title {
-    margin-top: var(--space-6);
+  .hero-title-warm {
+    font-family: var(--font-playful);
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 700;
+    color: var(--warm-text-primary);
     margin-bottom: var(--space-4);
-    font-size: clamp(var(--text-3xl), 6vw, 4.5rem);
-    font-weight: var(--font-medium);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: 1;
+    letter-spacing: -0.02em;
   }
 
-  .hero-subline {
-    font-size: var(--text-xl);
-    color: var(--aurora-cyan);
-    margin-bottom: var(--space-10);
+  .hero-subline-warm {
+    font-family: var(--font-playful);
+    font-size: clamp(var(--text-lg), 3vw, var(--text-2xl));
+    font-weight: 500;
+    color: var(--petrol-soft);
+    margin-bottom: var(--space-12);
+    opacity: 0.9;
+  }
+
+  .btn-warm {
+    background: linear-gradient(135deg, var(--petrol-main) 0%, var(--petrol-soft) 100%);
+    color: white;
+    border: none;
+    padding: var(--space-4) var(--space-8);
+    border-radius: 50px;
+    font-family: var(--font-playful);
+    font-weight: 600;
+    font-size: var(--text-base);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 20px rgba(20, 145, 155, 0.3);
+  }
+
+  .btn-warm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(20, 145, 155, 0.4);
+    background: linear-gradient(135deg, var(--petrol-dark) 0%, var(--petrol-main) 100%);
   }
 
   .hero-cta {
@@ -311,9 +382,42 @@ export const homeStyles = `
     font-size: var(--text-base);
   }
 
-  /* Products Section */
+  /* Warm Badge Override */
+  .products-section .badge {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+    font-family: var(--font-playful);
+    color: var(--warm-text-muted);
+  }
+
+  .products-section .badge::before {
+    background: var(--petrol-soft);
+    box-shadow: 0 0 6px rgba(69, 196, 176, 0.4);
+  }
+
+  .product-card-mapmind .badge::before {
+    background: var(--aurora-cyan);
+    box-shadow: 0 0 6px rgba(77, 238, 234, 0.4);
+  }
+
+  /* Products Section - Warm Theme */
   .products-section {
-    background: var(--surface);
+    background: linear-gradient(
+      180deg,
+      var(--warm-bg-medium) 0%,
+      var(--warm-bg-dark) 100%
+    );
+    position: relative;
+  }
+
+  .products-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--warm-border), transparent);
   }
 
   .section-header {
@@ -323,20 +427,30 @@ export const homeStyles = `
     margin-bottom: var(--space-8);
   }
 
+  .section-header h2 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+  }
+
+  .section-header .label {
+    color: var(--petrol-soft);
+  }
+
   .vote-prompt {
     text-align: center;
     margin-bottom: var(--space-10);
   }
 
   .vote-question {
+    font-family: var(--font-playful);
     font-size: var(--text-lg);
-    color: var(--text-primary);
+    color: var(--warm-text-primary);
     margin-bottom: var(--space-2);
   }
 
   .vote-hint {
     font-size: var(--text-sm);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
   }
 
   .products-grid {
@@ -345,14 +459,20 @@ export const homeStyles = `
     gap: var(--space-8);
   }
 
+  /* Liquid Glass Card Base */
   .product-card {
-    background: var(--background);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    background: rgba(41, 37, 36, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 162, 158, 0.12);
+    border-radius: var(--radius-xl);
     padding: var(--space-8);
-    transition: all var(--transition-base);
+    transition: all var(--transition-slow);
     position: relative;
     overflow: hidden;
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
   }
 
   .product-card::before {
@@ -361,21 +481,10 @@ export const homeStyles = `
     top: 0;
     left: 0;
     right: 0;
-    height: 2px;
-    background: transparent;
-    transition: background var(--transition-fast);
-  }
-
-  .product-card-mapmind::before {
-    background: linear-gradient(90deg, transparent, var(--aurora-cyan), transparent);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     opacity: 0;
-    transition: opacity var(--transition-fast);
-  }
-
-  .product-card-secondbrain::before {
-    background: linear-gradient(90deg, transparent, var(--soft-violet), transparent);
-    opacity: 0;
-    transition: opacity var(--transition-fast);
+    transition: opacity var(--transition-base);
   }
 
   .product-card:hover::before,
@@ -383,12 +492,33 @@ export const homeStyles = `
     opacity: 1;
   }
 
-  .product-card.glow-cyan {
-    box-shadow: var(--shadow-glow-cyan);
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border-color: rgba(168, 162, 158, 0.2);
   }
 
-  .product-card.glow-violet {
-    box-shadow: var(--shadow-glow-violet);
+  /* mapMind Card */
+  .product-card-mapmind {
+    background: rgba(41, 37, 36, 0.5);
+  }
+
+  .product-card-mapmind:hover,
+  .product-card-mapmind.glow-cyan {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.2),
+      0 0 40px rgba(77, 238, 234, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Pocket Card already styled separately */
+  .product-card.glow-pocket {
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.2),
+      0 0 40px rgba(20, 145, 155, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .product-card-header {
@@ -404,17 +534,17 @@ export const homeStyles = `
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--surface);
-    border-radius: var(--radius-md);
-    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    color: var(--warm-text-secondary);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .product-card-mapmind .product-icon {
     color: var(--aurora-cyan);
-  }
-
-  .product-card-secondbrain .product-icon {
-    color: var(--soft-violet);
+    background: rgba(77, 238, 234, 0.1);
+    border-color: rgba(77, 238, 234, 0.15);
   }
 
   .product-icon svg {
@@ -423,20 +553,30 @@ export const homeStyles = `
   }
 
   .product-name {
+    font-family: var(--font-playful);
     font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--warm-text-primary);
     margin-bottom: var(--space-2);
   }
 
   .product-tagline {
-    font-family: var(--font-mono);
+    font-family: var(--font-playful);
     font-size: var(--text-sm);
-    color: var(--text-muted);
+    color: var(--warm-text-muted);
     margin-bottom: var(--space-4);
+  }
+
+  .product-card-mapmind .product-tagline {
+    color: var(--aurora-cyan);
+    opacity: 0.8;
   }
 
   .product-description {
     margin-bottom: var(--space-6);
     font-size: var(--text-base);
+    color: var(--warm-text-secondary);
+    line-height: 1.6;
   }
 
   .product-actions {
@@ -448,7 +588,29 @@ export const homeStyles = `
 
   .product-link {
     display: inline-flex;
+    align-items: center;
     gap: var(--space-2);
+    padding: var(--space-3) var(--space-5);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    color: var(--warm-text-secondary);
+    font-family: var(--font-playful);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: all var(--transition-base);
+  }
+
+  .product-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--warm-text-primary);
+    transform: translateX(4px);
+  }
+
+  .product-card-mapmind .product-link:hover {
+    border-color: rgba(77, 238, 234, 0.3);
+    color: var(--aurora-cyan);
   }
 
   .vote-btn {
@@ -456,29 +618,30 @@ export const homeStyles = `
     align-items: center;
     gap: var(--space-2);
     padding: var(--space-2) var(--space-4);
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    color: var(--warm-text-muted);
     cursor: pointer;
-    transition: all var(--transition-fast);
-    font-family: var(--font-mono);
+    transition: all var(--transition-base);
+    font-family: var(--font-playful);
     font-size: var(--text-sm);
   }
 
   .vote-btn:hover {
     border-color: var(--aurora-cyan);
     color: var(--aurora-cyan);
+    background: rgba(77, 238, 234, 0.08);
   }
 
   .vote-btn.voted {
     border-color: var(--aurora-cyan);
     color: var(--aurora-cyan);
-    background: rgba(77, 238, 234, 0.1);
+    background: rgba(77, 238, 234, 0.12);
   }
 
   .vote-btn.voted:hover {
-    background: rgba(77, 238, 234, 0.2);
+    background: rgba(77, 238, 234, 0.18);
   }
 
   .vote-btn svg {
@@ -489,21 +652,6 @@ export const homeStyles = `
 
   .vote-btn:hover svg {
     transform: scale(1.1);
-  }
-
-  .vote-btn-violet:hover {
-    border-color: var(--soft-violet);
-    color: var(--soft-violet);
-  }
-
-  .vote-btn-violet.voted {
-    border-color: var(--soft-violet);
-    color: var(--soft-violet);
-    background: rgba(155, 140, 255, 0.1);
-  }
-
-  .vote-btn-violet.voted:hover {
-    background: rgba(155, 140, 255, 0.2);
   }
 
   /* Pocket Assistant Card - Warm brown theme with Petrol accent */
@@ -589,9 +737,15 @@ export const homeStyles = `
     background: rgba(20, 145, 155, 0.2);
   }
 
-  /* Philosophy Section */
+  /* Philosophy Section - Warm Glassmorphism */
   .philosophy-section {
     position: relative;
+    background: linear-gradient(
+      180deg,
+      var(--warm-bg-dark) 0%,
+      #1a1614 50%,
+      var(--warm-bg-dark) 100%
+    );
   }
 
   .philosophy-content {
@@ -600,27 +754,48 @@ export const homeStyles = `
     text-align: center;
   }
 
+  .philosophy-content .label {
+    color: var(--petrol-soft);
+  }
+
   .philosophy-quotes {
     position: relative;
-    min-height: 120px;
+    min-height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin: var(--space-8) 0;
+    margin: var(--space-10) 0;
+    padding: var(--space-8);
+    background: rgba(41, 37, 36, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(168, 162, 158, 0.08);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    transition: all var(--transition-base);
+  }
+
+  .philosophy-quotes:hover {
+    background: rgba(41, 37, 36, 0.5);
+    border-color: rgba(168, 162, 158, 0.12);
   }
 
   .philosophy-quote {
     position: absolute;
-    font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
-    font-weight: var(--font-light);
-    line-height: 1.4;
-    color: var(--text-primary);
+    font-family: var(--font-playful);
+    font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--warm-text-primary);
     font-style: normal;
     opacity: 0;
     transform: translateY(10px);
     transition: all var(--transition-slow);
     pointer-events: none;
+    padding: 0 var(--space-4);
   }
 
   .philosophy-quote.active {
@@ -632,34 +807,31 @@ export const homeStyles = `
   .philosophy-indicators {
     display: flex;
     justify-content: center;
-    gap: var(--space-2);
+    gap: var(--space-3);
     margin-bottom: var(--space-4);
   }
 
   .philosophy-indicator {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: var(--border);
+    background: rgba(168, 162, 158, 0.2);
     border: none;
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
     padding: 0;
   }
 
   .philosophy-indicator:hover {
-    background: var(--text-muted);
+    background: rgba(168, 162, 158, 0.4);
+    transform: scale(1.1);
   }
 
   .philosophy-indicator.active {
-    background: var(--aurora-cyan);
-    width: 24px;
-    border-radius: 4px;
-  }
-
-  .philosophy-hint {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
+    background: var(--petrol-soft);
+    width: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(69, 196, 176, 0.3);
   }
 
   @media (max-width: 768px) {
@@ -667,9 +839,24 @@ export const homeStyles = `
       grid-template-columns: 1fr;
     }
 
-    .hero-glow {
-      width: 300px;
-      height: 200px;
+    .hero-glow-warm {
+      width: 350px;
+      height: 300px;
+    }
+
+    .hero-orb-1,
+    .hero-orb-2 {
+      width: 150px;
+      height: 150px;
+      opacity: 0.3;
+    }
+
+    .hero-title-warm {
+      font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+
+    .hero-subline-warm {
+      font-size: var(--text-lg);
     }
 
     .product-actions {
@@ -677,8 +864,22 @@ export const homeStyles = `
       align-items: stretch;
     }
 
+    .product-link {
+      justify-content: center;
+    }
+
     .vote-btn {
       justify-content: center;
     }
+
+    .philosophy-quotes {
+      padding: var(--space-6);
+      min-height: 120px;
+    }
+
+    .philosophy-quote {
+      font-size: var(--text-lg);
+    }
   }
 `;
+
