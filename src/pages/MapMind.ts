@@ -217,6 +217,13 @@ export function renderMapMindPage(): string {
               <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.8.desc')}</span>
             </div>
           </div>
+          <div class="roadmap-vertical-item" data-status="future">
+            <div class="roadmap-vertical-marker"></div>
+            <div class="roadmap-vertical-content">
+              <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.9')}</span>
+              <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.9.desc')}</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -520,18 +520,26 @@ export const translations: Translations = {
     en: 'AI Integration',
   },
   'roadmap.mapmind.7': {
+    de: 'Speichern & Teilen',
+    en: 'Save & Share',
+  },
+  'roadmap.mapmind.7.desc': {
+    de: 'Projekte exportieren',
+    en: 'Export Projects',
+  },
+  'roadmap.mapmind.8': {
     de: 'Webapp Veröffentlichung',
     en: 'Webapp Release',
   },
-  'roadmap.mapmind.7.desc': {
+  'roadmap.mapmind.8.desc': {
     de: 'Erste öffentliche Version',
     en: 'First Public Version',
   },
-  'roadmap.mapmind.8': {
+  'roadmap.mapmind.9': {
     de: 'Feedbackrunde',
     en: 'Feedback Round',
   },
-  'roadmap.mapmind.8.desc': {
+  'roadmap.mapmind.9.desc': {
     de: 'Nutzerfeedback sammeln',
     en: 'Collect User Feedback',
   },
