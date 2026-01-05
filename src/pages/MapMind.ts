@@ -183,23 +183,27 @@ export function renderMapMindPage(): string {
               <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.4.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-vertical-item" data-status="current">
+          <div class="roadmap-vertical-item" data-status="done">
             <div class="roadmap-vertical-marker">
-              <span class="roadmap-vertical-pulse"></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
             </div>
             <div class="roadmap-vertical-content">
               <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.5')}</span>
               <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.5.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-vertical-item" data-status="upcoming">
-            <div class="roadmap-vertical-marker"></div>
+          <div class="roadmap-vertical-item" data-status="current">
+            <div class="roadmap-vertical-marker">
+              <span class="roadmap-vertical-pulse"></span>
+            </div>
             <div class="roadmap-vertical-content">
               <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.6')}</span>
               <span class="roadmap-vertical-desc mono">${i18n.t('roadmap.mapmind.6.desc')}</span>
             </div>
           </div>
-          <div class="roadmap-vertical-item" data-status="future">
+          <div class="roadmap-vertical-item" data-status="upcoming">
             <div class="roadmap-vertical-marker"></div>
             <div class="roadmap-vertical-content">
               <span class="roadmap-vertical-title">${i18n.t('roadmap.mapmind.7')}</span>

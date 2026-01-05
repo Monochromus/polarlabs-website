@@ -520,20 +520,20 @@ export const translations: Translations = {
     en: 'AI Integration',
   },
   'roadmap.mapmind.7': {
-    de: 'MVP Release',
-    en: 'MVP Release',
+    de: 'Webapp Veröffentlichung',
+    en: 'Webapp Release',
   },
   'roadmap.mapmind.7.desc': {
-    de: 'Erste vollständige Version',
-    en: 'First Complete Version',
+    de: 'Erste öffentliche Version',
+    en: 'First Public Version',
   },
   'roadmap.mapmind.8': {
-    de: 'iOS App',
-    en: 'iOS App',
+    de: 'Feedbackrunde',
+    en: 'Feedback Round',
   },
   'roadmap.mapmind.8.desc': {
-    de: 'App Store Release',
-    en: 'App Store Release',
+    de: 'Nutzerfeedback sammeln',
+    en: 'Collect User Feedback',
   },
 
   // Roadmap Items - Pocket Assistant
