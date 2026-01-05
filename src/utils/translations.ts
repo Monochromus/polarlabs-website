@@ -198,20 +198,20 @@ export const translations: Translations = {
     en: 'Pocket Assistant',
   },
   'secondbrain.hero.subtitle': {
-    de: 'Ein Befehl, viele Aktionen',
-    en: 'One command, many actions',
+    de: 'Der persönliche Assistent für die Hosentasche!',
+    en: 'Your personal pocket assistant!',
   },
   'secondbrain.hero.description': {
-    de: 'Dein KI-gestützter Produktivitäts-Assistent, der dir hilft, dein Leben zu organisieren – ganz natürlich per Sprache. Basierend auf der PARA-Methode strukturiert die App deine Aufgaben, Projekte und Wissen so, wie du denkst.',
-    en: 'Your AI-powered productivity assistant that helps you organize your life – naturally through voice. Based on the PARA method, the app structures your tasks, projects and knowledge the way you think.',
+    de: 'AI Agent organisiert deine Notizen, Todos, Kalender, Emails und alles was es sich zu merken lohnt. Per Kurzbefehl über den Sperrbildschirm organisiert er alles im Hintergrund.',
+    en: 'AI Agent organizes your notes, todos, calendar, emails and everything worth remembering. Via shortcut from the lock screen, it organizes everything in the background.',
   },
   'secondbrain.concept.title': {
     de: 'Das Besondere',
     en: 'What makes it special',
   },
   'secondbrain.concept.p1': {
-    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Techno-Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der AI-Agent erledigt alles.',
-    en: 'A single request can trigger complex workflows. Say "Find techno events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the AI agent handles everything.',
+    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der AI-Agent erledigt alles.',
+    en: 'A single request can trigger complex workflows. Say "Find events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the AI agent handles everything.',
   },
   'secondbrain.concept.p2': {
     de: 'Der Agent recherchiert im Web, erstellt Kalendereinträge und legt passende Aufgaben an. Alles in einem Schritt, ohne komplizierte Menüs.',
@@ -226,8 +226,8 @@ export const translations: Translations = {
     en: 'Key Features',
   },
   'secondbrain.feature.1.title': {
-    de: '37 KI-Tools',
-    en: '37 AI Tools',
+    de: 'Viele KI-Tools',
+    en: 'Many AI Tools',
   },
   'secondbrain.feature.1.desc': {
     de: 'Der Agent kombiniert intelligent Tools für Todos, Kalender, Email, Web-Recherche und mehr.',
@@ -338,8 +338,8 @@ export const translations: Translations = {
     en: 'forever',
   },
   'secondbrain.pricing.free.desc': {
-    de: 'Perfekt zum Ausprobieren',
-    en: 'Perfect to get started',
+    de: 'Einfach nutzen',
+    en: 'Just use it',
   },
   'secondbrain.pricing.free.feature.1': {
     de: 'AI Agent mit GPT-4o-mini (10 Anfragen/Tag)',
@@ -365,29 +365,73 @@ export const translations: Translations = {
     de: '2 Email-Konten & Kalender-Sync',
     en: '2 email accounts & calendar sync',
   },
+  'secondbrain.pricing.ownkey': {
+    de: 'Pro - OwnKey',
+    en: 'Pro - OwnKey',
+  },
+  'secondbrain.pricing.ownkey.price': {
+    de: '2 €',
+    en: '€2',
+  },
+  'secondbrain.pricing.ownkey.period': {
+    de: 'pro Monat',
+    en: 'per month',
+  },
+  'secondbrain.pricing.ownkey.desc': {
+    de: 'Nutze deine eigenen API Keys',
+    en: 'Use your own API keys',
+  },
+  'secondbrain.pricing.ownkey.includes': {
+    de: 'Alles aus Free, plus:',
+    en: 'Everything in Free, plus:',
+  },
+  'secondbrain.pricing.ownkey.feature.1': {
+    de: 'Eigener OpenAI API Key',
+    en: 'Your own OpenAI API key',
+  },
+  'secondbrain.pricing.ownkey.feature.2': {
+    de: 'Eigener Perplexity API Key',
+    en: 'Your own Perplexity API key',
+  },
+  'secondbrain.pricing.ownkey.feature.3': {
+    de: 'Unbegrenzte AI-Anfragen',
+    en: 'Unlimited AI requests',
+  },
+  'secondbrain.pricing.ownkey.feature.4': {
+    de: 'Zahle nur nach Nutzung bei OpenAI/Perplexity',
+    en: 'Pay only by usage at OpenAI/Perplexity',
+  },
+  'secondbrain.pricing.ownkey.feature.5': {
+    de: 'Volle Kontrolle über Kosten',
+    en: 'Full control over costs',
+  },
+  'secondbrain.pricing.ownkey.feature.6': {
+    de: 'Alle Pro Features',
+    en: 'All Pro features',
+  },
   'secondbrain.pricing.pro': {
     de: 'Pro',
     en: 'Pro',
   },
   'secondbrain.pricing.pro.price': {
-    de: '5,99 €',
-    en: '€5.99',
+    de: '6 €',
+    en: '€6',
   },
   'secondbrain.pricing.pro.period': {
     de: 'pro Monat',
     en: 'per month',
   },
   'secondbrain.pricing.pro.desc': {
-    de: 'Volle KI-Power für maximale Produktivität',
-    en: 'Full AI power for maximum productivity',
+    de: 'Wir zahlen die API-Kosten und kümmern uns um alles',
+    en: 'We pay the API costs and take care of everything',
   },
   'secondbrain.pricing.pro.includes': {
     de: 'Alles aus Free, plus:',
     en: 'Everything in Free, plus:',
   },
   'secondbrain.pricing.pro.feature.1': {
-    de: '100 AI-Anfragen pro Tag',
-    en: '100 AI requests per day',
+    de: '50 AI-Anfragen pro Tag',
+    en: '50 AI requests per day',
   },
   'secondbrain.pricing.pro.feature.2': {
     de: 'Premium-Modelle (GPT-5, Reasoning)',
@@ -412,6 +456,10 @@ export const translations: Translations = {
   'secondbrain.pricing.cta.free': {
     de: 'Kostenlos starten',
     en: 'Start for free',
+  },
+  'secondbrain.pricing.cta.ownkey': {
+    de: 'OwnKey wählen',
+    en: 'Choose OwnKey',
   },
   'secondbrain.pricing.cta.pro': {
     de: 'Pro werden',
@@ -502,8 +550,8 @@ export const translations: Translations = {
     en: 'AI Agent',
   },
   'roadmap.secondbrain.2.desc': {
-    de: '37 Tools integriert',
-    en: '37 Tools integrated',
+    de: 'Viele Tools integriert',
+    en: 'Many tools integrated',
   },
   'roadmap.secondbrain.3': {
     de: 'Email & Kalender',
@@ -546,12 +594,36 @@ export const translations: Translations = {
     en: 'Widget Generator',
   },
   'roadmap.secondbrain.8': {
-    de: 'App Store Release',
-    en: 'App Store Release',
+    de: 'Letzte Anpassungen',
+    en: 'Final Adjustments',
   },
   'roadmap.secondbrain.8.desc': {
-    de: 'iOS Veröffentlichung',
-    en: 'iOS Publication',
+    de: 'Feinschliff & Testing',
+    en: 'Polish & Testing',
+  },
+  'roadmap.secondbrain.9': {
+    de: 'Web App Launch',
+    en: 'Web App Launch',
+  },
+  'roadmap.secondbrain.9.desc': {
+    de: 'Öffentlicher Start',
+    en: 'Public Release',
+  },
+  'roadmap.secondbrain.10': {
+    de: 'Feedback-Runde',
+    en: 'Feedback Round',
+  },
+  'roadmap.secondbrain.10.desc': {
+    de: 'Community-Feedback',
+    en: 'Community Feedback',
+  },
+  'roadmap.secondbrain.11': {
+    de: 'iOS App Launch',
+    en: 'iOS App Launch',
+  },
+  'roadmap.secondbrain.11.desc': {
+    de: 'App Store Release',
+    en: 'App Store Release',
   },
 
   // Philosophy Quotes

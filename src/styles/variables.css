@@ -14,9 +14,27 @@
   --ion-green: #8AFFC1;
   --soft-violet: #9B8CFF;
 
+  /* Petrol Colors (Pocket Assistant) */
+  --petrol-dark: #0D5C63;
+  --petrol-main: #14919B;
+  --petrol-light: #0AD1C8;
+  --petrol-soft: #45C4B0;
+  --petrol-muted: #9ED8DB;
+
+  /* Warm Brown/Beige Theme (Claude-like for Pocket Assistant) */
+  --warm-bg-dark: #1C1917;
+  --warm-bg-medium: #292524;
+  --warm-bg-light: #3C3836;
+  --warm-surface: #44403C;
+  --warm-text-primary: #FAFAF9;
+  --warm-text-secondary: #D6D3D1;
+  --warm-text-muted: #A8A29E;
+  --warm-border: rgba(168, 162, 158, 0.15);
+  --warm-border-hover: rgba(168, 162, 158, 0.25);
+
   /* Product Colors */
   --mapmind-color: var(--aurora-cyan);
-  --secondbrain-color: var(--soft-violet);
+  --secondbrain-color: var(--petrol-main);
 
   /* UI Colors */
   --background: var(--polar-black);
@@ -28,6 +46,10 @@
   /* Typography */
   --font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
+  --font-playful: 'Nunito', 'IBM Plex Sans', sans-serif;
+
+  /* Glow Shadows - Petrol */
+  --shadow-glow-petrol: 0 0 20px rgba(20, 145, 155, 0.2);
 
   /* Font Sizes */
   --text-xs: 0.75rem;

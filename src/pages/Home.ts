@@ -102,33 +102,26 @@ export function renderHomePage(): string {
             </div>
           </article>
 
-          <article class="product-card product-card-secondbrain ${userVotes.secondbrain ? 'voted' : ''}" data-product="secondbrain">
+          <article class="product-card product-card-secondbrain product-card-pocket ${userVotes.secondbrain ? 'voted' : ''}" data-product="secondbrain">
             <div class="product-card-header">
-              <div class="product-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8v3H8v-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"/>
-                  <path d="M12 2v4"/>
-                  <path d="M4.93 4.93l2.83 2.83"/>
-                  <path d="M2 12h4"/>
-                  <path d="M19.07 4.93l-2.83 2.83"/>
-                  <path d="M22 12h-4"/>
-                </svg>
+              <div class="product-icon product-icon-pocket">
+                <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" class="pocket-logo" />
               </div>
               <div class="product-status">
-                <span class="badge">${i18n.t('products.status.development')}</span>
+                <span class="badge badge-pocket">${i18n.t('products.status.development')}</span>
               </div>
             </div>
-            <h3 class="product-name">Pocket Assistant</h3>
-            <p class="product-tagline">${i18n.t('secondbrain.tagline')}</p>
+            <h3 class="product-name product-name-pocket">Pocket Assistant</h3>
+            <p class="product-tagline product-tagline-pocket">${i18n.t('secondbrain.tagline')}</p>
             <p class="product-description">${i18n.t('secondbrain.description')}</p>
             <div class="product-actions">
-              <a href="/secondbrain" class="btn btn-secondary product-link" data-link>
+              <a href="/secondbrain" class="btn btn-secondary-pocket product-link" data-link>
                 ${i18n.t('products.learnmore')}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </a>
-              <button class="vote-btn vote-btn-violet ${userVotes.secondbrain ? 'voted' : ''}" data-vote="secondbrain">
+              <button class="vote-btn vote-btn-pocket ${userVotes.secondbrain ? 'voted' : ''}" data-vote="secondbrain">
                 <svg viewBox="0 0 24 24" fill="${userVotes.secondbrain ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
                   <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
                 </svg>
@@ -186,11 +179,11 @@ export function initHomePage(): void {
       if (product === 'mapmind') {
         card.classList.add('glow-cyan');
       } else if (product === 'secondbrain') {
-        card.classList.add('glow-violet');
+        card.classList.add('glow-pocket');
       }
     });
     card.addEventListener('mouseleave', () => {
-      card.classList.remove('glow-cyan', 'glow-violet');
+      card.classList.remove('glow-cyan', 'glow-pocket');
     });
   });
 
@@ -511,6 +504,89 @@ export const homeStyles = `
 
   .vote-btn-violet.voted:hover {
     background: rgba(155, 140, 255, 0.2);
+  }
+
+  /* Pocket Assistant Card - Warm brown theme with Petrol accent */
+  .product-card-pocket {
+    background: var(--warm-bg-dark, #1C1917);
+    border-color: var(--warm-border, rgba(168, 162, 158, 0.15));
+    font-family: var(--font-playful, 'Nunito', sans-serif);
+  }
+
+  .product-card-pocket::before {
+    background: linear-gradient(90deg, transparent, var(--petrol-soft, #45C4B0), transparent);
+  }
+
+  .product-card-pocket.glow-pocket {
+    box-shadow: 0 0 20px rgba(20, 145, 155, 0.25);
+  }
+
+  .product-icon-pocket {
+    background: linear-gradient(135deg, rgba(20, 145, 155, 0.1) 0%, rgba(69, 196, 176, 0.15) 100%);
+    border-radius: 16px;
+  }
+
+  .pocket-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .product-name-pocket {
+    font-family: var(--font-playful, 'Nunito', sans-serif);
+    font-weight: 700;
+    color: var(--warm-text-primary, #FAFAF9);
+  }
+
+  .product-tagline-pocket {
+    color: var(--petrol-soft, #45C4B0);
+    font-family: var(--font-playful, 'Nunito', sans-serif);
+  }
+
+  .product-card-pocket .product-description {
+    color: var(--warm-text-secondary, #D6D3D1);
+  }
+
+  .badge-pocket {
+    background: var(--warm-bg-medium, #292524);
+    border-color: var(--warm-border, rgba(168, 162, 158, 0.15));
+  }
+
+  .badge-pocket::before {
+    background: var(--petrol-soft, #45C4B0);
+  }
+
+  .btn-secondary-pocket {
+    background: transparent;
+    color: var(--warm-text-secondary, #D6D3D1);
+    border: 1px solid var(--warm-border, rgba(168, 162, 158, 0.15));
+    border-radius: 50px;
+    font-family: var(--font-playful, 'Nunito', sans-serif);
+  }
+
+  .btn-secondary-pocket:hover {
+    background: var(--warm-bg-medium, #292524);
+    border-color: var(--petrol-soft, #45C4B0);
+    color: var(--petrol-soft, #45C4B0);
+  }
+
+  .vote-btn-pocket {
+    border-color: var(--warm-border, rgba(168, 162, 158, 0.15));
+    color: var(--warm-text-muted, #A8A29E);
+  }
+
+  .vote-btn-pocket:hover {
+    border-color: var(--petrol-soft, #45C4B0);
+    color: var(--petrol-soft, #45C4B0);
+  }
+
+  .vote-btn-pocket.voted {
+    border-color: var(--petrol-soft, #45C4B0);
+    color: var(--petrol-soft, #45C4B0);
+    background: rgba(20, 145, 155, 0.1);
+  }
+
+  .vote-btn-pocket.voted:hover {
+    background: rgba(20, 145, 155, 0.2);
   }
 
   /* Philosophy Section */
