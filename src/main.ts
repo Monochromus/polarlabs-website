@@ -55,8 +55,8 @@ function initApp(): void {
     main.innerHTML = renderHomePage();
     initHomePage();
     updatePageMeta({
-      title: 'Polar Labs',
-      description: 'Werkzeuge die Klarheit schaffen. Entdecke mapMind und Pocket Assistant.',
+      title: 'Polar Labs - KI-Werkzeuge für Klarheit',
+      description: 'Einfache, digitale Werkzeuge',
       path: '/',
       schema: {
         '@context': 'https://schema.org',
