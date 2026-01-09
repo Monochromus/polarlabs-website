@@ -527,28 +527,36 @@ export const translations: Translations = {
     en: 'Just use it',
   },
   'secondbrain.pricing.free.feature.1': {
-    de: 'AI Agent mit GPT-4o-mini (10 Anfragen/Tag)',
-    en: 'AI Agent with GPT-4o-mini (10 requests/day)',
+    de: '10 AI-Anfragen pro Tag',
+    en: '10 AI requests per day',
   },
   'secondbrain.pricing.free.feature.2': {
-    de: 'iPhone Kurzbefehl (Sperrbildschirm)',
-    en: 'iPhone Shortcut (lock screen)',
+    de: '2x Bildanalyse täglich',
+    en: '2x image analysis daily',
   },
   'secondbrain.pricing.free.feature.3': {
-    de: 'Web Research',
-    en: 'Web Research',
+    de: '2 Email-Konten & Kalender-Sync',
+    en: '2 email accounts & calendar sync',
   },
   'secondbrain.pricing.free.feature.4': {
-    de: 'Bildanalyse (1x täglich)',
-    en: 'Image analysis (1x daily)',
+    de: 'Web Recherche (Perplexity Sonar)',
+    en: 'Web research (Perplexity Sonar)',
   },
   'secondbrain.pricing.free.feature.5': {
     de: 'PARA-Organisation & Notizen',
     en: 'PARA organization & notes',
   },
   'secondbrain.pricing.free.feature.6': {
-    de: '2 Email-Konten & Kalender-Sync',
-    en: '2 email accounts & calendar sync',
+    de: 'iPhone Kurzbefehl',
+    en: 'iPhone Shortcut',
+  },
+  'secondbrain.pricing.free.limitation.1': {
+    de: 'Keine Custom Tools',
+    en: 'No Custom Tools',
+  },
+  'secondbrain.pricing.free.limitation.2': {
+    de: 'Nur Gemini 2.5 Flash',
+    en: 'Only Gemini 2.5 Flash',
   },
   'secondbrain.pricing.ownkey': {
     de: 'Pro - OwnKey',
@@ -571,28 +579,24 @@ export const translations: Translations = {
     en: 'Everything in Free, plus:',
   },
   'secondbrain.pricing.ownkey.feature.1': {
-    de: 'Eigener OpenAI API Key',
-    en: 'Your own OpenAI API key',
+    de: 'Unbegrenzte Anfragen (eigene Kosten)',
+    en: 'Unlimited requests (own costs)',
   },
   'secondbrain.pricing.ownkey.feature.2': {
-    de: 'Eigener Perplexity API Key',
-    en: 'Your own Perplexity API key',
+    de: 'Wähle Google Gemini oder Mistral AI (DSGVO)',
+    en: 'Choose Google Gemini or Mistral AI (GDPR)',
   },
   'secondbrain.pricing.ownkey.feature.3': {
-    de: 'Unbegrenzte AI-Anfragen',
-    en: 'Unlimited AI requests',
+    de: 'Optional: Perplexity für Web-Recherche',
+    en: 'Optional: Perplexity for web research',
   },
   'secondbrain.pricing.ownkey.feature.4': {
-    de: 'Zahle nur nach Nutzung bei OpenAI/Perplexity',
-    en: 'Pay only by usage at OpenAI/Perplexity',
+    de: 'Custom Tools & alle Pro Features',
+    en: 'Custom Tools & all Pro features',
   },
-  'secondbrain.pricing.ownkey.feature.5': {
-    de: 'Volle Kontrolle über Kosten',
-    en: 'Full control over costs',
-  },
-  'secondbrain.pricing.ownkey.feature.6': {
-    de: 'Alle Pro Features',
-    en: 'All Pro features',
+  'secondbrain.pricing.ownkey.note': {
+    de: 'Erfordert eigene API Keys: Gemini oder Mistral',
+    en: 'Requires own API keys: Gemini or Mistral',
   },
   'secondbrain.pricing.pro': {
     de: 'Pro',
@@ -619,12 +623,12 @@ export const translations: Translations = {
     en: '50 AI requests per day',
   },
   'secondbrain.pricing.pro.feature.2': {
-    de: 'Premium-Modelle (GPT-5, Reasoning)',
-    en: 'Premium models (GPT-5, Reasoning)',
+    de: 'Gemini 3 Flash oder Mistral Large 3',
+    en: 'Gemini 3 Flash or Mistral Large 3',
   },
   'secondbrain.pricing.pro.feature.3': {
-    de: 'Unbegrenzte Bildanalyse',
-    en: 'Unlimited image analysis',
+    de: '10 Bildanalysen pro Tag',
+    en: '10 image analyses per day',
   },
   'secondbrain.pricing.pro.feature.4': {
     de: 'Unbegrenzte Email-Konten',

@@ -476,6 +476,20 @@ export function renderSecondBrainPage(): string {
                 </svg>
                 ${i18n.t('secondbrain.pricing.free.feature.6')}
               </li>
+              <li class="pricing-limitation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                ${i18n.t('secondbrain.pricing.free.limitation.1')}
+              </li>
+              <li class="pricing-limitation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                ${i18n.t('secondbrain.pricing.free.limitation.2')}
+              </li>
             </ul>
             <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pricing-cta">${i18n.t('secondbrain.pricing.cta.free')}</a>
           </div>
@@ -515,19 +529,8 @@ export function renderSecondBrainPage(): string {
                 </svg>
                 ${i18n.t('secondbrain.pricing.ownkey.feature.4')}
               </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                ${i18n.t('secondbrain.pricing.ownkey.feature.5')}
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                ${i18n.t('secondbrain.pricing.ownkey.feature.6')}
-              </li>
             </ul>
+            <p class="pricing-note mono">${i18n.t('secondbrain.pricing.ownkey.note')}</p>
             <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-petrol pricing-cta">${i18n.t('secondbrain.pricing.cta.ownkey')}</a>
           </div>
 
@@ -1229,6 +1232,23 @@ export const secondBrainStyles = `
 
   .pricing-card-pro .pricing-features li svg {
     color: var(--petrol-soft);
+  }
+
+  .pricing-limitation {
+    color: var(--warm-text-muted) !important;
+    opacity: 0.7;
+  }
+
+  .pricing-limitation svg {
+    color: #ef4444 !important;
+  }
+
+  .pricing-note {
+    font-size: var(--text-xs);
+    color: var(--warm-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-4);
+    text-align: center;
   }
 
   .pricing-cta {
