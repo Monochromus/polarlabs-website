@@ -214,16 +214,16 @@ export const translations: Translations = {
     en: 'The Memory Problem',
   },
   'secondbrain.problem.subtitle': {
-    de: 'Unser Gehirn ist nicht für das digitale Zeitalter gemacht',
-    en: 'Our brain wasn\'t built for the digital age',
+    de: 'Unser Gehirn ist noch nicht an das digitale Zeitalter angepasst',
+    en: 'Our brain hasn\'t adapted to the digital age yet',
   },
   'secondbrain.problem.item1': {
     de: 'Rezepte aus Reels, die du nie nachkochst',
     en: 'Recipes from reels you never cook',
   },
   'secondbrain.problem.item2': {
-    de: 'Geschenkideen, die du zum Geburtstag vergisst',
-    en: 'Gift ideas you forget when the birthday comes',
+    de: 'Geschenkideen, die du wieder vergisst',
+    en: 'Gift ideas you forget again',
   },
   'secondbrain.problem.item3': {
     de: 'Partyspiele, an die du dich nicht im richtigen Moment erinnerst',
@@ -318,8 +318,8 @@ export const translations: Translations = {
     en: 'How it works',
   },
   'secondbrain.example.1': {
-    de: '[Link teilen] Speichere das Video und verknüpfe es mit meinem Projekt "Wohnungseinrichtung"',
-    en: '[Share link] Save this video and link it to my project "Home decoration"',
+    de: '[Link teilen]',
+    en: '[Share link]',
   },
   'secondbrain.example.1.result': {
     de: 'Webclip → PARA-Einordnung → Projekt-Verknüpfung',
@@ -346,8 +346,8 @@ export const translations: Translations = {
     en: 'Summarize all articles I read about heating systems',
   },
   'secondbrain.example.4.result': {
-    de: 'Webclip-Suche → KI-Zusammenfassung',
-    en: 'Webclip search → AI summary',
+    de: 'Second Brain Recherche → KI-Zusammenfassung',
+    en: 'Second Brain research → AI summary',
   },
 
   // Morning Briefing Section
