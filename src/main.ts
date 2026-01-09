@@ -54,37 +54,91 @@ function initApp(): void {
   router.register('/', () => {
     main.innerHTML = renderHomePage();
     initHomePage();
-    updatePageMeta('Polar Labs', 'We reveal structure in complex systems. KI-Werkzeuge für Klarheit.');
+    updatePageMeta({
+      title: 'Polar Labs',
+      description: 'Werkzeuge die Klarheit schaffen. Entdecke mapMind und Pocket Assistant.',
+      path: '/',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        'name': 'Polar Labs',
+        'url': 'https://polarlabs.de'
+      }
+    });
   });
 
   router.register('/mapmind', () => {
     main.innerHTML = renderMapMindPage();
     initMapMindPage();
-    updatePageMeta('mapMind | Polar Labs', 'KI-gestützte Karten für personalisierte Entdeckungen.');
+    updatePageMeta({
+      title: 'mapMind | Polar Labs',
+      description: 'KI-gestützte Karten für personalisierte Entdeckungen. Visualisiere komplexe Zusammenhänge.',
+      path: '/mapmind',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'mapMind',
+        'applicationCategory': 'ProductivityApplication',
+        'operatingSystem': 'Web',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'EUR'
+        }
+      }
+    });
   });
 
   router.register('/pocket-assistant', () => {
     main.innerHTML = renderSecondBrainPage();
     initSecondBrainPage();
-    updatePageMeta('Pocket Assistant | Polar Labs', 'Dein KI-gestützter Produktivitäts-Assistent – ein Befehl, viele Aktionen.');
+    updatePageMeta({
+      title: 'Pocket Assistant | Polar Labs',
+      description: 'Dein KI-gestützter Produktivitäts-Assistent – ein Befehl, viele Aktionen. Automatisiere deinen Alltag.',
+      path: '/pocket-assistant',
+      schema: {
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        'name': 'Pocket Assistant',
+        'applicationCategory': 'ProductivityApplication',
+        'operatingSystem': 'Web',
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'EUR'
+        }
+      }
+    });
   });
 
   router.register('/contact', () => {
     main.innerHTML = renderContactPage();
     initContactPage();
-    updatePageMeta('Kontakt | Polar Labs', 'Kontaktieren Sie uns für Anfragen oder Zusammenarbeit.');
+    updatePageMeta({
+      title: 'Kontakt | Polar Labs',
+      description: 'Kontaktieren Sie uns für Anfragen oder Zusammenarbeit.',
+      path: '/contact'
+    });
   });
 
   router.register('/impressum', () => {
     main.innerHTML = renderImpressumPage();
     initImpressumPage();
-    updatePageMeta('Impressum | Polar Labs', 'Rechtliche Informationen.');
+    updatePageMeta({
+      title: 'Impressum | Polar Labs',
+      description: 'Rechtliche Informationen und Angaben gemäß § 5 TMG.',
+      path: '/impressum'
+    });
   });
 
   router.register('/datenschutz', () => {
     main.innerHTML = renderDatenschutzPage();
     initDatenschutzPage();
-    updatePageMeta('Datenschutz | Polar Labs', 'Datenschutzerklärung und Informationen zur Datenverarbeitung.');
+    updatePageMeta({
+      title: 'Datenschutz | Polar Labs',
+      description: 'Datenschutzerklärung und Informationen zur Datenverarbeitung.',
+      path: '/datenschutz'
+    });
   });
 
   // Initialize router
@@ -108,11 +162,55 @@ function initApp(): void {
   });
 }
 
-function updatePageMeta(title: string, description: string): void {
-  document.title = title;
-  const metaDescription = document.querySelector('meta[name="description"]');
-  if (metaDescription) {
-    metaDescription.setAttribute('content', description);
+interface PageMeta {
+  title: string;
+  description: string;
+  path: string;
+  schema?: object;
+}
+
+function updatePageMeta(meta: PageMeta): void {
+  const baseUrl = 'https://polarlabs.de';
+  const canonicalUrl = `${baseUrl}${meta.path === '/' ? '' : meta.path}`;
+  const ogImage = `${baseUrl}/logo_large.png`;
+
+  // Title
+  document.title = meta.title;
+
+  // Description
+  updateMetaTag('meta[name="description"]', 'content', meta.description);
+
+  // Canonical
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) {
+    canonical.setAttribute('href', canonicalUrl);
+  }
+
+  // Open Graph
+  updateMetaTag('meta[property="og:title"]', 'content', meta.title);
+  updateMetaTag('meta[property="og:description"]', 'content', meta.description);
+  updateMetaTag('meta[property="og:url"]', 'content', canonicalUrl);
+  updateMetaTag('meta[property="og:image"]', 'content', ogImage);
+
+  // Twitter
+  updateMetaTag('meta[name="twitter:title"]', 'content', meta.title);
+  updateMetaTag('meta[name="twitter:description"]', 'content', meta.description);
+  updateMetaTag('meta[name="twitter:url"]', 'content', canonicalUrl);
+  updateMetaTag('meta[name="twitter:image"]', 'content', ogImage);
+
+  // Update page-specific JSON-LD schema
+  if (meta.schema) {
+    const schemaScript = document.getElementById('page-schema');
+    if (schemaScript) {
+      schemaScript.textContent = JSON.stringify(meta.schema);
+    }
+  }
+}
+
+function updateMetaTag(selector: string, attribute: string, value: string): void {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.setAttribute(attribute, value);
   }
 }
 
