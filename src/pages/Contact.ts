@@ -83,7 +83,7 @@ export function renderContactPage(): string {
               </div>
               <div class="notice-content">
                 <p>${i18n.t('contact.form.notice')}</p>
-                <a href="mailto:contact@polarlabs.art" class="notice-email mono">contact@polarlabs.art</a>
+                <a href="mailto:kontakt@polarlabs.de" class="notice-email mono">kontakt@polarlabs.de</a>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ export function renderContactPage(): string {
           <div class="contact-info">
             <div class="contact-info-card">
               <h3>Polar Labs</h3>
-              <p class="mono">contact@polarlabs.art</p>
+              <p class="mono">kontakt@polarlabs.de</p>
               <div class="contact-decoration">
                 <div class="contact-dot"></div>
                 <div class="contact-line"></div>

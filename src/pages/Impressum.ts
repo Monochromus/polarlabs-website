@@ -25,7 +25,7 @@ export function renderImpressumPage(): string {
 
           <article class="legal-block">
             <h2>${i18n.t('impressum.contact')}</h2>
-            <p>E-Mail: <a href="mailto:contact@polarlabs.art" class="legal-link">contact@polarlabs.art</a></p>
+            <p>E-Mail: <a href="mailto:kontakt@polarlabs.de" class="legal-link">kontakt@polarlabs.de</a></p>
             <p>Telefon: <a href="tel:+4915229964144" class="legal-link">+49 152 29964144</a></p>
           </article>
 
