@@ -37,6 +37,10 @@ export const translations: Translations = {
     de: 'Impressum',
     en: 'Legal Notice',
   },
+  'nav.datenschutz': {
+    de: 'Datenschutz',
+    en: 'Privacy Policy',
+  },
 
   // Hero
   'hero.headline': {
@@ -760,6 +764,132 @@ export const translations: Translations = {
   'impressum.copyright.text': {
     de: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.',
     en: 'The content and works created by the site operators on these pages are subject to German copyright law.',
+  },
+
+  // Datenschutz
+  'datenschutz.title': {
+    de: 'Datenschutzerklärung',
+    en: 'Privacy Policy',
+  },
+  'datenschutz.overview.title': {
+    de: 'Datenschutz auf einen Blick',
+    en: 'Privacy at a Glance',
+  },
+  'datenschutz.overview.text': {
+    de: 'Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf unserer Website auf. Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst.',
+    en: 'This privacy policy explains the nature, scope, and purpose of processing personal data on our website. We take the protection of your personal data very seriously.',
+  },
+  'datenschutz.responsible.title': {
+    de: 'Verantwortliche Stelle',
+    en: 'Responsible Party',
+  },
+  'datenschutz.responsible.text': {
+    de: 'Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:',
+    en: 'The responsible party for data processing on this website is:',
+  },
+  'datenschutz.hosting.title': {
+    de: 'Hosting',
+    en: 'Hosting',
+  },
+  'datenschutz.hosting.text': {
+    de: 'Diese Website wird bei Render (Render Services, Inc., 525 Brannan Street, Suite 300, San Francisco, CA 94107, USA) gehostet. Beim Besuch unserer Website werden automatisch Informationen (Server-Logfiles) durch den Hostinganbieter erfasst. Dies dient der Bereitstellung und Sicherheit der Website. Die Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. f DSGVO.',
+    en: 'This website is hosted by Render (Render Services, Inc., 525 Brannan Street, Suite 300, San Francisco, CA 94107, USA). When you visit our website, information (server log files) is automatically collected by the hosting provider. This serves the provision and security of the website. The legal basis for this is Art. 6 Para. 1 lit. f GDPR.',
+  },
+  'datenschutz.data.title': {
+    de: 'Datenerfassung auf dieser Website',
+    en: 'Data Collection on This Website',
+  },
+  'datenschutz.data.visit.title': {
+    de: 'Beim Besuch der Website',
+    en: 'When Visiting the Website',
+  },
+  'datenschutz.data.visit.text': {
+    de: 'Bei der rein informatorischen Nutzung der Website werden automatisch Daten an unseren Hostinganbieter übermittelt. Diese Daten (Server-Logfiles) umfassen z.B. den Browsertyp, das Betriebssystem, die Referrer-URL, den Hostnamen des zugreifenden Rechners sowie die Uhrzeit der Serveranfrage.',
+    en: 'When using the website for purely informational purposes, data is automatically transmitted to our hosting provider. This data (server log files) includes, for example, the browser type, operating system, referrer URL, hostname of the accessing computer, and the time of the server request.',
+  },
+  'datenschutz.data.storage.title': {
+    de: 'Lokale Speicherung (LocalStorage)',
+    en: 'Local Storage',
+  },
+  'datenschutz.data.storage.text': {
+    de: 'Unsere Website nutzt den LocalStorage Ihres Browsers, um Ihre Einstellungen zu speichern. Diese Daten werden nur lokal auf Ihrem Gerät gespeichert und nicht an uns übermittelt:',
+    en: 'Our website uses your browser\'s LocalStorage to save your settings. This data is stored locally on your device only and is not transmitted to us:',
+  },
+  'datenschutz.data.storage.item1': {
+    de: 'Spracheinstellung (Deutsch/Englisch)',
+    en: 'Language setting (German/English)',
+  },
+  'datenschutz.data.storage.item2': {
+    de: 'Theme-Einstellung (Hell/Dunkel)',
+    en: 'Theme setting (Light/Dark)',
+  },
+  'datenschutz.data.storage.item3': {
+    de: 'Produkt-Votes (welche Produkte Sie interessieren)',
+    en: 'Product votes (which products interest you)',
+  },
+  'datenschutz.data.contact.title': {
+    de: 'Kontaktaufnahme',
+    en: 'Contact',
+  },
+  'datenschutz.data.contact.text': {
+    de: 'Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben einschließlich der von Ihnen angegebenen Kontaktdaten zur Bearbeitung Ihrer Anfrage und für Rückfragen gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.',
+    en: 'If you contact us by email, your details including the contact information you provide will be stored for processing your request and for follow-up questions. We will not share this data without your consent.',
+  },
+  'datenschutz.cookies.title': {
+    de: 'Cookies',
+    en: 'Cookies',
+  },
+  'datenschutz.cookies.text': {
+    de: 'Diese Website verwendet keine Cookies. Wir setzen ausschließlich den LocalStorage für Ihre Präferenzen ein, der keine Tracking-Funktionalität besitzt.',
+    en: 'This website does not use cookies. We only use LocalStorage for your preferences, which has no tracking functionality.',
+  },
+  'datenschutz.thirdparty.title': {
+    de: 'Drittanbieter-Dienste',
+    en: 'Third-Party Services',
+  },
+  'datenschutz.thirdparty.fonts.title': {
+    de: 'Google Fonts',
+    en: 'Google Fonts',
+  },
+  'datenschutz.thirdparty.fonts.text': {
+    de: 'Diese Website nutzt zur Darstellung von Schriftarten Google Fonts. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriften von Google-Servern. Dabei wird Ihre IP-Adresse an Google übermittelt. Weitere Informationen finden Sie in der Datenschutzerklärung von Google: https://policies.google.com/privacy',
+    en: 'This website uses Google Fonts for font display. When you access a page, your browser loads the required fonts from Google servers. In doing so, your IP address is transmitted to Google. For more information, see Google\'s privacy policy: https://policies.google.com/privacy',
+  },
+  'datenschutz.rights.title': {
+    de: 'Ihre Rechte',
+    en: 'Your Rights',
+  },
+  'datenschutz.rights.text': {
+    de: 'Sie haben gemäß DSGVO folgende Rechte bezüglich Ihrer personenbezogenen Daten:',
+    en: 'According to GDPR, you have the following rights regarding your personal data:',
+  },
+  'datenschutz.rights.item1': {
+    de: 'Recht auf Auskunft (Art. 15 DSGVO)',
+    en: 'Right to access (Art. 15 GDPR)',
+  },
+  'datenschutz.rights.item2': {
+    de: 'Recht auf Berichtigung (Art. 16 DSGVO)',
+    en: 'Right to rectification (Art. 16 GDPR)',
+  },
+  'datenschutz.rights.item3': {
+    de: 'Recht auf Löschung (Art. 17 DSGVO)',
+    en: 'Right to erasure (Art. 17 GDPR)',
+  },
+  'datenschutz.rights.item4': {
+    de: 'Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)',
+    en: 'Right to restriction of processing (Art. 18 GDPR)',
+  },
+  'datenschutz.rights.item5': {
+    de: 'Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)',
+    en: 'Right to lodge a complaint with a supervisory authority (Art. 77 GDPR)',
+  },
+  'datenschutz.changes.title': {
+    de: 'Änderungen dieser Datenschutzerklärung',
+    en: 'Changes to This Privacy Policy',
+  },
+  'datenschutz.changes.text': {
+    de: 'Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte Rechtslagen oder bei Änderungen unserer Dienste anzupassen. Die aktuelle Version finden Sie stets auf dieser Seite.',
+    en: 'We reserve the right to adapt this privacy policy to accommodate changes in the legal situation or changes to our services. You will always find the current version on this page.',
   },
 
   // Footer

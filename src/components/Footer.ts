@@ -23,6 +23,7 @@ export function createFooter(): HTMLElement {
         <div class="footer-links">
           <a href="/contact" class="footer-link" data-link>${i18n.t('nav.contact')}</a>
           <a href="/impressum" class="footer-link" data-link>${i18n.t('nav.impressum')}</a>
+          <a href="/datenschutz" class="footer-link" data-link>${i18n.t('nav.datenschutz')}</a>
         </div>
         <div class="footer-copyright">
           <span class="mono">${i18n.t('footer.copyright')}</span>

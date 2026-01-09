@@ -6,6 +6,7 @@ import { renderMapMindPage, initMapMindPage, mapMindStyles } from './pages/MapMi
 import { renderSecondBrainPage, initSecondBrainPage, secondBrainStyles } from './pages/SecondBrain';
 import { renderContactPage, initContactPage, contactStyles } from './pages/Contact';
 import { renderImpressumPage, initImpressumPage, impressumStyles } from './pages/Impressum';
+import { renderDatenschutzPage, initDatenschutzPage, datenschutzStyles } from './pages/Datenschutz';
 import { router } from './utils/router';
 import { i18n } from './utils/translations';
 
@@ -19,6 +20,7 @@ styles.textContent = `
   ${secondBrainStyles}
   ${contactStyles}
   ${impressumStyles}
+  ${datenschutzStyles}
 `;
 document.head.appendChild(styles);
 
@@ -79,6 +81,12 @@ function initApp(): void {
     updatePageMeta('Impressum | Polar Labs', 'Rechtliche Informationen.');
   });
 
+  router.register('/datenschutz', () => {
+    main.innerHTML = renderDatenschutzPage();
+    initDatenschutzPage();
+    updatePageMeta('Datenschutz | Polar Labs', 'Datenschutzerklärung und Informationen zur Datenverarbeitung.');
+  });
+
   // Initialize router
   router.init();
 
@@ -91,6 +99,7 @@ function initApp(): void {
       '/secondbrain': () => { main.innerHTML = renderSecondBrainPage(); initSecondBrainPage(); },
       '/contact': () => { main.innerHTML = renderContactPage(); initContactPage(); },
       '/impressum': () => { main.innerHTML = renderImpressumPage(); initImpressumPage(); },
+      '/datenschutz': () => { main.innerHTML = renderDatenschutzPage(); initDatenschutzPage(); },
     }[currentRoute];
 
     if (handler) {

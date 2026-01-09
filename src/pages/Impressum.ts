@@ -15,24 +15,26 @@ export function renderImpressumPage(): string {
           <article class="legal-block">
             <h2>${i18n.t('impressum.tmg')}</h2>
             <address class="legal-address">
-              <p><strong>[Name / Firma]</strong></p>
-              <p>[Straße und Hausnummer]</p>
-              <p>[PLZ Ort]</p>
-              <p>[Land]</p>
+              <p><strong>Polarlabs</strong></p>
+              <p>Daniel Sauer</p>
+              <p>Holtenauer Strasse</p>
+              <p>24106 Kiel</p>
+              <p>Deutschland</p>
             </address>
           </article>
 
           <article class="legal-block">
             <h2>${i18n.t('impressum.contact')}</h2>
             <p>E-Mail: <a href="mailto:contact@polarlabs.art" class="legal-link">contact@polarlabs.art</a></p>
+            <p>Telefon: <a href="tel:+4915229964144" class="legal-link">+49 152 29964144</a></p>
           </article>
 
           <article class="legal-block">
             <h2>${i18n.t('impressum.responsible')}</h2>
             <address class="legal-address">
-              <p><strong>[Name]</strong></p>
-              <p>[Straße und Hausnummer]</p>
-              <p>[PLZ Ort]</p>
+              <p><strong>Daniel Sauer</strong></p>
+              <p>Holtenauer Strasse</p>
+              <p>24106 Kiel</p>
             </address>
           </article>
 

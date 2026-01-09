@@ -1,4 +1,4 @@
-export type Route = '/' | '/mapmind' | '/secondbrain' | '/contact' | '/impressum';
+export type Route = '/' | '/mapmind' | '/secondbrain' | '/contact' | '/impressum' | '/datenschutz';
 
 type RouteHandler = () => void;
 
@@ -15,7 +15,7 @@ class Router {
 
   private getRouteFromPath(): Route {
     const path = window.location.pathname;
-    const validRoutes: Route[] = ['/', '/mapmind', '/secondbrain', '/contact', '/impressum'];
+    const validRoutes: Route[] = ['/', '/mapmind', '/secondbrain', '/contact', '/impressum', '/datenschutz'];
     return validRoutes.includes(path as Route) ? (path as Route) : '/';
   }
 
