@@ -194,8 +194,8 @@ export const translations: Translations = {
     en: 'Your automated Second Brain using the PARA method',
   },
   'secondbrain.description': {
-    de: 'Nie wieder Rezepte, Tanzvideos oder Partyspiele vergessen – der Pocket Assistant speichert alles und erinnert dich zum richtigen Zeitpunkt.',
-    en: 'Never forget recipes, dance videos or party games again – Pocket Assistant saves everything and reminds you at the right moment.',
+    de: 'Nie wieder Rezepte, Tech-Reviews oder Side-Project-Ideen vergessen – der Pocket Assistant speichert alles und erinnert dich zum richtigen Zeitpunkt.',
+    en: 'Never forget recipes, tech reviews or side project ideas again – Pocket Assistant saves everything and reminds you at the right moment.',
   },
   'secondbrain.hero.title': {
     de: 'Pocket Assistant',
@@ -254,8 +254,8 @@ export const translations: Translations = {
     en: 'With webclips, you save anything with a link: an Instagram post, a YouTube video, any article – via the share button, everything lands in your Second Brain in seconds. Via the lock screen shortcut, you can also quickly send any request to the assistant – text only or with a photo.',
   },
   'secondbrain.concept.p2': {
-    de: 'In der App oder per Sprachbefehl findest du alles sofort wieder: "Welche Rezepte hatte ich mir gemerkt?" oder "Zeig mir die Videos zum Tanzen lernen". Der Agent durchsucht dein Second Brain und präsentiert die passenden Inhalte – genau dann, wenn du sie brauchst.',
-    en: 'In the app or via voice command, you instantly find everything again: "Which recipes did I save?" or "Show me the dance tutorial videos". The agent searches your Second Brain and presents the matching content – exactly when you need it.',
+    de: 'In der App oder per Sprachbefehl findest du alles sofort wieder: "Welche Coding-Tutorials hatte ich mir gemerkt?" oder "Zeig mir die Tech-Reviews zu Smartphones". Der Agent durchsucht dein Second Brain und präsentiert die passenden Inhalte – genau dann, wenn du sie brauchst.',
+    en: 'In the app or via voice command, you instantly find everything again: "Which coding tutorials did I save?" or "Show me the tech reviews about smartphones". The agent searches your Second Brain and presents the matching content – exactly when you need it.',
   },
   'secondbrain.concept.p3': {
     de: 'Beispiel: Fotografiere deinen Schichtplan oder handgeschriebene Notizen ab, schicke sie an den Pocket Assistant – und alle Schichten werden automatisch in deinen Kalender eingetragen. Mit dem iPhone Kurzbefehl geht das direkt vom Sperrbildschirm.',
@@ -274,12 +274,12 @@ export const translations: Translations = {
     en: 'The agent intelligently combines tools for todos, calendar, email, web research and more.',
   },
   'secondbrain.feature.2.title': {
-    de: 'Multi-Account Email',
-    en: 'Multi-Account Email',
+    de: 'Email lesen & senden',
+    en: 'Read & Send Email',
   },
   'secondbrain.feature.2.desc': {
-    de: 'Alle Postfächer (iCloud, Gmail, Outlook, GMX) in einer Oberfläche.',
-    en: 'All mailboxes (iCloud, Gmail, Outlook, GMX) in one interface.',
+    de: 'Alle Postfächer in einer Oberfläche. Emails zusammenfassen, beantworten oder neue verfassen lassen.',
+    en: 'All mailboxes in one interface. Have emails summarized, answered, or composed for you.',
   },
   'secondbrain.feature.3.title': {
     de: 'Kalender-Sync',
@@ -342,8 +342,8 @@ export const translations: Translations = {
     en: 'Email analysis → Todo creation',
   },
   'secondbrain.example.4': {
-    de: 'Fasse alle Artikel zusammen, die ich diese Woche zum Thema KI gespeichert habe',
-    en: 'Summarize all articles I saved this week about AI',
+    de: 'Fasse alle Artikel zusammen, die ich über das Thema Heizung gelesen habe',
+    en: 'Summarize all articles I read about heating systems',
   },
   'secondbrain.example.4.result': {
     de: 'Webclip-Suche → KI-Zusammenfassung',
