@@ -277,21 +277,13 @@ export function renderSecondBrainPage(): string {
 
         <div class="usecase-ideas">
           <h4>${i18n.t('secondbrain.usecase.more')}</h4>
-          <div class="usecase-ideas-grid">
+          <div class="usecase-ideas-grid usecase-ideas-grid-3">
             <div class="usecase-idea">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
                 <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
                 <polyline points="16 7 22 7 22 13"/>
               </svg>
               <span>${i18n.t('secondbrain.usecase.idea1')}</span>
-            </div>
-            <div class="usecase-idea">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
-                <path d="M9 18V5l12-2v13"/>
-                <circle cx="6" cy="18" r="3"/>
-                <circle cx="18" cy="16" r="3"/>
-              </svg>
-              <span>${i18n.t('secondbrain.usecase.idea2')}</span>
             </div>
             <div class="usecase-idea">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
@@ -306,13 +298,6 @@ export function renderSecondBrainPage(): string {
                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>
               <span>${i18n.t('secondbrain.usecase.idea4')}</span>
-            </div>
-            <div class="usecase-idea">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
-                <line x1="12" y1="1" x2="12" y2="23"/>
-                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-              <span>${i18n.t('secondbrain.usecase.idea5')}</span>
             </div>
           </div>
         </div>
@@ -346,9 +331,9 @@ export function renderSecondBrainPage(): string {
                 <div class="tool-badge tool-badge-1">Todos</div>
                 <div class="tool-badge tool-badge-2">Kalender</div>
                 <div class="tool-badge tool-badge-3">Email</div>
-                <div class="tool-badge tool-badge-4">Web</div>
-                <div class="tool-badge tool-badge-5">Notizen</div>
-                <div class="tool-badge tool-badge-6">+32</div>
+                <div class="tool-badge tool-badge-4">Projekte</div>
+                <div class="tool-badge tool-badge-5">Ressourcen</div>
+                <div class="tool-badge tool-badge-6">Webclips</div>
               </div>
             </div>
           </div>
@@ -1852,7 +1837,11 @@ export const secondBrainStyles = `
   .tool-badge-3 { bottom: 20%; right: 0; }
   .tool-badge-4 { bottom: 0; left: 50%; transform: translateX(-50%); }
   .tool-badge-5 { bottom: 20%; left: 0; }
-  .tool-badge-6 { top: 20%; left: 0; background: rgba(69, 196, 176, 0.2); color: var(--petrol-soft); border-color: var(--petrol-soft); }
+  .tool-badge-6 { top: 20%; left: 0; }
+
+  .usecase-ideas-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /* Shortcut Section */
   .shortcut-grid {
@@ -1983,7 +1972,8 @@ export const secondBrainStyles = `
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .usecase-ideas-grid {
+    .usecase-ideas-grid,
+    .usecase-ideas-grid-3 {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -2045,8 +2035,9 @@ export const secondBrainStyles = `
       text-align: center;
     }
 
-    .usecase-ideas-grid {
-      grid-template-columns: repeat(2, 1fr);
+    .usecase-ideas-grid,
+    .usecase-ideas-grid-3 {
+      grid-template-columns: 1fr;
     }
 
     .tools-showcase {

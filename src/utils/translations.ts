@@ -202,12 +202,12 @@ export const translations: Translations = {
     en: 'Pocket Assistant',
   },
   'secondbrain.hero.subtitle': {
-    de: 'Dein automatisiertes Second Brain',
-    en: 'Your automated Second Brain',
+    de: 'AI powered Second Brain',
+    en: 'AI powered Second Brain',
   },
   'secondbrain.hero.description': {
-    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – jetzt vollautomatisch. Speichere Ideen aus Reels, Rezepte, Artikel und alles Wissenswerte. Der KI-Agent erinnert dich genau dann, wenn es relevant wird.',
-    en: 'Based on the PARA method by Tiago Forte – now fully automated. Save ideas from reels, recipes, articles and anything worth knowing. The AI agent reminds you exactly when it becomes relevant.',
+    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – jetzt vollautomatisch. Speichere Webclips aus Instagram, YouTube, Artikeln oder allem mit Link. Der KI-Agent sortiert automatisch ein und erinnert dich, wenn es relevant wird.',
+    en: 'Based on the PARA method by Tiago Forte – now fully automated. Save webclips from Instagram, YouTube, articles or anything with a link. The AI agent automatically organizes and reminds you when relevant.',
   },
   'secondbrain.problem.title': {
     de: 'Das Gedächtnis-Problem',
@@ -250,12 +250,12 @@ export const translations: Translations = {
     en: 'How it works',
   },
   'secondbrain.concept.p1': {
-    de: 'Wir alle kennen es: Du scrollst durch Instagram und entdeckst ein Rezept, das du unbedingt nachkochen willst. Ein Reel zeigt dir Partyspiele für den nächsten Spieleabend. Ein Tanzvideo, das du lernen möchtest. Du speicherst es – und vergisst es. Deine gespeicherten Posts sind ein Friedhof von "Das mach ich später"-Momenten.',
-    en: 'We all know it: You scroll through Instagram and discover a recipe you want to cook. A reel shows party games for your next game night. A dance video you want to learn. You save it – and forget it. Your saved posts are a graveyard of "I\'ll do this later" moments.',
+    de: 'Mit Webclips speicherst du alles, was einen Link hat: Ein Instagram-Post, ein YouTube-Video, ein Artikel bei SPIEGEL Online – alles landet in Sekunden in deinem Second Brain. Per iPhone Kurzbefehl teilst du den Link direkt vom Sperrbildschirm. Der KI-Agent analysiert den Inhalt und sortiert ihn automatisch nach dem PARA-Prinzip ein.',
+    en: 'With webclips, you save anything with a link: an Instagram post, a YouTube video, an article on any website – everything lands in your Second Brain in seconds. Via iPhone shortcut, you share the link directly from the lock screen. The AI agent analyzes the content and automatically organizes it using the PARA method.',
   },
   'secondbrain.concept.p2': {
-    de: 'Das Pocket Assistant Second Brain nach Tiago Fortes PARA-Methode löst zwei Probleme: Erstens speichert es alle deine Ideen, Notizen und Inspirationen an einem Ort – automatisch organisiert in Projekte, Bereiche, Ressourcen und Archiv. Zweitens führt der KI-Agent direkt Aufgaben aus: Mails sichten, zusammenfassen, Kalendereinträge erstellen.',
-    en: 'The Pocket Assistant Second Brain using Tiago Forte\'s PARA method solves two problems: First, it stores all your ideas, notes and inspirations in one place – automatically organized into Projects, Areas, Resources and Archive. Second, the AI agent directly executes tasks: reviewing emails, summarizing, creating calendar entries.',
+    de: 'In der App oder per Sprachbefehl findest du alles sofort wieder: "Welche Rezepte hatte ich mir gemerkt?" oder "Zeig mir die Videos zum Tanzen lernen". Der Agent durchsucht dein Second Brain und präsentiert die passenden Inhalte – genau dann, wenn du sie brauchst.',
+    en: 'In the app or via voice command, you instantly find everything again: "Which recipes did I save?" or "Show me the dance tutorial videos". The agent searches your Second Brain and presents the matching content – exactly when you need it.',
   },
   'secondbrain.concept.p3': {
     de: 'Beispiel: Fotografiere deinen Schichtplan oder handgeschriebene Notizen ab, schicke sie an den Pocket Assistant – und alle Schichten werden automatisch in deinen Kalender eingetragen. Mit dem iPhone Kurzbefehl geht das direkt vom Sperrbildschirm.',
@@ -326,12 +326,12 @@ export const translations: Translations = {
     en: 'Image analysis → Calendar entries',
   },
   'secondbrain.example.2': {
-    de: 'Speichere dieses Rezept für Pasta – erinnere mich, wenn ich einkaufen gehe',
-    en: 'Save this pasta recipe – remind me when I go shopping',
+    de: 'Ich plane einen Trip nach Berlin – recherchiere alle Konzerte am Wochenende und trag sie in einen neuen Kalender ein',
+    en: 'I\'m planning a trip to Berlin – research all concerts on the weekend and add them to a new calendar',
   },
   'secondbrain.example.2.result': {
-    de: 'Second Brain → Kontextuelle Erinnerung',
-    en: 'Second Brain → Contextual reminder',
+    de: 'Web-Recherche → Neuer Kalender → Events',
+    en: 'Web research → New calendar → Events',
   },
   'secondbrain.example.3': {
     de: 'Fasse meine ungelesenen Emails zusammen und erstelle Todos für alles Wichtige',
@@ -448,8 +448,8 @@ export const translations: Translations = {
     en: 'One Command, Many Actions',
   },
   'secondbrain.power.subtitle': {
-    de: '37 Tools, die der Agent intelligent kombiniert',
-    en: '37 tools the agent intelligently combines',
+    de: 'Dutzende Tools, die der Agent intelligent kombiniert',
+    en: 'Dozens of tools the agent intelligently combines',
   },
   'secondbrain.power.desc': {
     de: 'Vergiss komplizierte Menüs und endlose Klicks. Der AI-Agent versteht komplexe Anfragen und führt automatisch die richtigen Aktionen aus – alles in einer Konversation.',
