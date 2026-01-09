@@ -222,12 +222,12 @@ export const translations: Translations = {
     en: 'Recipes from reels you never cook',
   },
   'secondbrain.problem.item2': {
-    de: 'Tanzvideos, die du vergisst zu üben',
-    en: 'Dance videos you forget to practice',
+    de: 'Geschenkideen, die du zum Geburtstag vergisst',
+    en: 'Gift ideas you forget when the birthday comes',
   },
   'secondbrain.problem.item3': {
-    de: 'Partyspiele, an die du dich nicht erinnerst',
-    en: 'Party games you can\'t remember',
+    de: 'Partyspiele, an die du dich nicht im richtigen Moment erinnerst',
+    en: 'Party games you can\'t remember at the right moment',
   },
   'secondbrain.problem.item4': {
     de: 'Artikel, die ungelesen bleiben',
@@ -318,12 +318,12 @@ export const translations: Translations = {
     en: 'How it works',
   },
   'secondbrain.example.1': {
-    de: '[Foto vom Schichtplan] Trag alle meine Schichten in den Kalender ein',
-    en: '[Photo of work schedule] Add all my shifts to the calendar',
+    de: '[Link teilen] Speichere das Video und verknüpfe es mit meinem Projekt "Wohnungseinrichtung"',
+    en: '[Share link] Save this video and link it to my project "Home decoration"',
   },
   'secondbrain.example.1.result': {
-    de: 'Bildanalyse → Kalendereinträge',
-    en: 'Image analysis → Calendar entries',
+    de: 'Webclip → PARA-Einordnung → Projekt-Verknüpfung',
+    en: 'Webclip → PARA organization → Project linking',
   },
   'secondbrain.example.2': {
     de: 'Ich plane einen Trip nach Berlin – recherchiere alle Konzerte am Wochenende und trag sie in einen neuen Kalender ein',
