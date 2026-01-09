@@ -55,7 +55,7 @@ function initApp(): void {
     main.innerHTML = renderHomePage();
     initHomePage();
     updatePageMeta({
-      title: 'Polar Labs - KI-Werkzeuge für Klarheit',
+      title: 'Polar Labs - AI Tools to make things easy',
       description: 'Einfache, digitale Werkzeuge',
       path: '/',
       schema: {

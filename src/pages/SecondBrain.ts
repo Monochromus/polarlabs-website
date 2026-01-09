@@ -304,43 +304,6 @@ export function renderSecondBrainPage(): string {
       </div>
     </section>
 
-    <section class="section power-section">
-      <div class="container">
-        <div class="power-grid">
-          <div class="power-content">
-            <span class="label mono">//05</span>
-            <h2>${i18n.t('secondbrain.power.title')}</h2>
-            <p class="power-subtitle">${i18n.t('secondbrain.power.subtitle')}</p>
-            <p>${i18n.t('secondbrain.power.desc')}</p>
-            <div class="power-example">
-              <blockquote>${i18n.t('secondbrain.power.example')}</blockquote>
-              <div class="power-result">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-                <span class="mono">${i18n.t('secondbrain.power.result')}</span>
-              </div>
-            </div>
-          </div>
-          <div class="power-visual">
-            <div class="tools-showcase">
-              <div class="tools-center">
-                <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" />
-              </div>
-              <div class="tools-orbit">
-                <div class="tool-badge tool-badge-1">Todos</div>
-                <div class="tool-badge tool-badge-2">Kalender</div>
-                <div class="tool-badge tool-badge-3">Email</div>
-                <div class="tool-badge tool-badge-4">Projekte</div>
-                <div class="tool-badge tool-badge-5">Ressourcen</div>
-                <div class="tool-badge tool-badge-6">Webclips</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section section-alt shortcut-section">
       <div class="container">
         <div class="shortcut-grid">
@@ -357,7 +320,7 @@ export function renderSecondBrainPage(): string {
             </div>
           </div>
           <div class="shortcut-content">
-            <span class="label mono">//06</span>
+            <span class="label mono">//05</span>
             <h2>${i18n.t('secondbrain.shortcut.title')}</h2>
             <p class="shortcut-subtitle">${i18n.t('secondbrain.shortcut.subtitle')}</p>
             <p>${i18n.t('secondbrain.shortcut.desc')}</p>
@@ -387,7 +350,7 @@ export function renderSecondBrainPage(): string {
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//07</span>
+          <span class="label mono">//06</span>
           <h2>${i18n.t('secondbrain.features.title')}</h2>
         </div>
         <div class="features-grid features-grid-6 features-grid-secondbrain">
@@ -463,7 +426,7 @@ export function renderSecondBrainPage(): string {
     <section class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//08</span>
+          <span class="label mono">//07</span>
           <h2>${i18n.t('secondbrain.pricing.title')}</h2>
         </div>
         <div class="pricing-grid pricing-grid-3">
@@ -626,7 +589,7 @@ export function renderSecondBrainPage(): string {
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//09</span>
+          <span class="label mono">//08</span>
           <h2>${i18n.t('secondbrain.roadmap.title')}</h2>
         </div>
         <div class="timeline-pocket">
