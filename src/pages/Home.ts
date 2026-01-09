@@ -115,7 +115,7 @@ export function renderHomePage(): string {
             <p class="product-tagline product-tagline-pocket">${i18n.t('secondbrain.tagline')}</p>
             <p class="product-description">${i18n.t('secondbrain.description')}</p>
             <div class="product-actions">
-              <a href="/secondbrain" class="btn btn-secondary-pocket product-link" data-link>
+              <a href="/pocket-assistant" class="btn btn-secondary-pocket product-link" data-link>
                 ${i18n.t('products.learnmore')}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                   <path d="M5 12h14M12 5l7 7-7 7"/>

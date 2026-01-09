@@ -63,7 +63,7 @@ function initApp(): void {
     updatePageMeta('mapMind | Polar Labs', 'KI-gestützte Karten für personalisierte Entdeckungen.');
   });
 
-  router.register('/secondbrain', () => {
+  router.register('/pocket-assistant', () => {
     main.innerHTML = renderSecondBrainPage();
     initSecondBrainPage();
     updatePageMeta('Pocket Assistant | Polar Labs', 'Dein KI-gestützter Produktivitäts-Assistent – ein Befehl, viele Aktionen.');
@@ -96,7 +96,7 @@ function initApp(): void {
     const handler = {
       '/': () => { main.innerHTML = renderHomePage(); initHomePage(); },
       '/mapmind': () => { main.innerHTML = renderMapMindPage(); initMapMindPage(); },
-      '/secondbrain': () => { main.innerHTML = renderSecondBrainPage(); initSecondBrainPage(); },
+      '/pocket-assistant': () => { main.innerHTML = renderSecondBrainPage(); initSecondBrainPage(); },
       '/contact': () => { main.innerHTML = renderContactPage(); initContactPage(); },
       '/impressum': () => { main.innerHTML = renderImpressumPage(); initImpressumPage(); },
       '/datenschutz': () => { main.innerHTML = renderDatenschutzPage(); initDatenschutzPage(); },

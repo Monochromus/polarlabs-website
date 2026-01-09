@@ -40,7 +40,7 @@ export function createNavigation(): HTMLElement {
               ${i18n.t('nav.home')}
             </a>
             <div class="nav-dropdown">
-              <button class="nav-link nav-dropdown-trigger ${currentRoute === '/mapmind' || currentRoute === '/secondbrain' ? 'active' : ''}">
+              <button class="nav-link nav-dropdown-trigger ${currentRoute === '/mapmind' || currentRoute === '/pocket-assistant' ? 'active' : ''}">
                 ${i18n.t('nav.products')}
                 <svg class="nav-dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
                   <polyline points="6 9 12 15 18 9"/>
@@ -51,7 +51,7 @@ export function createNavigation(): HTMLElement {
                   <span class="nav-dropdown-item-name">mapMind</span>
                   <span class="nav-dropdown-item-desc mono">AI Maps</span>
                 </a>
-                <a href="/secondbrain" class="nav-dropdown-item ${currentRoute === '/secondbrain' ? 'active' : ''}" data-link>
+                <a href="/pocket-assistant" class="nav-dropdown-item ${currentRoute === '/pocket-assistant' ? 'active' : ''}" data-link>
                   <span class="nav-dropdown-item-name">Pocket Assistant</span>
                   <span class="nav-dropdown-item-desc mono">AI Agent</span>
                 </a>

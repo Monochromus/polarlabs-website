@@ -190,40 +190,76 @@ export const translations: Translations = {
 
   // Pocket Assistant
   'secondbrain.tagline': {
-    de: 'Dein Assistent für Produktivität',
-    en: 'Your assistant for productivity',
+    de: 'Dein automatisiertes Second Brain nach dem PARA-Prinzip',
+    en: 'Your automated Second Brain using the PARA method',
   },
   'secondbrain.description': {
-    de: 'Verwaltet per Sprache Projekte, Todos, Notizen, Kalender und Emails – alles in einer Anfrage.',
-    en: 'Manages projects, todos, notes, calendar and emails via voice – all in one request.',
+    de: 'Nie wieder Rezepte, Tanzvideos oder Partyspiele vergessen – der Pocket Assistant speichert alles und erinnert dich zum richtigen Zeitpunkt.',
+    en: 'Never forget recipes, dance videos or party games again – Pocket Assistant saves everything and reminds you at the right moment.',
   },
   'secondbrain.hero.title': {
     de: 'Pocket Assistant',
     en: 'Pocket Assistant',
   },
   'secondbrain.hero.subtitle': {
-    de: 'Der persönliche Assistent für die Hosentasche!',
-    en: 'Your personal pocket assistant!',
+    de: 'Dein automatisiertes Second Brain',
+    en: 'Your automated Second Brain',
   },
   'secondbrain.hero.description': {
-    de: 'Organisiert deine Notizen, Todos, Kalender, Emails und alles was es sich zu merken lohnt. Per Kurzbefehl über den Sperrbildschirm erledigt er alles im Hintergrund.',
-    en: 'Organizes your notes, todos, calendar, emails and everything worth remembering. Via shortcut from the lock screen, it handles everything in the background.',
+    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – jetzt vollautomatisch. Speichere Ideen aus Reels, Rezepte, Artikel und alles Wissenswerte. Der KI-Agent erinnert dich genau dann, wenn es relevant wird.',
+    en: 'Based on the PARA method by Tiago Forte – now fully automated. Save ideas from reels, recipes, articles and anything worth knowing. The AI agent reminds you exactly when it becomes relevant.',
+  },
+  'secondbrain.problem.title': {
+    de: 'Das Gedächtnis-Problem',
+    en: 'The Memory Problem',
+  },
+  'secondbrain.problem.subtitle': {
+    de: 'Unser Gehirn ist nicht für das digitale Zeitalter gemacht',
+    en: 'Our brain wasn\'t built for the digital age',
+  },
+  'secondbrain.problem.item1': {
+    de: 'Rezepte aus Reels, die du nie nachkochst',
+    en: 'Recipes from reels you never cook',
+  },
+  'secondbrain.problem.item2': {
+    de: 'Tanzvideos, die du vergisst zu üben',
+    en: 'Dance videos you forget to practice',
+  },
+  'secondbrain.problem.item3': {
+    de: 'Partyspiele, an die du dich nicht erinnerst',
+    en: 'Party games you can\'t remember',
+  },
+  'secondbrain.problem.item4': {
+    de: 'Artikel, die ungelesen bleiben',
+    en: 'Articles that remain unread',
+  },
+  'secondbrain.problem.quote': {
+    de: '"Gespeicherte Posts sind ein Friedhof von \'Das mach ich später\'-Momenten."',
+    en: '"Saved posts are a graveyard of \'I\'ll do this later\' moments."',
+  },
+  'secondbrain.solution.title': {
+    de: 'Die Lösung: Dein Second Brain',
+    en: 'The Solution: Your Second Brain',
+  },
+  'secondbrain.solution.subtitle': {
+    de: 'Ein digitales Gedächtnis, das für dich arbeitet',
+    en: 'A digital memory that works for you',
   },
   'secondbrain.concept.title': {
-    de: 'Das Besondere',
-    en: 'What makes it special',
+    de: 'Wie es funktioniert',
+    en: 'How it works',
   },
   'secondbrain.concept.p1': {
-    de: 'Eine einzige Anfrage kann komplexe Workflows auslösen. Sag zum Beispiel "Suche Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen" – und der Assistent erledigt alles.',
-    en: 'A single request can trigger complex workflows. Say "Find events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets" – and the assistant handles everything.',
+    de: 'Wir alle kennen es: Du scrollst durch Instagram und entdeckst ein Rezept, das du unbedingt nachkochen willst. Ein Reel zeigt dir Partyspiele für den nächsten Spieleabend. Ein Tanzvideo, das du lernen möchtest. Du speicherst es – und vergisst es. Deine gespeicherten Posts sind ein Friedhof von "Das mach ich später"-Momenten.',
+    en: 'We all know it: You scroll through Instagram and discover a recipe you want to cook. A reel shows party games for your next game night. A dance video you want to learn. You save it – and forget it. Your saved posts are a graveyard of "I\'ll do this later" moments.',
   },
   'secondbrain.concept.p2': {
-    de: 'Der Agent recherchiert im Web, erstellt Kalendereinträge und legt passende Aufgaben an. Alles in einem Schritt, ohne komplizierte Menüs.',
-    en: 'The agent researches the web, creates calendar entries and sets up matching tasks. All in one step, without complicated menus.',
+    de: 'Das Pocket Assistant Second Brain nach Tiago Fortes PARA-Methode löst zwei Probleme: Erstens speichert es alle deine Ideen, Notizen und Inspirationen an einem Ort – automatisch organisiert in Projekte, Bereiche, Ressourcen und Archiv. Zweitens führt der KI-Agent direkt Aufgaben aus: Mails sichten, zusammenfassen, Kalendereinträge erstellen.',
+    en: 'The Pocket Assistant Second Brain using Tiago Forte\'s PARA method solves two problems: First, it stores all your ideas, notes and inspirations in one place – automatically organized into Projects, Areas, Resources and Archive. Second, the AI agent directly executes tasks: reviewing emails, summarizing, creating calendar entries.',
   },
   'secondbrain.concept.p3': {
-    de: 'Mit dem iPhone Kurzbefehl hast du den Assistenten immer griffbereit – direkt vom Sperrbildschirm. Kein App-Öffnen, kein Einloggen.',
-    en: 'With the iPhone shortcut, you always have the assistant at hand – directly from the lock screen. No app opening, no logging in.',
+    de: 'Beispiel: Fotografiere deinen Schichtplan oder handgeschriebene Notizen ab, schicke sie an den Pocket Assistant – und alle Schichten werden automatisch in deinen Kalender eingetragen. Mit dem iPhone Kurzbefehl geht das direkt vom Sperrbildschirm.',
+    en: 'Example: Take a photo of your work schedule or handwritten notes, send them to Pocket Assistant – and all shifts are automatically added to your calendar. With the iPhone shortcut, this works directly from the lock screen.',
   },
   'secondbrain.features.title': {
     de: 'Hauptfunktionen',
@@ -262,12 +298,12 @@ export const translations: Translations = {
     en: 'Extract appointments from screenshots, digitize business cards.',
   },
   'secondbrain.feature.5.title': {
-    de: 'PARA-Organisation',
-    en: 'PARA Organization',
+    de: 'Second Brain (PARA)',
+    en: 'Second Brain (PARA)',
   },
   'secondbrain.feature.5.desc': {
-    de: 'Projekte, Areas, Ressourcen und Archiv nach bewährter Methode.',
-    en: 'Projects, Areas, Resources and Archive following the proven method.',
+    de: 'Dein digitales Gedächtnis nach Tiago Fortes PARA-Methode – nie wieder wichtige Inhalte vergessen.',
+    en: 'Your digital memory using Tiago Forte\'s PARA method – never forget important content again.',
   },
   'secondbrain.feature.6.title': {
     de: 'Custom Tools',
@@ -278,40 +314,40 @@ export const translations: Translations = {
     en: 'Create custom interactive widgets via natural description.',
   },
   'secondbrain.examples.title': {
-    de: 'Beispiel-Anfragen',
-    en: 'Example Requests',
+    de: 'So funktioniert\'s',
+    en: 'How it works',
   },
   'secondbrain.example.1': {
-    de: 'Suche Jazz-Konzerte in München im Januar und trag sie ein',
-    en: 'Find jazz concerts in Munich in January and add them',
+    de: '[Foto vom Schichtplan] Trag alle meine Schichten in den Kalender ein',
+    en: '[Photo of work schedule] Add all my shifts to the calendar',
   },
   'secondbrain.example.1.result': {
-    de: 'Web-Recherche → Kalendereinträge',
-    en: 'Web research → Calendar entries',
+    de: 'Bildanalyse → Kalendereinträge',
+    en: 'Image analysis → Calendar entries',
   },
   'secondbrain.example.2': {
+    de: 'Speichere dieses Rezept für Pasta – erinnere mich, wenn ich einkaufen gehe',
+    en: 'Save this pasta recipe – remind me when I go shopping',
+  },
+  'secondbrain.example.2.result': {
+    de: 'Second Brain → Kontextuelle Erinnerung',
+    en: 'Second Brain → Contextual reminder',
+  },
+  'secondbrain.example.3': {
     de: 'Fasse meine ungelesenen Emails zusammen und erstelle Todos für alles Wichtige',
     en: 'Summarize my unread emails and create todos for everything important',
   },
-  'secondbrain.example.2.result': {
+  'secondbrain.example.3.result': {
     de: 'Email-Analyse → Todo-Erstellung',
     en: 'Email analysis → Todo creation',
   },
-  'secondbrain.example.3': {
-    de: 'Plane einen Wochenendtrip nach Hamburg',
-    en: 'Plan a weekend trip to Hamburg',
-  },
-  'secondbrain.example.3.result': {
-    de: 'Recherche → Projekt + Todos + Kalender',
-    en: 'Research → Project + Todos + Calendar',
-  },
   'secondbrain.example.4': {
-    de: 'Was steht morgen an und welche Emails muss ich beantworten?',
-    en: 'What\'s on tomorrow and which emails do I need to answer?',
+    de: 'Welche Partyspiele hatte ich mir für den Spieleabend gemerkt?',
+    en: 'Which party games did I save for game night?',
   },
   'secondbrain.example.4.result': {
-    de: 'Kontext aus Kalender + Email-Analyse',
-    en: 'Context from calendar + email analysis',
+    de: 'Second Brain Suche → Relevante Inhalte',
+    en: 'Second Brain search → Relevant content',
   },
   'secondbrain.roadmap.title': {
     de: 'Roadmap',

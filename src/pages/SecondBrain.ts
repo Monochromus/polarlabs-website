@@ -28,12 +28,73 @@ export function renderSecondBrainPage(): string {
         <h1 class="product-hero-title">${i18n.t('secondbrain.hero.title')}</h1>
         <p class="product-hero-subtitle secondbrain-subtitle">${i18n.t('secondbrain.hero.subtitle')}</p>
         <p class="product-hero-description">${i18n.t('secondbrain.hero.description')}</p>
-        <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet btn-lg hero-cta-btn">${i18n.t('secondbrain.try')}</a>
+        <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet btn-lg hero-cta-btn">${i18n.t('secondbrain.try')}</a>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section problem-section">
       <div class="container">
+        <div class="section-header section-header-center">
+          <span class="label mono">//00</span>
+          <h2>${i18n.t('secondbrain.problem.title')}</h2>
+          <p class="section-subtitle">${i18n.t('secondbrain.problem.subtitle')}</p>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-item">
+            <div class="problem-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span>${i18n.t('secondbrain.problem.item1')}</span>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="23 7 16 12 23 17 23 7"/>
+                <rect x="1" y="5" width="15" height="14" rx="2"/>
+              </svg>
+            </div>
+            <span>${i18n.t('secondbrain.problem.item2')}</span>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <span>${i18n.t('secondbrain.problem.item3')}</span>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <span>${i18n.t('secondbrain.problem.item4')}</span>
+          </div>
+        </div>
+        <blockquote class="problem-quote">
+          ${i18n.t('secondbrain.problem.quote')}
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section-alt solution-section">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="label mono">//01</span>
+          <h2>${i18n.t('secondbrain.solution.title')}</h2>
+          <p class="section-subtitle">${i18n.t('secondbrain.solution.subtitle')}</p>
+        </div>
         <div class="concept-grid concept-grid-reverse">
           <div class="concept-visual">
             <div class="brain-preview">
@@ -75,7 +136,6 @@ export function renderSecondBrainPage(): string {
             </div>
           </div>
           <div class="concept-content">
-            <span class="label mono">//01</span>
             <h2>${i18n.t('secondbrain.concept.title')}</h2>
             <p>${i18n.t('secondbrain.concept.p1')}</p>
             <p>${i18n.t('secondbrain.concept.p2')}</p>
@@ -262,7 +322,7 @@ export function renderSecondBrainPage(): string {
                 ${i18n.t('secondbrain.pricing.free.feature.6')}
               </li>
             </ul>
-            <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pricing-cta">${i18n.t('secondbrain.pricing.cta.free')}</a>
+            <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pricing-cta">${i18n.t('secondbrain.pricing.cta.free')}</a>
           </div>
 
           <div class="pricing-card pricing-card-ownkey">
@@ -313,7 +373,7 @@ export function renderSecondBrainPage(): string {
                 ${i18n.t('secondbrain.pricing.ownkey.feature.6')}
               </li>
             </ul>
-            <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-petrol pricing-cta">${i18n.t('secondbrain.pricing.cta.ownkey')}</a>
+            <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-petrol pricing-cta">${i18n.t('secondbrain.pricing.cta.ownkey')}</a>
           </div>
 
           <div class="pricing-card pricing-card-pro">
@@ -365,7 +425,7 @@ export function renderSecondBrainPage(): string {
                 ${i18n.t('secondbrain.pricing.pro.feature.6')}
               </li>
             </ul>
-            <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet pricing-cta">${i18n.t('secondbrain.pricing.cta.pro')}</a>
+            <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet pricing-cta">${i18n.t('secondbrain.pricing.cta.pro')}</a>
           </div>
         </div>
       </div>
@@ -493,7 +553,7 @@ export function renderSecondBrainPage(): string {
       <div class="container">
         <div class="cta-content">
           <h2>${i18n.t('secondbrain.cta')}</h2>
-          <a href="https://second-brain-api-fo1f.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet btn-lg">${i18n.t('secondbrain.try')}</a>
+          <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet btn-lg">${i18n.t('secondbrain.try')}</a>
         </div>
       </div>
     </section>
@@ -1233,7 +1293,99 @@ export const secondBrainStyles = `
     color: var(--warm-text-primary);
   }
 
+  .section-header-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-10);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-lg);
+    color: var(--warm-text-muted);
+    margin-top: var(--space-3);
+    font-family: var(--font-playful);
+  }
+
+  /* Problem Section */
+  .problem-section {
+    background: var(--warm-bg-dark);
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-10);
+  }
+
+  .problem-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background: var(--warm-bg-medium);
+    border: 1px solid var(--warm-border);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .problem-item:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .problem-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 16px;
+    color: #ef4444;
+  }
+
+  .problem-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .problem-item span {
+    font-family: var(--font-playful);
+    font-size: var(--text-base);
+    color: var(--warm-text-secondary);
+    font-weight: 500;
+  }
+
+  .problem-quote {
+    text-align: center;
+    font-family: var(--font-playful);
+    font-size: var(--text-xl);
+    font-style: italic;
+    color: var(--warm-text-muted);
+    padding: var(--space-6) var(--space-8);
+    border-left: 4px solid rgba(239, 68, 68, 0.4);
+    background: var(--warm-bg-medium);
+    border-radius: 0 16px 16px 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Solution Section */
+  .solution-section {
+    background: var(--warm-bg-medium);
+  }
+
+  .solution-section .section-header-center h2 {
+    color: var(--petrol-soft);
+  }
+
   @media (max-width: 1024px) {
+    .problem-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .examples-grid {
       grid-template-columns: 1fr;
     }
@@ -1255,6 +1407,21 @@ export const secondBrainStyles = `
   }
 
   @media (max-width: 768px) {
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+
+    .problem-item {
+      padding: var(--space-4);
+      border-radius: 16px;
+    }
+
+    .problem-quote {
+      font-size: var(--text-base);
+      padding: var(--space-4) var(--space-5);
+    }
+
     .concept-grid-reverse {
       direction: ltr;
     }
