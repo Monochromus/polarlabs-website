@@ -349,6 +349,151 @@ export const translations: Translations = {
     de: 'Second Brain Suche → Relevante Inhalte',
     en: 'Second Brain search → Relevant content',
   },
+
+  // Morning Briefing Section
+  'secondbrain.briefing.title': {
+    de: 'Morning Briefing',
+    en: 'Morning Briefing',
+  },
+  'secondbrain.briefing.subtitle': {
+    de: 'Dein personalisierter Start in den Tag',
+    en: 'Your personalized start to the day',
+  },
+  'secondbrain.briefing.desc': {
+    de: 'Jeden Morgen stellt der Pocket Assistant dein individuelles Briefing zusammen – basierend auf deinem Standort, deinen Interessen und deinem Kalender.',
+    en: 'Every morning, Pocket Assistant compiles your individual briefing – based on your location, interests, and calendar.',
+  },
+  'secondbrain.briefing.weather': {
+    de: 'Lokales Wetter',
+    en: 'Local Weather',
+  },
+  'secondbrain.briefing.weather.desc': {
+    de: 'Wettervorhersage für deinen Standort mit Empfehlungen für den Tag.',
+    en: 'Weather forecast for your location with recommendations for the day.',
+  },
+  'secondbrain.briefing.events': {
+    de: 'Events in deiner Nähe',
+    en: 'Events Near You',
+  },
+  'secondbrain.briefing.events.desc': {
+    de: 'Konzerte, Ausstellungen und Veranstaltungen, die zu deinen Interessen passen.',
+    en: 'Concerts, exhibitions and events that match your interests.',
+  },
+  'secondbrain.briefing.news': {
+    de: 'Personalisierte News',
+    en: 'Personalized News',
+  },
+  'secondbrain.briefing.news.desc': {
+    de: 'Nachrichten zu Politik, Sport, Börse oder anderen Themen, die dich interessieren.',
+    en: 'News on politics, sports, stocks or other topics that interest you.',
+  },
+  'secondbrain.briefing.calendar': {
+    de: 'Tagesübersicht',
+    en: 'Daily Overview',
+  },
+  'secondbrain.briefing.calendar.desc': {
+    de: 'Deine Termine und Aufgaben für heute – kompakt zusammengefasst.',
+    en: 'Your appointments and tasks for today – summarized compactly.',
+  },
+
+  // Daily Updates / Usecase Section
+  'secondbrain.usecase.title': {
+    de: 'Tägliche Updates – Automatisch informiert',
+    en: 'Daily Updates – Automatically Informed',
+  },
+  'secondbrain.usecase.subtitle': {
+    de: 'Der Agent recherchiert täglich für dich – zu jedem Thema',
+    en: 'The agent researches daily for you – on any topic',
+  },
+  'secondbrain.usecase.desc': {
+    de: 'Richte einmalig ein, worüber du informiert bleiben willst. Der Pocket Assistant recherchiert jeden Tag automatisch im Internet und fasst die wichtigsten Neuigkeiten für dich zusammen.',
+    en: 'Set up once what you want to stay informed about. Pocket Assistant automatically researches the internet every day and summarizes the most important news for you.',
+  },
+  'secondbrain.usecase.example.title': {
+    de: 'Beispiel: Wohnungssuche',
+    en: 'Example: Apartment Search',
+  },
+  'secondbrain.usecase.example.desc': {
+    de: '"Informiere mich täglich über neue 2-Zimmer-Wohnungen in München unter 1.200€ Kaltmiete" – Der Agent durchsucht Immobilienportale und schickt dir jeden Morgen eine Zusammenfassung neuer Angebote, die deinen Kriterien entsprechen.',
+    en: '"Inform me daily about new 2-room apartments in Munich under €1,200 cold rent" – The agent searches real estate portals and sends you a summary of new listings matching your criteria every morning.',
+  },
+  'secondbrain.usecase.more': {
+    de: 'Weitere Ideen für tägliche Updates',
+    en: 'More ideas for daily updates',
+  },
+  'secondbrain.usecase.idea1': {
+    de: 'Aktienkurse und Marktanalysen für dein Portfolio',
+    en: 'Stock prices and market analysis for your portfolio',
+  },
+  'secondbrain.usecase.idea2': {
+    de: 'Neue Podcast-Episoden deiner Lieblings-Shows',
+    en: 'New podcast episodes from your favorite shows',
+  },
+  'secondbrain.usecase.idea3': {
+    de: 'Spielergebnisse und News zu deinem Lieblingsverein',
+    en: 'Match results and news about your favorite team',
+  },
+  'secondbrain.usecase.idea4': {
+    de: 'Neue Stellenangebote in deiner Branche',
+    en: 'New job offers in your industry',
+  },
+  'secondbrain.usecase.idea5': {
+    de: 'Preisalarme für Produkte auf deiner Wunschliste',
+    en: 'Price alerts for products on your wishlist',
+  },
+
+  // Power Features Section
+  'secondbrain.power.title': {
+    de: 'Ein Befehl, viele Aktionen',
+    en: 'One Command, Many Actions',
+  },
+  'secondbrain.power.subtitle': {
+    de: '37 Tools, die der Agent intelligent kombiniert',
+    en: '37 tools the agent intelligently combines',
+  },
+  'secondbrain.power.desc': {
+    de: 'Vergiss komplizierte Menüs und endlose Klicks. Der AI-Agent versteht komplexe Anfragen und führt automatisch die richtigen Aktionen aus – alles in einer Konversation.',
+    en: 'Forget complicated menus and endless clicks. The AI agent understands complex requests and automatically executes the right actions – all in one conversation.',
+  },
+  'secondbrain.power.example': {
+    de: '"Suche Techno-Events in Berlin nächstes Wochenende, trag die besten in meinen Kalender ein und erstelle Todos für Tickets kaufen"',
+    en: '"Find techno events in Berlin next weekend, add the best ones to my calendar and create todos for buying tickets"',
+  },
+  'secondbrain.power.result': {
+    de: 'Web-Recherche → Kalendereinträge → Todo-Erstellung – alles automatisch',
+    en: 'Web research → Calendar entries → Todo creation – all automatic',
+  },
+
+  // iPhone Shortcut Section
+  'secondbrain.shortcut.title': {
+    de: 'iPhone Kurzbefehl',
+    en: 'iPhone Shortcut',
+  },
+  'secondbrain.shortcut.subtitle': {
+    de: 'Dein Assistent auf dem Sperrbildschirm',
+    en: 'Your assistant on the lock screen',
+  },
+  'secondbrain.shortcut.desc': {
+    de: 'Mit dem iOS Kurzbefehl hast du Pocket Assistant immer griffbereit – direkt vom Sperrbildschirm oder per Siri. Kein App-Öffnen, kein Einloggen. Einfach antippen, sprechen, fertig.',
+    en: 'With the iOS shortcut, you always have Pocket Assistant at hand – directly from the lock screen or via Siri. No opening apps, no logging in. Just tap, speak, done.',
+  },
+  'secondbrain.shortcut.step1': {
+    de: 'Kurzbefehl als Widget auf dem Sperrbildschirm platzieren',
+    en: 'Place shortcut as widget on lock screen',
+  },
+  'secondbrain.shortcut.step2': {
+    de: 'Antippen → Spracheingabe oder Text',
+    en: 'Tap → Voice input or text',
+  },
+  'secondbrain.shortcut.step3': {
+    de: 'Der Agent führt alle Aktionen im Hintergrund aus',
+    en: 'The agent executes all actions in the background',
+  },
+  'secondbrain.shortcut.step4': {
+    de: 'Beim nächsten Öffnen der App ist alles erledigt',
+    en: 'Next time you open the app, everything is done',
+  },
+
   'secondbrain.roadmap.title': {
     de: 'Roadmap',
     en: 'Roadmap',

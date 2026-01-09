@@ -192,10 +192,217 @@ export function renderSecondBrainPage(): string {
       </div>
     </section>
 
+    <section class="section briefing-section">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="label mono">//03</span>
+          <h2>${i18n.t('secondbrain.briefing.title')}</h2>
+          <p class="section-subtitle">${i18n.t('secondbrain.briefing.subtitle')}</p>
+        </div>
+        <p class="briefing-intro">${i18n.t('secondbrain.briefing.desc')}</p>
+        <div class="briefing-grid">
+          <div class="briefing-item">
+            <div class="briefing-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                <circle cx="12" cy="12" r="4"/>
+              </svg>
+            </div>
+            <h4>${i18n.t('secondbrain.briefing.weather')}</h4>
+            <p>${i18n.t('secondbrain.briefing.weather.desc')}</p>
+          </div>
+          <div class="briefing-item">
+            <div class="briefing-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4>${i18n.t('secondbrain.briefing.events')}</h4>
+            <p>${i18n.t('secondbrain.briefing.events.desc')}</p>
+          </div>
+          <div class="briefing-item">
+            <div class="briefing-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1"/>
+                <path d="M18 14h4v4"/>
+                <path d="M15 11l7 7"/>
+                <line x1="7" y1="8" x2="13" y2="8"/>
+                <line x1="7" y1="12" x2="11" y2="12"/>
+              </svg>
+            </div>
+            <h4>${i18n.t('secondbrain.briefing.news')}</h4>
+            <p>${i18n.t('secondbrain.briefing.news.desc')}</p>
+          </div>
+          <div class="briefing-item">
+            <div class="briefing-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+              </svg>
+            </div>
+            <h4>${i18n.t('secondbrain.briefing.calendar')}</h4>
+            <p>${i18n.t('secondbrain.briefing.calendar.desc')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt usecase-section">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <span class="label mono">//04</span>
+          <h2>${i18n.t('secondbrain.usecase.title')}</h2>
+          <p class="section-subtitle">${i18n.t('secondbrain.usecase.subtitle')}</p>
+        </div>
+        <p class="usecase-intro">${i18n.t('secondbrain.usecase.desc')}</p>
+
+        <div class="usecase-highlight">
+          <div class="usecase-highlight-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="usecase-highlight-content">
+            <h4>${i18n.t('secondbrain.usecase.example.title')}</h4>
+            <p>${i18n.t('secondbrain.usecase.example.desc')}</p>
+          </div>
+        </div>
+
+        <div class="usecase-ideas">
+          <h4>${i18n.t('secondbrain.usecase.more')}</h4>
+          <div class="usecase-ideas-grid">
+            <div class="usecase-idea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                <polyline points="16 7 22 7 22 13"/>
+              </svg>
+              <span>${i18n.t('secondbrain.usecase.idea1')}</span>
+            </div>
+            <div class="usecase-idea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+              <span>${i18n.t('secondbrain.usecase.idea2')}</span>
+            </div>
+            <div class="usecase-idea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="12 6 12 12 16 14"/>
+              </svg>
+              <span>${i18n.t('secondbrain.usecase.idea3')}</span>
+            </div>
+            <div class="usecase-idea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+              </svg>
+              <span>${i18n.t('secondbrain.usecase.idea4')}</span>
+            </div>
+            <div class="usecase-idea">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              <span>${i18n.t('secondbrain.usecase.idea5')}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section power-section">
+      <div class="container">
+        <div class="power-grid">
+          <div class="power-content">
+            <span class="label mono">//05</span>
+            <h2>${i18n.t('secondbrain.power.title')}</h2>
+            <p class="power-subtitle">${i18n.t('secondbrain.power.subtitle')}</p>
+            <p>${i18n.t('secondbrain.power.desc')}</p>
+            <div class="power-example">
+              <blockquote>${i18n.t('secondbrain.power.example')}</blockquote>
+              <div class="power-result">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="20" height="20">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                <span class="mono">${i18n.t('secondbrain.power.result')}</span>
+              </div>
+            </div>
+          </div>
+          <div class="power-visual">
+            <div class="tools-showcase">
+              <div class="tools-center">
+                <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" />
+              </div>
+              <div class="tools-orbit">
+                <div class="tool-badge tool-badge-1">Todos</div>
+                <div class="tool-badge tool-badge-2">Kalender</div>
+                <div class="tool-badge tool-badge-3">Email</div>
+                <div class="tool-badge tool-badge-4">Web</div>
+                <div class="tool-badge tool-badge-5">Notizen</div>
+                <div class="tool-badge tool-badge-6">+32</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt shortcut-section">
+      <div class="container">
+        <div class="shortcut-grid">
+          <div class="shortcut-visual">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="phone-widget">
+                  <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" class="widget-icon" />
+                  <span class="widget-label">Pocket Assistant</span>
+                </div>
+                <div class="phone-time">09:41</div>
+                <div class="phone-date">Donnerstag, 9. Januar</div>
+              </div>
+            </div>
+          </div>
+          <div class="shortcut-content">
+            <span class="label mono">//06</span>
+            <h2>${i18n.t('secondbrain.shortcut.title')}</h2>
+            <p class="shortcut-subtitle">${i18n.t('secondbrain.shortcut.subtitle')}</p>
+            <p>${i18n.t('secondbrain.shortcut.desc')}</p>
+            <div class="shortcut-steps">
+              <div class="shortcut-step">
+                <span class="step-number">1</span>
+                <span>${i18n.t('secondbrain.shortcut.step1')}</span>
+              </div>
+              <div class="shortcut-step">
+                <span class="step-number">2</span>
+                <span>${i18n.t('secondbrain.shortcut.step2')}</span>
+              </div>
+              <div class="shortcut-step">
+                <span class="step-number">3</span>
+                <span>${i18n.t('secondbrain.shortcut.step3')}</span>
+              </div>
+              <div class="shortcut-step">
+                <span class="step-number">4</span>
+                <span>${i18n.t('secondbrain.shortcut.step4')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//03</span>
+          <span class="label mono">//07</span>
           <h2>${i18n.t('secondbrain.features.title')}</h2>
         </div>
         <div class="features-grid features-grid-6 features-grid-secondbrain">
@@ -271,7 +478,7 @@ export function renderSecondBrainPage(): string {
     <section class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//04</span>
+          <span class="label mono">//08</span>
           <h2>${i18n.t('secondbrain.pricing.title')}</h2>
         </div>
         <div class="pricing-grid pricing-grid-3">
@@ -434,7 +641,7 @@ export function renderSecondBrainPage(): string {
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="label mono">//05</span>
+          <span class="label mono">//09</span>
           <h2>${i18n.t('secondbrain.roadmap.title')}</h2>
         </div>
         <div class="timeline-pocket">
@@ -1382,7 +1589,414 @@ export const secondBrainStyles = `
     color: var(--petrol-soft);
   }
 
+  /* Briefing Section */
+  .briefing-section {
+    background: var(--warm-bg-dark);
+  }
+
+  .briefing-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-10);
+    font-size: var(--text-lg);
+    color: var(--warm-text-secondary);
+  }
+
+  .briefing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+
+  .briefing-item {
+    text-align: center;
+    padding: var(--space-6);
+    background: var(--warm-bg-medium);
+    border: 1px solid var(--warm-border);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .briefing-item:hover {
+    border-color: rgba(69, 196, 176, 0.3);
+    transform: translateY(-4px);
+  }
+
+  .briefing-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(69, 196, 176, 0.1);
+    border-radius: 16px;
+    color: var(--petrol-soft);
+  }
+
+  .briefing-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .briefing-item h4 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .briefing-item p {
+    font-size: var(--text-sm);
+    color: var(--warm-text-muted);
+  }
+
+  /* Usecase Section */
+  .usecase-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-10);
+    font-size: var(--text-lg);
+    color: var(--warm-text-secondary);
+  }
+
+  .usecase-highlight {
+    display: flex;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-left: 4px solid var(--petrol-soft);
+    border-radius: 0 20px 20px 0;
+    margin-bottom: var(--space-10);
+  }
+
+  .usecase-highlight-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(69, 196, 176, 0.1);
+    border-radius: 16px;
+    color: var(--petrol-soft);
+  }
+
+  .usecase-highlight-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .usecase-highlight-content h4 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-2);
+  }
+
+  .usecase-highlight-content p {
+    color: var(--warm-text-secondary);
+    line-height: 1.7;
+  }
+
+  .usecase-ideas h4 {
+    font-family: var(--font-playful);
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-6);
+    text-align: center;
+  }
+
+  .usecase-ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--space-4);
+  }
+
+  .usecase-idea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .usecase-idea:hover {
+    border-color: rgba(69, 196, 176, 0.3);
+  }
+
+  .usecase-idea svg {
+    color: var(--petrol-soft);
+  }
+
+  .usecase-idea span {
+    font-size: var(--text-sm);
+    color: var(--warm-text-secondary);
+  }
+
+  /* Power Section */
+  .power-section {
+    background: var(--warm-bg-dark);
+  }
+
+  .power-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .power-content h2 {
+    margin-top: var(--space-4);
+    color: var(--warm-text-primary);
+  }
+
+  .power-subtitle {
+    font-family: var(--font-playful);
+    font-size: var(--text-xl);
+    color: var(--petrol-soft);
+    margin-bottom: var(--space-4);
+  }
+
+  .power-content > p {
+    color: var(--warm-text-secondary);
+    margin-bottom: var(--space-6);
+  }
+
+  .power-example {
+    background: var(--warm-bg-medium);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    padding: var(--space-6);
+  }
+
+  .power-example blockquote {
+    font-family: var(--font-playful);
+    font-style: italic;
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .power-result {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--petrol-soft);
+  }
+
+  .power-result span {
+    font-size: var(--text-sm);
+  }
+
+  .tools-showcase {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .tools-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: var(--warm-bg-medium);
+    border: 2px solid var(--petrol-soft);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(69, 196, 176, 0.2);
+  }
+
+  .tools-center img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tools-orbit {
+    position: absolute;
+    inset: 0;
+    animation: rotate 30s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .tool-badge {
+    position: absolute;
+    padding: var(--space-2) var(--space-3);
+    background: var(--warm-bg-medium);
+    border: 1px solid var(--warm-border);
+    border-radius: 20px;
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    color: var(--warm-text-secondary);
+    animation: counter-rotate 30s linear infinite;
+  }
+
+  @keyframes counter-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+  }
+
+  .tool-badge-1 { top: 0; left: 50%; transform: translateX(-50%); }
+  .tool-badge-2 { top: 20%; right: 0; }
+  .tool-badge-3 { bottom: 20%; right: 0; }
+  .tool-badge-4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .tool-badge-5 { bottom: 20%; left: 0; }
+  .tool-badge-6 { top: 20%; left: 0; background: rgba(69, 196, 176, 0.2); color: var(--petrol-soft); border-color: var(--petrol-soft); }
+
+  /* Shortcut Section */
+  .shortcut-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+
+  .phone-mockup {
+    width: 220px;
+    height: 450px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    border-radius: 40px;
+    border: 3px solid #333;
+    padding: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+  }
+
+  .phone-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-6);
+    background: rgba(69, 196, 176, 0.15);
+    border: 1px solid rgba(69, 196, 176, 0.3);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .phone-widget:hover {
+    background: rgba(69, 196, 176, 0.25);
+    transform: scale(1.05);
+  }
+
+  .widget-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .widget-label {
+    font-size: 10px;
+    color: var(--warm-text-muted);
+  }
+
+  .phone-time {
+    font-size: 48px;
+    font-weight: 200;
+    color: white;
+    letter-spacing: -2px;
+  }
+
+  .phone-date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .shortcut-content h2 {
+    margin-top: var(--space-4);
+    color: var(--warm-text-primary);
+  }
+
+  .shortcut-subtitle {
+    font-family: var(--font-playful);
+    font-size: var(--text-xl);
+    color: var(--petrol-soft);
+    margin-bottom: var(--space-4);
+  }
+
+  .shortcut-content > p {
+    color: var(--warm-text-secondary);
+    margin-bottom: var(--space-6);
+  }
+
+  .shortcut-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .shortcut-step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-radius: 12px;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(69, 196, 176, 0.1);
+    border: 1px solid var(--petrol-soft);
+    border-radius: 50%;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--petrol-soft);
+    flex-shrink: 0;
+  }
+
+  .shortcut-step span:last-child {
+    color: var(--warm-text-secondary);
+    font-size: var(--text-sm);
+  }
+
   @media (max-width: 1024px) {
+    .briefing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .usecase-ideas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .power-grid,
+    .shortcut-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .power-visual {
+      order: -1;
+    }
+
     .problem-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1420,6 +2034,37 @@ export const secondBrainStyles = `
     .problem-quote {
       font-size: var(--text-base);
       padding: var(--space-4) var(--space-5);
+    }
+
+    .briefing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .usecase-highlight {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .usecase-ideas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tools-showcase {
+      width: 250px;
+      height: 250px;
+    }
+
+    .phone-mockup {
+      width: 180px;
+      height: 380px;
+    }
+
+    .phone-time {
+      font-size: 36px;
+    }
+
+    .shortcut-visual {
+      order: -1;
     }
 
     .concept-grid-reverse {
