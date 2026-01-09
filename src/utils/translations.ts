@@ -206,8 +206,8 @@ export const translations: Translations = {
     en: 'AI powered Second Brain',
   },
   'secondbrain.hero.description': {
-    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – jetzt vollautomatisch. Speichere Webclips aus Instagram, YouTube, Artikeln oder allem mit Link. Der KI-Agent sortiert automatisch ein und erinnert dich, wenn es relevant wird.',
-    en: 'Based on the PARA method by Tiago Forte – now fully automated. Save webclips from Instagram, YouTube, articles or anything with a link. The AI agent automatically organizes and reminds you when relevant.',
+    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – automatisiert. Speichere Webclips, verwalte Todos, lass Webrecherchen durchführen. Der KI-Agent organisiert alles und erinnert dich, wenn es relevant wird.',
+    en: 'Based on the PARA method by Tiago Forte – automated. Save webclips, manage todos, have web research done. The AI agent organizes everything and reminds you when relevant.',
   },
   'secondbrain.problem.title': {
     de: 'Das Gedächtnis-Problem',
@@ -250,8 +250,8 @@ export const translations: Translations = {
     en: 'How it works',
   },
   'secondbrain.concept.p1': {
-    de: 'Mit Webclips speicherst du alles, was einen Link hat: Ein Instagram-Post, ein YouTube-Video, ein Artikel bei SPIEGEL Online – alles landet in Sekunden in deinem Second Brain. Per iPhone Kurzbefehl teilst du den Link direkt vom Sperrbildschirm. Der KI-Agent analysiert den Inhalt und sortiert ihn automatisch nach dem PARA-Prinzip ein.',
-    en: 'With webclips, you save anything with a link: an Instagram post, a YouTube video, an article on any website – everything lands in your Second Brain in seconds. Via iPhone shortcut, you share the link directly from the lock screen. The AI agent analyzes the content and automatically organizes it using the PARA method.',
+    de: 'Mit Webclips speicherst du alles, was einen Link hat: Ein Instagram-Post, ein YouTube-Video, ein Artikel bei SPIEGEL Online – direkt über den Teilen-Button landet alles in Sekunden in deinem Second Brain. Über den Sperrbildschirm-Kurzbefehl kannst du außerdem blitzschnell jede Anfrage an den Assistenten senden – ob nur Text oder auch mit Foto.',
+    en: 'With webclips, you save anything with a link: an Instagram post, a YouTube video, any article – via the share button, everything lands in your Second Brain in seconds. Via the lock screen shortcut, you can also quickly send any request to the assistant – text only or with a photo.',
   },
   'secondbrain.concept.p2': {
     de: 'In der App oder per Sprachbefehl findest du alles sofort wieder: "Welche Rezepte hatte ich mir gemerkt?" oder "Zeig mir die Videos zum Tanzen lernen". Der Agent durchsucht dein Second Brain und präsentiert die passenden Inhalte – genau dann, wenn du sie brauchst.',
@@ -342,12 +342,12 @@ export const translations: Translations = {
     en: 'Email analysis → Todo creation',
   },
   'secondbrain.example.4': {
-    de: 'Welche Partyspiele hatte ich mir für den Spieleabend gemerkt?',
-    en: 'Which party games did I save for game night?',
+    de: 'Fasse alle Artikel zusammen, die ich diese Woche zum Thema KI gespeichert habe',
+    en: 'Summarize all articles I saved this week about AI',
   },
   'secondbrain.example.4.result': {
-    de: 'Second Brain Suche → Relevante Inhalte',
-    en: 'Second Brain search → Relevant content',
+    de: 'Webclip-Suche → KI-Zusammenfassung',
+    en: 'Webclip search → AI summary',
   },
 
   // Morning Briefing Section
