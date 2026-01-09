@@ -206,12 +206,12 @@ export const translations: Translations = {
     en: 'AI powered Second Brain',
   },
   'secondbrain.hero.description': {
-    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – automatisiert. Speichere Webclips, verwalte Todos, lass Webrecherchen durchführen. Der KI-Agent organisiert alles und erinnert dich, wenn es relevant wird.',
-    en: 'Based on the PARA method by Tiago Forte – automated. Save webclips, manage todos, have web research done. The AI agent organizes everything and reminds you when relevant.',
+    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – automatisiert. Speichere Links, verwalte Todos, lass Webrecherchen durchführen. Der KI-Agent organisiert alles und erinnert dich, wenn es relevant wird.',
+    en: 'Based on the PARA method by Tiago Forte – automated. Save links, manage todos, have web research done. The AI agent organizes everything and reminds you when relevant.',
   },
   'secondbrain.problem.title': {
-    de: 'Das Gedächtnis-Problem',
-    en: 'The Memory Problem',
+    de: 'Das Problem der Überreizung durch digitale Medien',
+    en: 'The Problem of Digital Overstimulation',
   },
   'secondbrain.problem.subtitle': {
     de: 'Unser Gehirn ist noch nicht an das digitale Zeitalter angepasst',
