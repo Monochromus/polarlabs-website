@@ -218,24 +218,24 @@ export const translations: Translations = {
     en: 'Our brain hasn\'t adapted to the digital age yet',
   },
   'secondbrain.problem.item1': {
-    de: 'Rezepte aus Reels, die du nie nachkochst',
-    en: 'Recipes from reels you never cook',
+    de: 'Fachartikel, die du für "später" speicherst, aber nie wieder öffnest',
+    en: 'Articles you save for "later" but never open again',
   },
   'secondbrain.problem.item2': {
-    de: 'Geschenkideen, die du wieder vergisst',
-    en: 'Gift ideas you forget again',
+    de: 'Tutorials, die dein Problem sofort lösen würden – wenn du sie finden könntest',
+    en: 'Tutorials that would solve your problem instantly – if only you could find them',
   },
   'secondbrain.problem.item3': {
-    de: 'Partyspiele, an die du dich nicht im richtigen Moment erinnerst',
-    en: 'Party games you can\'t remember at the right moment',
+    de: 'Reisetipps, die du vergisst, sobald du am Ziel bist',
+    en: 'Travel tips you forget as soon as you arrive',
   },
   'secondbrain.problem.item4': {
-    de: 'Artikel, die ungelesen bleiben',
-    en: 'Articles that remain unread',
+    de: 'Inspirationen, die in der Content-Flut untergehen',
+    en: 'Inspiration that drowns in the content flood',
   },
   'secondbrain.problem.quote': {
-    de: '"Gespeicherte Posts sind ein Friedhof von \'Das mach ich später\'-Momenten."',
-    en: '"Saved posts are a graveyard of \'I\'ll do this later\' moments."',
+    de: '"Dein digitales Archiv sollte eine Schatzkiste sein, kein Friedhof."',
+    en: '"Your digital archive should be a treasure chest, not a graveyard."',
   },
   'secondbrain.solution.title': {
     de: 'Die Lösung: Dein Second Brain',
