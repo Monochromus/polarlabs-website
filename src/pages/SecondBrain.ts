@@ -95,51 +95,84 @@ export function renderSecondBrainPage(): string {
           <h2>${i18n.t('secondbrain.solution.title')}</h2>
           <p class="section-subtitle">${i18n.t('secondbrain.solution.subtitle')}</p>
         </div>
-        <div class="concept-grid concept-grid-reverse">
-          <div class="concept-visual">
-            <div class="brain-preview">
-              <div class="brain-node brain-node-center">
-                <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" class="brain-center-logo" />
-              </div>
-              <div class="brain-node brain-node-1">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="3" y="4" width="18" height="18" rx="2"/>
-                  <line x1="16" y1="2" x2="16" y2="6"/>
-                  <line x1="8" y1="2" x2="8" y2="6"/>
-                  <line x1="3" y1="10" x2="21" y2="10"/>
-                </svg>
-              </div>
-              <div class="brain-node brain-node-2">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </div>
-              <div class="brain-node brain-node-3">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M9 11l3 3L22 4"/>
-                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                </svg>
-              </div>
-              <div class="brain-node brain-node-4">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="11" cy="11" r="8"/>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
-              </div>
-              <svg class="brain-connections" viewBox="0 0 300 200">
-                <line x1="150" y1="100" x2="60" y2="40" stroke="var(--soft-violet)" stroke-width="1" opacity="0.3"/>
-                <line x1="150" y1="100" x2="240" y2="40" stroke="var(--soft-violet)" stroke-width="1" opacity="0.3"/>
-                <line x1="150" y1="100" x2="60" y2="160" stroke="var(--soft-violet)" stroke-width="1" opacity="0.3"/>
-                <line x1="150" y1="100" x2="240" y2="160" stroke="var(--soft-violet)" stroke-width="1" opacity="0.3"/>
+
+        <!-- Flow Visualisierung -->
+        <div class="flow-visual">
+          <div class="flow-step flow-step-input">
+            <div class="flow-icons">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
               </svg>
             </div>
+            <span class="flow-label mono">Input</span>
           </div>
-          <div class="concept-content">
-            <h2>${i18n.t('secondbrain.concept.title')}</h2>
-            <p>${i18n.t('secondbrain.concept.p1')}</p>
-            <p>${i18n.t('secondbrain.concept.p2')}</p>
-            <p>${i18n.t('secondbrain.concept.p3')}</p>
+          <div class="flow-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <div class="flow-step flow-step-brain">
+            <img src="/pocket_assistent_logo.svg" alt="Pocket Assistant" class="flow-brain-logo" />
+            <span class="flow-label mono">AI Brain</span>
+          </div>
+          <div class="flow-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <div class="flow-step flow-step-output">
+            <div class="flow-icons">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 11l3 3L22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span class="flow-label mono">Output</span>
+          </div>
+        </div>
+
+        <!-- 3 Phasen -->
+        <div class="phases-grid">
+          <div class="phase-card phase-card-1">
+            <div class="phase-number">1</div>
+            <h3>${i18n.t('secondbrain.phase.1.title')}</h3>
+            <p class="phase-desc">${i18n.t('secondbrain.phase.1.desc')}</p>
+            <p class="phase-features">${i18n.t('secondbrain.phase.1.features')}</p>
+            <p class="phase-highlight">${i18n.t('secondbrain.phase.1.highlight')}</p>
+          </div>
+          <div class="phase-card phase-card-2">
+            <div class="phase-number">2</div>
+            <h3>${i18n.t('secondbrain.phase.2.title')}</h3>
+            <p class="phase-desc">${i18n.t('secondbrain.phase.2.desc')}</p>
+            <p class="phase-example">${i18n.t('secondbrain.phase.2.example')}</p>
+          </div>
+          <div class="phase-card phase-card-3">
+            <div class="phase-number">3</div>
+            <h3>${i18n.t('secondbrain.phase.3.title')}</h3>
+            <p class="phase-desc">${i18n.t('secondbrain.phase.3.desc')}</p>
+            <p class="phase-example">${i18n.t('secondbrain.phase.3.example1')}</p>
+            <p class="phase-example">${i18n.t('secondbrain.phase.3.example2')}</p>
           </div>
         </div>
       </div>
@@ -1557,6 +1590,166 @@ export const secondBrainStyles = `
     color: var(--petrol-soft);
   }
 
+  /* Flow Visualisierung */
+  .flow-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
+    padding: var(--space-8) var(--space-4);
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-radius: 24px;
+  }
+
+  .flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    background: var(--warm-bg-medium);
+    border: 2px solid var(--warm-border);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .flow-step:hover {
+    border-color: var(--petrol-soft);
+    transform: translateY(-4px);
+  }
+
+  .flow-step-input {
+    border-color: rgba(69, 196, 176, 0.3);
+  }
+
+  .flow-step-brain {
+    padding: var(--space-6);
+    background: linear-gradient(135deg, rgba(20, 145, 155, 0.1) 0%, rgba(69, 196, 176, 0.15) 100%);
+    border-color: var(--petrol-soft);
+  }
+
+  .flow-step-output {
+    border-color: rgba(69, 196, 176, 0.3);
+  }
+
+  .flow-icons {
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .flow-icons svg {
+    width: 28px;
+    height: 28px;
+    color: var(--petrol-soft);
+    opacity: 0.8;
+  }
+
+  .flow-brain-logo {
+    width: 56px;
+    height: 56px;
+    filter: drop-shadow(0 4px 12px rgba(20, 145, 155, 0.3));
+  }
+
+  .flow-arrow {
+    color: var(--petrol-soft);
+    opacity: 0.6;
+  }
+
+  .flow-arrow svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .flow-label {
+    font-size: var(--text-xs);
+    color: var(--warm-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* 3 Phasen Grid */
+  .phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .phase-card {
+    padding: var(--space-6);
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .phase-card:hover {
+    border-color: var(--petrol-soft);
+    transform: translateY(-4px);
+  }
+
+  .phase-card h3 {
+    font-family: var(--font-playful);
+    font-size: var(--text-xl);
+    color: var(--petrol-soft);
+    margin-bottom: var(--space-3);
+  }
+
+  .phase-number {
+    position: absolute;
+    top: -12px;
+    left: var(--space-6);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--petrol-main) 0%, var(--petrol-soft) 100%);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    border-radius: 50%;
+  }
+
+  .phase-desc {
+    font-family: var(--font-playful);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .phase-features {
+    font-size: var(--text-sm);
+    color: var(--warm-text-secondary);
+    margin-bottom: var(--space-3);
+  }
+
+  .phase-highlight {
+    font-size: var(--text-sm);
+    color: var(--petrol-soft);
+    font-weight: 600;
+    padding: var(--space-3);
+    background: rgba(69, 196, 176, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--petrol-soft);
+  }
+
+  .phase-example {
+    font-size: var(--text-sm);
+    color: var(--warm-text-secondary);
+    font-style: italic;
+    padding: var(--space-2) 0;
+    border-bottom: 1px dashed var(--warm-border);
+  }
+
+  .phase-example:last-child {
+    border-bottom: none;
+  }
+
   /* Briefing Section */
   .briefing-section {
     background: var(--warm-bg-dark);
@@ -1991,6 +2184,24 @@ export const secondBrainStyles = `
       width: 64px;
       height: 64px;
     }
+
+    .phases-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .flow-visual {
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .flow-arrow {
+      transform: rotate(90deg);
+    }
+
+    .flow-arrow svg {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -2043,34 +2254,6 @@ export const secondBrainStyles = `
 
     .concept-grid-reverse {
       direction: ltr;
-    }
-
-    .brain-preview {
-      border-radius: 16px;
-    }
-
-    .brain-node-center {
-      width: 56px;
-      height: 56px;
-    }
-
-    .brain-node-center svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    .brain-node-1,
-    .brain-node-2,
-    .brain-node-3,
-    .brain-node-4 {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-    }
-
-    .brain-node svg {
-      width: 16px;
-      height: 16px;
     }
 
     .features-grid-6 {

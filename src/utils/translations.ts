@@ -249,17 +249,52 @@ export const translations: Translations = {
     de: 'Wie es funktioniert',
     en: 'How it works',
   },
-  'secondbrain.concept.p1': {
-    de: 'Mit Webclips speicherst du alles, was einen Link hat: Ein Instagram-Post, ein YouTube-Video, ein Artikel bei SPIEGEL Online – direkt über den Teilen-Button landet alles in Sekunden in deinem Second Brain. Über den Sperrbildschirm-Kurzbefehl kannst du außerdem blitzschnell jede Anfrage an den Assistenten senden – ob nur Text oder auch mit Foto.',
-    en: 'With webclips, you save anything with a link: an Instagram post, a YouTube video, any article – via the share button, everything lands in your Second Brain in seconds. Via the lock screen shortcut, you can also quickly send any request to the assistant – text only or with a photo.',
+  // Phase 1: Sammeln (Input)
+  'secondbrain.phase.1.title': {
+    de: 'Sammeln',
+    en: 'Capture',
   },
-  'secondbrain.concept.p2': {
-    de: 'In der App oder per Sprachbefehl findest du alles sofort wieder: "Welche Coding-Tutorials hatte ich mir gemerkt?" oder "Zeig mir die Tech-Reviews zu Smartphones". Der Agent durchsucht dein Second Brain und präsentiert die passenden Inhalte – genau dann, wenn du sie brauchst.',
-    en: 'In the app or via voice command, you instantly find everything again: "Which coding tutorials did I save?" or "Show me the tech reviews about smartphones". The agent searches your Second Brain and presents the matching content – exactly when you need it.',
+  'secondbrain.phase.1.desc': {
+    de: 'Alles, was dich inspiriert, landet mit einem Klick im System.',
+    en: 'Everything that inspires you lands in the system with one click.',
   },
-  'secondbrain.concept.p3': {
-    de: 'Beispiel: Fotografiere deinen Schichtplan oder handgeschriebene Notizen ab, schicke sie an den Pocket Assistant – und alle Schichten werden automatisch in deinen Kalender eingetragen. Mit dem iPhone Kurzbefehl geht das direkt vom Sperrbildschirm.',
-    en: 'Example: Take a photo of your work schedule or handwritten notes, send them to Pocket Assistant – and all shifts are automatically added to your calendar. With the iPhone shortcut, this works directly from the lock screen.',
+  'secondbrain.phase.1.features': {
+    de: 'Web-Links, Fotos von Notizen, Sprachmemos oder Text-Snippets.',
+    en: 'Web links, photos of notes, voice memos or text snippets.',
+  },
+  'secondbrain.phase.1.highlight': {
+    de: 'Direkt vom Sperrbildschirm – ohne die App zu öffnen.',
+    en: 'Directly from the lock screen – without opening the app.',
+  },
+  // Phase 2: Verstehen (Processing)
+  'secondbrain.phase.2.title': {
+    de: 'Verstehen',
+    en: 'Process',
+  },
+  'secondbrain.phase.2.desc': {
+    de: 'Dein KI-Assistent liest mit und handelt für dich.',
+    en: 'Your AI assistant reads along and acts for you.',
+  },
+  'secondbrain.phase.2.example': {
+    de: 'Schick ein Foto deines Schichtplans und der Assistent trägt die Termine direkt in deinen Kalender ein.',
+    en: 'Send a photo of your work schedule and the assistant adds the appointments directly to your calendar.',
+  },
+  // Phase 3: Nutzen (Output)
+  'secondbrain.phase.3.title': {
+    de: 'Nutzen',
+    en: 'Retrieve',
+  },
+  'secondbrain.phase.3.desc': {
+    de: 'Vergiss das Suchen. Frag einfach.',
+    en: 'Forget searching. Just ask.',
+  },
+  'secondbrain.phase.3.example1': {
+    de: '"Welche Rezepte mit Kürbis habe ich gespeichert?"',
+    en: '"Which pumpkin recipes did I save?"',
+  },
+  'secondbrain.phase.3.example2': {
+    de: '"Wann war mein nächster Zahnarzttermin?"',
+    en: '"When is my next dentist appointment?"',
   },
   'secondbrain.features.title': {
     de: 'Hauptfunktionen',
