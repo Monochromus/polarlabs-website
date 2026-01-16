@@ -353,12 +353,12 @@ export const translations: Translations = {
     en: 'How it works',
   },
   'secondbrain.example.1': {
-    de: '[Link teilen]',
-    en: '[Share link]',
+    de: 'Ein spannender Artikel über KI-Trends',
+    en: 'An interesting article about AI trends',
   },
   'secondbrain.example.1.result': {
-    de: 'Webclip → PARA-Einordnung → Projekt-Verknüpfung',
-    en: 'Webclip → PARA organization → Project linking',
+    de: 'Webclip → Automatische Sortierung → Projekt-Verknüpfung',
+    en: 'Webclip → Auto-sorting → Project linking',
   },
   'secondbrain.example.2': {
     de: 'Ich plane einen Trip nach Berlin – recherchiere alle Konzerte am Wochenende und trag sie in einen neuen Kalender ein',
@@ -373,16 +373,16 @@ export const translations: Translations = {
     en: 'Summarize my unread emails and create todos for everything important',
   },
   'secondbrain.example.3.result': {
-    de: 'Email-Analyse → Todo-Erstellung',
-    en: 'Email analysis → Todo creation',
+    de: 'KI-Analyse → Aufgaben-Liste',
+    en: 'AI analysis → Task list',
   },
   'secondbrain.example.4': {
-    de: 'Fasse alle Artikel zusammen, die ich über das Thema Heizung gelesen habe',
-    en: 'Summarize all articles I read about heating systems',
+    de: 'Fasse alle Tipps zusammen, die ich über Fotografie gespeichert habe',
+    en: 'Summarize all the tips I saved about photography',
   },
   'secondbrain.example.4.result': {
-    de: 'Second Brain Recherche → KI-Zusammenfassung',
-    en: 'Second Brain research → AI summary',
+    de: 'Intelligente Suche → Wissens-Zusammenfassung',
+    en: 'Smart search → Knowledge summary',
   },
 
   // Morning Briefing Section
