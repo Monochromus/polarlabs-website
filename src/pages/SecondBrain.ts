@@ -564,8 +564,8 @@ export const secondBrainStyles = `
   .flow-brain-logo { width: 56px; height: 56px; }
   .flow-arrow svg { width: 32px; height: 32px; color: var(--petrol-soft); }
 
-  .phases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-  .phase-card { padding: var(--space-6); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 20px; position: relative; }
+  .phases-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-8); }
+  .phase-card { padding: var(--space-8) var(--space-6) var(--space-6); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 20px; position: relative; }
   .phase-number { position: absolute; top: -12px; left: var(--space-6); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: var(--petrol-soft); color: white; border-radius: 50%; font-size: var(--text-sm); font-weight: 700; }
   .phase-highlight { font-size: var(--text-sm); color: var(--petrol-soft); font-weight: 600; padding: var(--space-3); background: rgba(69, 196, 176, 0.1); border-radius: 8px; border-left: 3px solid var(--petrol-soft); margin-top: var(--space-4); }
 
