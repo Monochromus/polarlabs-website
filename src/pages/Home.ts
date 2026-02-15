@@ -53,7 +53,9 @@ export function renderHomePage(): string {
       </div>
       <div class="hero-content container">
         <h1 class="hero-title-warm">${i18n.t('hero.headline')}</h1>
-        <p class="hero-subline-warm">${i18n.t('hero.subline')}</p>
+        <p class="hero-subline-warm">
+          ${i18n.t('hero.subline')}<span class="rotating-text"></span>
+        </p>
         <a href="#products" class="btn btn-warm hero-cta">${i18n.t('hero.cta')}</a>
       </div>
     </section>
@@ -257,9 +259,63 @@ export function initHomePage(): void {
       showQuote(index);
     });
   });
+
+  // Rotating Hero Text
+  const rotatingContainer = document.querySelector('.rotating-text');
+  if (rotatingContainer) {
+    const texts = [
+      i18n.t('hero.subline.rotating.1'),
+      i18n.t('hero.subline.rotating.2'),
+      i18n.t('hero.subline.rotating.3'),
+      i18n.t('hero.subline.rotating.4')
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+      const current = texts[textIndex % texts.length];
+      
+      if (isDeleting) {
+        rotatingContainer!.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50;
+      } else {
+        rotatingContainer!.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === current.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex++;
+        typeSpeed = 500; // Pause before next word
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    type();
+  }
 }
 
 export const homeStyles = `
+  .rotating-text {
+    color: var(--aurora-cyan);
+    border-right: 2px solid var(--aurora-cyan);
+    padding-right: 4px;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--aurora-cyan); }
+  }
+
   .hero {
     position: relative;
     min-height: 100vh;
