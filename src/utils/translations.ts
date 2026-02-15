@@ -226,8 +226,8 @@ export const translations: Translations = {
     en: 'AI powered Second Brain',
   },
   'secondbrain.hero.description': {
-    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – automatisiert. Speichere Links, verwalte Todos, lass Webrecherchen durchführen. Der KI-Agent organisiert alles und erinnert dich, wenn es relevant wird.',
-    en: 'Based on the PARA method by Tiago Forte – automated. Save links, manage todos, have web research done. The AI agent organizes everything and reminds you when relevant.',
+    de: 'Basierend auf dem PARA-Prinzip von Tiago Forte – automatisiert. Speichere Links, verwalte deine Projekte und Todos oder lasse Webrecherchen durchführen. Der KI-Agent organisiert alles und erinnert dich, wenn es relevant wird.',
+    en: 'Based on the PARA method by Tiago Forte – automated. Save links, manage your projects and todos or have web research done. The AI agent organizes everything and reminds you when relevant.',
   },
   'secondbrain.problem.title': {
     de: 'Das Problem der Überreizung durch digitale Medien',

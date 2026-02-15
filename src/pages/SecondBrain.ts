@@ -622,6 +622,17 @@ export const secondBrainStyles = `
   .btn-primary-violet { background: linear-gradient(135deg, var(--petrol-main) 0%, var(--petrol-soft) 100%); color: white; border: none; border-radius: 50px; padding: var(--space-3) var(--space-8); cursor: pointer; transition: all 0.3s ease; }
   .btn-primary-violet:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 145, 155, 0.4); }
 
+  .product-hero-secondbrain .hero-cta-btn {
+    margin: var(--space-8) auto 0;
+    display: block;
+    width: max-content;
+    border-radius: 50px;
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--text-base);
+    font-weight: 600;
+  }
+  .btn-primary-violet:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 145, 155, 0.4); }
+
   @media (max-width: 1024px) { 
     .problem-grid, .phases-grid, .briefing-grid, .features-grid { grid-template-columns: repeat(2, 1fr); } 
   }
