@@ -34,46 +34,35 @@ export function renderSecondBrainPage(): string {
     </section>
 
     <section id="experience" class="experience-section">
-      <div class="container">
+      <div class="container-fluid">
         <!-- Module Navigation -->
         <div class="module-nav-wrapper">
           <nav class="module-nav">
             <button class="module-nav-btn active" data-module="vision">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"></circle><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></svg>
               <span>Vision</span>
             </button>
             <button class="module-nav-btn" data-module="brain">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8v3H8v-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8v3H8v-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"></path></svg>
               <span>Brain</span>
             </button>
             <button class="module-nav-btn" data-module="utility">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               <span>Utility</span>
             </button>
             <button class="module-nav-btn" data-module="engine">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
               <span>Engine</span>
             </button>
             <button class="module-nav-btn" data-module="future">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
-                <path d="M9 18l6-6-6-6"></path>
-              </svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M9 18l6-6-6-6"></path></svg>
               <span>Future</span>
             </button>
           </nav>
         </div>
 
         <!-- Module Content Container -->
-        <div class="module-content-viewport">
+        <div class="module-content-viewport container">
           
           <!-- Module: Vision -->
           <div class="module-panel active" id="module-vision">
@@ -86,33 +75,25 @@ export function renderSecondBrainPage(): string {
             <div class="problem-grid">
               <div class="problem-item">
                 <div class="problem-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                 </div>
                 <span>${i18n.t('secondbrain.problem.item1')}</span>
               </div>
               <div class="problem-item">
                 <div class="problem-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
                 </div>
                 <span>${i18n.t('secondbrain.problem.item2')}</span>
               </div>
               <div class="problem-item">
                 <div class="problem-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
                 </div>
                 <span>${i18n.t('secondbrain.problem.item3')}</span>
               </div>
               <div class="problem-item">
                 <div class="problem-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-                  </svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                 </div>
                 <span>${i18n.t('secondbrain.problem.item4')}</span>
               </div>
@@ -127,7 +108,7 @@ export function renderSecondBrainPage(): string {
             </div>
 
             <div class="flow-visual">
-              <div class="flow-step flow-step-input">
+              <div class="flow-step">
                 <div class="flow-icons">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                 </div>
@@ -139,7 +120,7 @@ export function renderSecondBrainPage(): string {
                 <span class="flow-label mono">AI Brain</span>
               </div>
               <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-              <div class="flow-step flow-step-output">
+              <div class="flow-step">
                 <div class="flow-icons">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 </div>
@@ -156,20 +137,20 @@ export function renderSecondBrainPage(): string {
             </div>
             
             <div class="phases-grid">
-              <div class="phase-card phase-card-1">
+              <div class="phase-card">
                 <div class="phase-number">1</div>
                 <h3>${i18n.t('secondbrain.phase.1.title')}</h3>
                 <p class="phase-desc">${i18n.t('secondbrain.phase.1.desc')}</p>
                 <p class="phase-features">${i18n.t('secondbrain.phase.1.features')}</p>
                 <p class="phase-highlight">${i18n.t('secondbrain.phase.1.highlight')}</p>
               </div>
-              <div class="phase-card phase-card-2">
+              <div class="phase-card">
                 <div class="phase-number">2</div>
                 <h3>${i18n.t('secondbrain.phase.2.title')}</h3>
                 <p class="phase-desc">${i18n.t('secondbrain.phase.2.desc')}</p>
                 <p class="phase-example">${i18n.t('secondbrain.phase.2.example')}</p>
               </div>
-              <div class="phase-card phase-card-3">
+              <div class="phase-card">
                 <div class="phase-number">3</div>
                 <h3>${i18n.t('secondbrain.phase.3.title')}</h3>
                 <p class="phase-desc">${i18n.t('secondbrain.phase.3.desc')}</p>
@@ -184,29 +165,29 @@ export function renderSecondBrainPage(): string {
               <h2>${i18n.t('secondbrain.examples.title')}</h2>
             </div>
 
-            <div class="examples-grid examples-grid-secondbrain">
-              <div class="example-card example-card-secondbrain">
+            <div class="examples-grid">
+              <div class="example-card">
                 <div class="example-prompt mono">"${i18n.t('secondbrain.example.1')}"</div>
                 <div class="example-result">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   <span class="mono">${i18n.t('secondbrain.example.1.result')}</span>
                 </div>
               </div>
-              <div class="example-card example-card-secondbrain">
+              <div class="example-card">
                 <div class="example-prompt mono">"${i18n.t('secondbrain.example.2')}"</div>
                 <div class="example-result">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   <span class="mono">${i18n.t('secondbrain.example.2.result')}</span>
                 </div>
               </div>
-              <div class="example-card example-card-secondbrain">
+              <div class="example-card">
                 <div class="example-prompt mono">"${i18n.t('secondbrain.example.3')}"</div>
                 <div class="example-result">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   <span class="mono">${i18n.t('secondbrain.example.3.result')}</span>
                 </div>
               </div>
-              <div class="example-card example-card-secondbrain">
+              <div class="example-card">
                 <div class="example-prompt mono">"${i18n.t('secondbrain.example.4')}"</div>
                 <div class="example-result">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -292,7 +273,7 @@ export function renderSecondBrainPage(): string {
               <h2>${i18n.t('secondbrain.features.title')}</h2>
             </div>
 
-            <div class="features-grid features-grid-6 features-grid-secondbrain">
+            <div class="features-grid">
               <div class="feature-card feature-card-secondbrain">
                 <div class="feature-icon feature-icon-secondbrain">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a9 9 0 0 1 9 9c0 3.5-2 6.5-5 8v3H8v-3c-3-1.5-5-4.5-5-8a9 9 0 0 1 9-9z"/><path d="M12 2v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M19.07 4.93l-2.83 2.83"/></svg>
@@ -345,10 +326,7 @@ export function renderSecondBrainPage(): string {
                 <p class="section-subtitle">${i18n.t('secondbrain.changelog.subtitle')}</p>
               </div>
               <div id="github-changelog" class="changelog-list">
-                <div class="changelog-loading">
-                  <div class="loading-spinner"></div>
-                  <span>${i18n.t('secondbrain.changelog.loading')}</span>
-                </div>
+                <div class="changelog-loading"><div class="loading-spinner"></div><span>${i18n.t('secondbrain.changelog.loading')}</span></div>
               </div>
               <div class="changelog-footer">
                 <a href="https://github.com/Monochromus/PocketAssistent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View on GitHub</a>
@@ -427,6 +405,10 @@ export function initSecondBrainPage(): void {
         p.classList.remove('active');
         if (p.id === 'module-' + target) p.classList.add('active');
       });
+      // Scroll to start of experience section on mobile when switching
+      if (window.innerWidth < 768) {
+        document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   });
 
@@ -463,7 +445,7 @@ async function fetchLatestCommits(): Promise<void> {
 
 export const secondBrainStyles = `
   /* ============================================
-     POCKET ASSISTANT - Interactive Modular Style
+     POCKET ASSISTANT - Fixed Modular Style
      ============================================ */
 
   .product-hero-secondbrain, .product-hero-secondbrain ~ section {
@@ -477,14 +459,61 @@ export const secondBrainStyles = `
   @keyframes logoFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
   .experience-section { background: var(--warm-bg-dark); padding: var(--space-12) 0; min-height: 800px; }
-  .module-nav-wrapper { display: flex; justify-content: center; margin-bottom: var(--space-10); position: sticky; top: 80px; z-index: 100; }
-  .module-nav { display: flex; background: var(--warm-bg-medium); border: 1px solid var(--warm-border); padding: var(--space-1); border-radius: 50px; box-shadow: var(--shadow-lg); }
-  .module-nav-btn { display: flex; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-6); border-radius: 40px; border: none; background: transparent; color: var(--warm-text-muted); font-family: var(--font-playful); font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+  
+  .module-nav-wrapper { 
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: var(--space-10); 
+    position: sticky; 
+    top: 80px; 
+    z-index: 100;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-2) 0;
+    scrollbar-width: none;
+  }
+  .module-nav-wrapper::-webkit-scrollbar { display: none; }
+
+  .module-nav { 
+    display: flex; 
+    background: var(--warm-bg-medium); 
+    border: 1px solid var(--warm-border); 
+    padding: var(--space-1); 
+    border-radius: 50px; 
+    box-shadow: var(--shadow-lg);
+    min-width: max-content;
+    margin: 0 auto;
+  }
+
+  .module-nav-btn { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--space-2); 
+    padding: var(--space-2) var(--space-6); 
+    border-radius: 40px; 
+    border: none; 
+    background: transparent; 
+    color: var(--warm-text-muted); 
+    font-family: var(--font-playful); 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
   .module-nav-btn:hover { color: var(--warm-text-primary); background: rgba(255, 255, 255, 0.05); }
   .module-nav-btn.active { background: var(--petrol-soft); color: white; box-shadow: 0 4px 12px rgba(69, 196, 176, 0.3); }
 
-  .module-content-viewport { background: var(--warm-bg-medium); border: 1px solid var(--warm-border); border-radius: 32px; padding: var(--space-10); min-height: 600px; overflow: hidden; }
-  .module-panel { display: none; animation: slideUp 0.5s ease-out forwards; }
+  .module-content-viewport { 
+    background: var(--warm-bg-medium); 
+    border: 1px solid var(--warm-border); 
+    border-radius: 32px; 
+    padding: var(--space-10); 
+    min-height: 600px;
+    width: 100%;
+  }
+
+  .module-panel { display: none; animation: slideUp 0.5s ease-out forwards; width: 100%; }
   .module-panel.active { display: block; }
   @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -492,7 +521,7 @@ export const secondBrainStyles = `
   .section-header-center { text-align: center; max-width: 700px; margin: 0 auto var(--space-10); }
   .section-subtitle { font-size: var(--text-lg); color: var(--warm-text-muted); margin-top: var(--space-3); }
 
-  /* Grid Restores */
+  /* Grids */
   .problem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-10); }
   .problem-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); padding: var(--space-6); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 20px; }
   .problem-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: rgba(239, 68, 68, 0.1); border-radius: 16px; color: #ef4444; }
@@ -520,16 +549,16 @@ export const secondBrainStyles = `
   .briefing-icon svg { width: 28px; height: 28px; }
 
   .shortcut-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center; }
-  .phone-mockup { width: 220px; height: 450px; background: #1a1a1a; border-radius: 40px; border: 3px solid #333; padding: 12px; margin: 0 auto; }
+  .phone-mockup { width: 200px; height: 400px; background: #1a1a1a; border-radius: 40px; border: 3px solid #333; padding: 12px; margin: 0 auto; }
   .phone-screen { width: 100%; height: 100%; background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%); border-radius: 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-4); }
   .phone-widget { background: rgba(69, 196, 176, 0.15); border: 1px solid rgba(69, 196, 176, 0.3); border-radius: 16px; padding: var(--space-4); text-align: center; }
   .widget-icon { width: 32px; height: 32px; }
-  .phone-time { font-size: 48px; color: white; font-weight: 200; }
+  .phone-time { font-size: 36px; color: white; font-weight: 200; }
   .shortcut-steps { display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6); }
   .shortcut-step { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 12px; }
   .step-number { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(69, 196, 176, 0.1); border: 1px solid var(--petrol-soft); border-radius: 50%; color: var(--petrol-soft); flex-shrink: 0; }
 
-  .features-grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
   .feature-card-secondbrain { padding: var(--space-6); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 20px; }
   .feature-icon-secondbrain { width: 52px; height: 52px; background: rgba(69, 196, 176, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--petrol-soft); margin-bottom: var(--space-4); }
 
@@ -550,7 +579,6 @@ export const secondBrainStyles = `
   @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
 
   .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); max-width: 900px; margin: 0 auto; }
-  .pricing-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .pricing-card { background: var(--warm-bg-dark); border: 2px solid var(--warm-border); border-radius: 24px; padding: var(--space-6); display: flex; flex-direction: column; position: relative; }
   .pricing-card-pro { border-color: var(--petrol-soft); }
   .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--petrol-soft); color: white; font-size: var(--text-xs); padding: var(--space-2) var(--space-5); border-radius: 50px; font-weight: 700; }
@@ -563,6 +591,16 @@ export const secondBrainStyles = `
   .btn-primary-violet { background: linear-gradient(135deg, var(--petrol-main) 0%, var(--petrol-soft) 100%); color: white; border: none; border-radius: 50px; padding: var(--space-3) var(--space-8); cursor: pointer; transition: all 0.3s ease; }
   .btn-primary-violet:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 145, 155, 0.4); }
 
-  @media (max-width: 1024px) { .problem-grid, .phases-grid, .briefing-grid, .features-grid-6 { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 768px) { .module-nav-wrapper { top: 60px; } .module-nav { transform: scale(0.9); } .problem-grid, .phases-grid, .briefing-grid, .features-grid-6, .pricing-grid, .shortcut-grid { grid-template-columns: 1fr; } .module-content-viewport { padding: var(--space-6); } }
+  @media (max-width: 1024px) { 
+    .problem-grid, .phases-grid, .briefing-grid, .features-grid { grid-template-columns: repeat(2, 1fr); } 
+  }
+  @media (max-width: 768px) { 
+    .module-nav-wrapper { top: 60px; padding: 0 var(--space-4); } 
+    .module-nav { transform: scale(0.9); } 
+    .problem-grid, .phases-grid, .briefing-grid, .features-grid, .pricing-grid, .shortcut-grid, .examples-grid { grid-template-columns: 1fr; } 
+    .module-content-viewport { padding: var(--space-6); border-radius: 20px; }
+    .flow-visual { flex-direction: column; gap: var(--space-3); }
+    .flow-arrow { transform: rotate(90deg); }
+    .section-header-center { margin-bottom: var(--space-6); }
+  }
 `;
