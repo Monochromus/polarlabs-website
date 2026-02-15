@@ -152,6 +152,11 @@ export function renderHomePage(): string {
             <button class="philosophy-indicator" data-index="1" aria-label="Quote 2"></button>
           </div>
         </div>
+
+        <div class="products-cta">
+          <p class="cta-text">${i18n.t('products.cta.description')}</p>
+          <a href="/contact" class="btn btn-warm" data-link>${i18n.t('nav.contact')}</a>
+        </div>
       </div>
     </section>
   `;
@@ -522,6 +527,24 @@ export const homeStyles = `
   .vote-hint {
     font-size: var(--text-sm);
     color: var(--warm-text-muted);
+  }
+
+  .products-cta {
+    margin-top: var(--space-20);
+    padding: var(--space-12);
+    text-align: center;
+    background: rgba(41, 37, 36, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(168, 162, 158, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .cta-text {
+    font-family: var(--font-playful);
+    font-size: var(--text-xl);
+    color: var(--warm-text-primary);
+    margin-bottom: var(--space-8);
   }
 
   .products-grid {
@@ -908,6 +931,22 @@ export const homeStyles = `
   @media (max-width: 768px) {
     .products-grid {
       grid-template-columns: 1fr;
+    }
+
+    .products-cta {
+      margin-top: var(--space-12);
+      padding: var(--space-8);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(168, 162, 158, 0.1);
+    }
+
+    .cta-text {
+      font-family: var(--font-playful);
+      font-size: var(--text-lg);
+      color: var(--warm-text-primary);
+      margin-bottom: var(--space-6);
     }
 
     .hero-glow-warm {

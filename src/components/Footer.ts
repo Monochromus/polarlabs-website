@@ -60,18 +60,20 @@ export function createFooter(): HTMLElement {
       </div>
     `;
 
-    // Handle scroll to products from footer
-    footer.querySelector('a[href="/#products"]')?.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (router.route === '/') {
-        document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        router.navigate('/');
-        setTimeout(() => {
+    const productsLink = footer.querySelector('a[href="/#products"]');
+    if (productsLink) {
+      productsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (router.route === '/') {
           document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
-    });
+        } else {
+          router.navigate('/');
+          setTimeout(() => {
+            document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      });
+    }
 
     footer.querySelectorAll('[data-link]').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -93,8 +95,9 @@ export const footerStyles = `
     border-top: 1px solid rgba(168, 162, 158, 0.08);
     padding: var(--space-16) 0 var(--space-8);
     margin-top: auto;
-    background: linear-gradient(to bottom, transparent, rgba(28, 25, 23, 0.4));
-    backdrop-filter: blur(10px);
+    background: #1C1917;
+    position: relative;
+    z-index: 10;
   }
 
   .footer-grid {
@@ -126,6 +129,10 @@ export const footerStyles = `
     font-weight: 700;
     text-decoration: none;
     transition: color var(--transition-fast);
+  }
+
+  .footer-logo:hover {
+    color: var(--petrol-soft);
   }
 
   .footer-logo:hover .polar-star {
@@ -171,8 +178,8 @@ export const footerStyles = `
   }
 
   .footer-built-badge {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(168, 162, 158, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 162, 158, 0.15);
     border-radius: var(--radius-lg);
     padding: var(--space-4);
     display: inline-flex;
@@ -181,17 +188,19 @@ export const footerStyles = `
   }
 
   .badge-luna {
-    background: rgba(69, 196, 176, 0.1);
+    background: rgba(69, 196, 176, 0.15);
     color: var(--petrol-soft);
-    border-color: rgba(69, 196, 176, 0.2);
+    border: 1px solid rgba(69, 196, 176, 0.3);
+    border-radius: 4px;
     font-size: 10px;
     padding: 2px 8px;
     width: fit-content;
+    font-weight: 600;
   }
 
   .footer-built-text {
     font-size: 11px;
-    color: var(--warm-text-muted);
+    color: var(--warm-text-secondary);
     margin: 0;
   }
 
@@ -200,19 +209,17 @@ export const footerStyles = `
     justify-content: space-between;
     align-items: center;
     padding-top: var(--space-8);
-    border-top: 1px solid rgba(168, 162, 158, 0.05);
+    border-top: 1px solid rgba(168, 162, 158, 0.1);
   }
 
   .footer-copyright {
     color: var(--warm-text-muted);
     font-size: var(--text-xs);
-    opacity: 0.6;
   }
 
   .footer-social-hint {
     color: var(--warm-text-muted);
     font-size: 10px;
-    opacity: 0.4;
     letter-spacing: 0.05em;
   }
 

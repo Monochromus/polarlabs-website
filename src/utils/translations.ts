@@ -85,6 +85,10 @@ export const translations: Translations = {
     de: 'Dein Vote beeinflusst die Entwicklung',
     en: 'Your vote influences development',
   },
+  'products.cta.description': {
+    de: 'Bereit für die Zukunft? Lass uns gemeinsam etwas Großartiges bauen.',
+    en: 'Ready for the future? Let\'s build something great together.',
+  },
   'products.status.development': {
     de: 'In Entwicklung',
     en: 'In Development',
