@@ -343,8 +343,16 @@ export function renderSecondBrainPage(): string {
 
             <div class="timeline-pocket">
               <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.1')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.1.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.2')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.2.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.3')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.3.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.4')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.4.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.5')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.5.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.6')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.6.desc')}</span></div></div>
+              <div class="timeline-item done"><div class="timeline-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.7')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.7.desc')}</span></div></div>
               <div class="timeline-item current"><div class="timeline-marker"><div class="pulse-dot"></div></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.8')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.8.desc')}</span></div></div>
               <div class="timeline-item upcoming"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.9')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.9.desc')}</span></div></div>
+              <div class="timeline-item future"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.10')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.10.desc')}</span></div></div>
+              <div class="timeline-item future last"><div class="timeline-marker"></div><div class="timeline-content"><span class="timeline-title">${i18n.t('roadmap.secondbrain.11')}</span><span class="timeline-desc">${i18n.t('roadmap.secondbrain.11.desc')}</span></div></div>
             </div>
 
             <div class="panel-divider"></div>
@@ -360,8 +368,26 @@ export function renderSecondBrainPage(): string {
                 </div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.1')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.2')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.3')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.4')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.5')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.free.feature.6')}</li>
                 </ul>
                 <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pricing-cta">${i18n.t('secondbrain.pricing.cta.free')}</a>
+              </div>
+              <div class="pricing-card pricing-card-ownkey">
+                <div class="pricing-header">
+                  <h3 class="pricing-name">${i18n.t('secondbrain.pricing.ownkey')}</h3>
+                  <div class="pricing-price"><span class="price-amount">${i18n.t('secondbrain.pricing.ownkey.price')}</span><span class="price-period mono">${i18n.t('secondbrain.pricing.ownkey.period')}</span></div>
+                </div>
+                <ul class="pricing-features">
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.ownkey.feature.1')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.ownkey.feature.2')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.ownkey.feature.3')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.ownkey.feature.4')}</li>
+                </ul>
+                <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-petrol pricing-cta">${i18n.t('secondbrain.pricing.cta.ownkey')}</a>
               </div>
               <div class="pricing-card pricing-card-pro">
                 <div class="pricing-badge">${i18n.t('secondbrain.pricing.popular')}</div>
@@ -371,6 +397,11 @@ export function renderSecondBrainPage(): string {
                 </div>
                 <ul class="pricing-features">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.1')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.2')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.3')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.4')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.5')}</li>
+                  <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>${i18n.t('secondbrain.pricing.pro.feature.6')}</li>
                 </ul>
                 <a href="https://pocketassistant.polarlabs.de/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary-violet pricing-cta">${i18n.t('secondbrain.pricing.cta.pro')}</a>
               </div>
