@@ -462,7 +462,7 @@ export function renderSecondBrainPage(): string {
           <span class="label mono">//07</span>
           <h2>${i18n.t('secondbrain.pricing.title')}</h2>
         </div>
-        <div class="pricing-grid pricing-grid-3">
+        <div class="pricing-grid pricing-grid-3 pricing-blurred">
           <div class="pricing-card pricing-card-free">
             <div class="pricing-header">
               <h3 class="pricing-name">${i18n.t('secondbrain.pricing.free')}</h3>
@@ -2268,5 +2268,11 @@ export const secondBrainStyles = `
     .pricing-card {
       border-radius: 16px;
     }
+  }
+
+  .pricing-blurred {
+    filter: blur(8px);
+    pointer-events: none;
+    user-select: none;
   }
 `;

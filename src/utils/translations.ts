@@ -618,8 +618,8 @@ export const translations: Translations = {
     en: 'Pro - OwnKey',
   },
   'secondbrain.pricing.ownkey.price': {
-    de: '2 €',
-    en: '€2',
+    de: '3 €',
+    en: '€3',
   },
   'secondbrain.pricing.ownkey.period': {
     de: 'pro Monat',
@@ -658,8 +658,8 @@ export const translations: Translations = {
     en: 'Pro',
   },
   'secondbrain.pricing.pro.price': {
-    de: '6 €',
-    en: '€6',
+    de: '9 €',
+    en: '€9',
   },
   'secondbrain.pricing.pro.period': {
     de: 'pro Monat',
