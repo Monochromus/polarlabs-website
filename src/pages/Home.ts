@@ -173,6 +173,7 @@ export function initHomePage(): void {
 
   // Animate product cards on hover
   document.querySelectorAll('.product-card').forEach(card => {
+    card.style.cursor = 'pointer';
     card.addEventListener('mouseenter', () => {
       const product = card.getAttribute('data-product');
       if (product === 'mapmind') {
@@ -183,6 +184,20 @@ export function initHomePage(): void {
     });
     card.addEventListener('mouseleave', () => {
       card.classList.remove('glow-cyan', 'glow-pocket');
+    });
+
+    // Make whole card clickable
+    card.addEventListener('click', (e) => {
+      // Don't navigate if clicking the vote button or its children
+      if ((e.target as HTMLElement).closest('.vote-btn')) {
+        return;
+      }
+
+      const link = card.querySelector('.product-link');
+      if (link) {
+        const href = link.getAttribute('href') as Route;
+        router.navigate(href);
+      }
     });
   });
 
