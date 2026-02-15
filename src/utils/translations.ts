@@ -234,8 +234,8 @@ export const translations: Translations = {
     en: 'The Problem of Digital Overstimulation',
   },
   'secondbrain.problem.subtitle': {
-    de: 'Unser Gehirn ist noch nicht an das digitale Zeitalter angepasst',
-    en: 'Our brain hasn\'t adapted to the digital age yet',
+    de: 'Die Herausforderung der digitalen Informationsflut',
+    en: 'The challenge of digital information overload',
   },
   'secondbrain.problem.item1': {
     de: 'Fachartikel, die du für "später" speicherst, aber nie wieder öffnest',
