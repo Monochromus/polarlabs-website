@@ -468,19 +468,21 @@ export const mapMindStyles = `
 
   .example-item {
     padding: var(--space-6);
-    background: rgba(41, 37, 36, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(168, 162, 158, 0.1);
-    border-radius: var(--radius-md);
-    border-left: 2px solid var(--petrol-soft);
-    transition: all var(--transition-fast);
+    background: rgba(41, 37, 36, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 162, 158, 0.12);
+    border-radius: var(--radius-lg);
+    border-left: 3px solid var(--petrol-soft);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .example-item:hover {
-    border-color: rgba(69, 196, 176, 0.3);
-    background: rgba(41, 37, 36, 0.7);
-    transform: translateX(4px);
+    border-color: var(--aurora-cyan);
+    background: rgba(41, 37, 36, 0.75);
+    transform: translateX(8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 
   .example-prompt {
@@ -496,29 +498,38 @@ export const mapMindStyles = `
   }
 
   .feature-card {
-    padding: var(--space-6);
-    background: rgba(41, 37, 36, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(168, 162, 158, 0.1);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-fast);
+    padding: var(--space-8);
+    background: rgba(41, 37, 36, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(168, 162, 158, 0.12);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-slow);
+    box-shadow: 
+      0 4px 24px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.03);
   }
 
   .feature-card:hover {
     border-color: rgba(69, 196, 176, 0.25);
     background: rgba(41, 37, 36, 0.7);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .feature-icon {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--space-4);
-    color: var(--petrol-soft);
+    margin-bottom: var(--space-6);
+    background: rgba(69, 196, 176, 0.1);
+    border-radius: var(--radius-lg);
+    color: var(--aurora-cyan);
+    border: 1px solid rgba(69, 196, 176, 0.15);
   }
 
   .feature-icon svg {
