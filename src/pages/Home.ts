@@ -173,7 +173,7 @@ export function initHomePage(): void {
 
   // Animate product cards on hover
   document.querySelectorAll('.product-card').forEach(card => {
-    card.style.cursor = 'pointer';
+    (card as HTMLElement).style.cursor = 'pointer';
     card.addEventListener('mouseenter', () => {
       const product = card.getAttribute('data-product');
       if (product === 'mapmind') {
