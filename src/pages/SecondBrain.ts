@@ -740,6 +740,32 @@ export function renderSecondBrainPage(): string {
       </div>
     </section>
 
+    <section class="section section-alt changelog-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="label mono">//09</span>
+          <h2>${i18n.t('secondbrain.changelog.title')}</h2>
+          <p class="section-subtitle">${i18n.t('secondbrain.changelog.subtitle')}</p>
+        </div>
+        <div class="changelog-container">
+          <div id="github-changelog" class="changelog-list">
+            <div class="changelog-loading">
+              <div class="loading-spinner"></div>
+              <span>${i18n.t('secondbrain.changelog.loading')}</span>
+            </div>
+          </div>
+          <div class="changelog-footer">
+            <a href="https://github.com/Monochromus/PocketAssistent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section cta-section">
       <div class="container">
         <div class="cta-content">
@@ -772,6 +798,35 @@ export function initSecondBrainPage(): void {
   document.querySelectorAll('.roadmap-item').forEach(item => {
     observer.observe(item);
   });
+
+  // Fetch GitHub Commits
+  fetchLatestCommits();
+}
+
+async function fetchLatestCommits(): Promise<void> {
+  const container = document.getElementById('github-changelog');
+  if (!container) return;
+
+  try {
+    const response = await fetch('https://api.github.com/repos/Monochromus/PocketAssistent/commits?per_page=5');
+    if (!response.ok) throw new Error('Failed to fetch commits');
+    
+    const commits = await response.json();
+    
+    container.innerHTML = commits.map((c: any) => `
+      <div class="changelog-entry">
+        <div class="changelog-dot"></div>
+        <div class="changelog-meta">
+          <span class="changelog-hash mono">${c.sha.substring(0, 7)}</span>
+          <span class="changelog-date">${new Date(c.commit.author.date).toLocaleDateString()}</span>
+        </div>
+        <div class="changelog-message">${c.commit.message.split('\n')[0]}</div>
+      </div>
+    `).join('');
+  } catch (error) {
+    console.error('Error fetching commits:', error);
+    container.innerHTML = `<div class="changelog-error">Unable to load live updates.</div>`;
+  }
 }
 
 export const secondBrainStyles = `
@@ -2274,5 +2329,111 @@ export const secondBrainStyles = `
     filter: blur(8px);
     pointer-events: none;
     user-select: none;
+  }
+
+  /* Changelog Section */
+  .changelog-container {
+    background: var(--warm-bg-dark);
+    border: 1px solid var(--warm-border);
+    border-radius: 24px;
+    padding: var(--space-8);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .changelog-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .changelog-entry {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: var(--warm-bg-medium);
+    border: 1px solid var(--warm-border);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .changelog-entry:hover {
+    border-color: var(--petrol-soft);
+    transform: translateX(4px);
+  }
+
+  .changelog-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--petrol-soft);
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px var(--petrol-soft);
+  }
+
+  .changelog-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 100px;
+  }
+
+  .changelog-hash {
+    font-size: 10px;
+    color: var(--warm-text-muted);
+  }
+
+  .changelog-date {
+    font-size: 12px;
+    color: var(--petrol-soft);
+    font-weight: 600;
+  }
+
+  .changelog-message {
+    font-size: var(--text-sm);
+    color: var(--warm-text-primary);
+    font-family: var(--font-playful);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .changelog-footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--warm-border);
+    padding-top: var(--space-6);
+  }
+
+  .changelog-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    color: var(--warm-text-muted);
+    padding: var(--space-10);
+  }
+
+  .loading-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--warm-border);
+    border-top-color: var(--petrol-soft);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .changelog-error {
+    text-align: center;
+    color: #ef4444;
+    padding: var(--space-6);
+    font-family: var(--font-playful);
   }
 `;

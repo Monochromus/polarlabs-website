@@ -714,6 +714,20 @@ export const translations: Translations = {
     en: 'Popular',
   },
 
+  // Changelog
+  'secondbrain.changelog.title': {
+    de: 'Live Updates',
+    en: 'Live Updates',
+  },
+  'secondbrain.changelog.subtitle': {
+    de: 'Die neuesten Entwicklungen direkt aus dem Maschinenraum',
+    en: 'The latest developments directly from the engine room',
+  },
+  'secondbrain.changelog.loading': {
+    de: 'Lade Updates...',
+    en: 'Loading updates...',
+  },
+
   // Roadmap Items - mapMind
   'roadmap.mapmind.1': {
     de: 'OpenStreetMaps Karte',
