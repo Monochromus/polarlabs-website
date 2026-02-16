@@ -317,21 +317,6 @@ export function renderSecondBrainPage(): string {
                 <p>${i18n.t('secondbrain.feature.6.desc')}</p>
               </div>
             </div>
-
-            <div class="panel-divider"></div>
-
-            <div class="changelog-container">
-              <div class="section-header text-center">
-                <h2>${i18n.t('secondbrain.changelog.title')}</h2>
-                <p class="section-subtitle">${i18n.t('secondbrain.changelog.subtitle')}</p>
-              </div>
-              <div id="github-changelog" class="changelog-list">
-                <div class="changelog-loading"><div class="loading-spinner"></div><span>${i18n.t('secondbrain.changelog.loading')}</span></div>
-              </div>
-              <div class="changelog-footer">
-                <a href="https://github.com/Monochromus/PocketAssistent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View on GitHub</a>
-              </div>
-            </div>
           </div>
 
           <!-- Module: Future -->
@@ -358,9 +343,24 @@ export function renderSecondBrainPage(): string {
             <div class="panel-divider"></div>
 
             <div class="section-header text-center">
+              <h2>${i18n.t('secondbrain.changelog.title')}</h2>
+              <p class="section-subtitle">${i18n.t('secondbrain.changelog.subtitle')}</p>
+            </div>
+            <div class="changelog-container">
+              <div id="github-changelog" class="changelog-list">
+                <div class="changelog-loading"><div class="loading-spinner"></div><span>${i18n.t('secondbrain.changelog.loading')}</span></div>
+              </div>
+              <div class="changelog-footer">
+                <a href="https://github.com/Monochromus/PocketAssistent" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View on GitHub</a>
+              </div>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="section-header text-center">
               <h2>${i18n.t('secondbrain.pricing.title')}</h2>
             </div>
-            <div class="pricing-grid pricing-grid-3 pricing-blurred">
+            <div class="pricing-grid pricing-blurred">
               <div class="pricing-card pricing-card-free">
                 <div class="pricing-header">
                   <h3 class="pricing-name">${i18n.t('secondbrain.pricing.free')}</h3>
@@ -436,7 +436,6 @@ export function initSecondBrainPage(): void {
         p.classList.remove('active');
         if (p.id === 'module-' + target) p.classList.add('active');
       });
-      // Scroll to start of experience section on mobile when switching
       if (window.innerWidth < 768) {
         document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' });
       }
@@ -470,15 +469,11 @@ async function fetchLatestCommits(): Promise<void> {
       </div>
     `).join('');
   } catch (error) {
-    container.innerHTML = `<div class="changelog-error">Unable to load live updates.</div>`;
+    container.innerHTML = '<div class="changelog-error">Unable to load live updates.</div>';
   }
 }
 
 export const secondBrainStyles = `
-  /* ============================================
-     POCKET ASSISTANT - Fixed Modular Style
-     ============================================ */
-
   .product-hero-secondbrain, .product-hero-secondbrain ~ section {
     background-color: var(--warm-bg-dark);
     color: var(--warm-text-primary);
@@ -552,7 +547,6 @@ export const secondBrainStyles = `
   .section-header-center { text-align: center; max-width: 700px; margin: 0 auto var(--space-10); }
   .section-subtitle { font-size: var(--text-lg); color: var(--warm-text-muted); margin-top: var(--space-3); }
 
-  /* Grids */
   .problem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); margin-bottom: var(--space-10); }
   .problem-item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-4); padding: var(--space-6); background: var(--warm-bg-dark); border: 1px solid var(--warm-border); border-radius: 20px; }
   .problem-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: rgba(239, 68, 68, 0.1); border-radius: 16px; color: #ef4444; }
@@ -609,7 +603,7 @@ export const secondBrainStyles = `
   .pulse-dot { width: 12px; height: 12px; background: var(--petrol-soft); border-radius: 50%; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
 
-  .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); max-width: 900px; margin: 0 auto; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); max-width: 1100px; margin: 0 auto; }
   .pricing-card { background: var(--warm-bg-dark); border: 2px solid var(--warm-border); border-radius: 24px; padding: var(--space-6); display: flex; flex-direction: column; position: relative; }
   .pricing-card-pro { border-color: var(--petrol-soft); }
   .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--petrol-soft); color: white; font-size: var(--text-xs); padding: var(--space-2) var(--space-5); border-radius: 50px; font-weight: 700; }
@@ -631,10 +625,9 @@ export const secondBrainStyles = `
     font-size: var(--text-base);
     font-weight: 600;
   }
-  .btn-primary-violet:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 145, 155, 0.4); }
 
   @media (max-width: 1024px) { 
-    .problem-grid, .phases-grid, .briefing-grid, .features-grid { grid-template-columns: repeat(2, 1fr); } 
+    .problem-grid, .phases-grid, .briefing-grid, .features-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); } 
   }
   @media (max-width: 768px) { 
     .module-nav-wrapper { top: 60px; padding: 0 var(--space-4); } 
