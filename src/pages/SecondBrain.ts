@@ -455,21 +455,27 @@ async function fetchLatestCommits(): Promise<void> {
   if (!container) return;
 
   try {
-    const response = await fetch('https://api.github.com/repos/Monochromus/PocketAssistent/commits?per_page=5');
-    if (!response.ok) throw new Error('Failed to fetch commits');
+    const response = await fetch('/changelog.json');
+    if (!response.ok) throw new Error('Failed to fetch changelog');
     const commits = await response.json();
+    
+    if (commits.length === 0) {
+      container.innerHTML = `<div class="changelog-empty">No updates available yet.</div>`;
+      return;
+    }
+
     container.innerHTML = commits.map((c: any) => `
       <div class="changelog-entry">
         <div class="changelog-dot"></div>
         <div class="changelog-meta">
           <span class="changelog-hash mono">${c.sha.substring(0, 7)}</span>
-          <span class="changelog-date">${new Date(c.commit.author.date).toLocaleDateString()}</span>
+          <span class="changelog-date">${new Date(c.date).toLocaleDateString()}</span>
         </div>
-        <div class="changelog-message">${c.commit.message.split('\n')[0]}</div>
+        <div class="changelog-message">${c.message.split('\n')[0]}</div>
       </div>
     `).join('');
   } catch (error) {
-    container.innerHTML = '<div class="changelog-error">Unable to load live updates.</div>';
+    container.innerHTML = `<div class="changelog-error">Unable to load live updates.</div>`;
   }
 }
 
