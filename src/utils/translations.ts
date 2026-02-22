@@ -894,8 +894,8 @@ export const translations: Translations = {
 
   // Philosophy Quotes
   'philosophy.quote.1': {
-    de: 'Mama du bist toll',
-    en: 'Mama du bist toll',
+    de: 'Quiet tools for complex problems.',
+    en: 'Quiet tools for complex problems.',
   },
   'philosophy.quote.2': {
     de: 'Powerful tools shouldn\'t require a manual.',
