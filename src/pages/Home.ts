@@ -269,10 +269,7 @@ export function initHomePage(): void {
   const rotatingContainer = document.querySelector('.rotating-text');
   if (rotatingContainer) {
     const texts = [
-      i18n.t('hero.subline.rotating.1'),
-      i18n.t('hero.subline.rotating.2'),
-      i18n.t('hero.subline.rotating.3'),
-      i18n.t('hero.subline.rotating.4')
+      'Leif ist geil'
     ];
     let textIndex = 0;
     let charIndex = 0;
