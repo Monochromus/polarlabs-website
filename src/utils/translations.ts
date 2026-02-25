@@ -52,20 +52,20 @@ export const translations: Translations = {
     en: 'AI Tools ',
   },
   'hero.subline.rotating.1': {
-    de: 'to make things easy',
-    en: 'to make things easy',
+    de: 'Leif ist geil',
+    en: 'Leif ist geil',
   },
   'hero.subline.rotating.2': {
-    de: 'to boost your workflow',
-    en: 'to boost your workflow',
+    de: 'Leif ist geil',
+    en: 'Leif ist geil',
   },
   'hero.subline.rotating.3': {
-    de: 'to organize your life',
-    en: 'to organize your life',
+    de: 'Leif ist geil',
+    en: 'Leif ist geil',
   },
   'hero.subline.rotating.4': {
-    de: 'built with passion',
-    en: 'built with passion',
+    de: 'Leif ist geil',
+    en: 'Leif ist geil',
   },
   'hero.cta': {
     de: 'Produkte entdecken',
