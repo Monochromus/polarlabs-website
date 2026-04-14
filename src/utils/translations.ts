@@ -352,14 +352,6 @@ export const translations: Translations = {
     de: 'Termine aus Screenshots extrahieren, Visitenkarten digitalisieren.',
     en: 'Extract appointments from screenshots, digitize business cards.',
   },
-  'secondbrain.feature.7.title': {
-    de: 'Kalorien-Tracker',
-    en: 'Calorie Tracker',
-  },
-  'secondbrain.feature.7.desc': {
-    de: 'Foto deiner Mahlzeit genügt – der Agent schätzt die Nährwerte und pflegt sie in dein Ernährungstagebuch ein.',
-    en: 'Just a photo of your meal – the agent estimates the nutritional values and updates your nutrition log.',
-  },
   'secondbrain.feature.5.title': {
     de: 'Second Brain (PARA)',
     en: 'Second Brain (PARA)',

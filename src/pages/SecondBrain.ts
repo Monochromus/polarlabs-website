@@ -304,13 +304,6 @@ export function renderSecondBrainPage(): string {
               </div>
               <div class="feature-card feature-card-secondbrain">
                 <div class="feature-icon feature-icon-secondbrain">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20v-5M9 20v-2M15 20v-3M18 20v-8M21 20V4M6 20v-4M3 20v-2"/><circle cx="12" cy="12" r="10"/></svg>
-                </div>
-                <h4>${i18n.t('secondbrain.feature.7.title')}</h4>
-                <p>${i18n.t('secondbrain.feature.7.desc')}</p>
-              </div>
-              <div class="feature-card feature-card-secondbrain">
-                <div class="feature-icon feature-icon-secondbrain">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
                 </div>
                 <h4>${i18n.t('secondbrain.feature.5.title')}</h4>
