@@ -1,6 +1,2 @@
-# Polar Labs - robots.txt
 User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://polarlabs.de/sitemap.xml
+Disallow: /
